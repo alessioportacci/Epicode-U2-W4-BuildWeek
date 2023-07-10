@@ -20,6 +20,20 @@
     <!-- Icona e titolo -->
     <link rel="icon" type="image/x-icon" href="./assets/imgs/logo.png" />
     <title>Spotify</title>
+    <style>
+      #home {
+        width: 25px;
+        height: 25px;
+      }
+      #lente {
+        width: 35px;
+        height: 35px;
+      }
+      #libreria {
+        width: 25px;
+        height: 25px;
+      }
+    </style>
   </head>
 
   <body class="bg-spotify text-white">
@@ -30,54 +44,16 @@
           <section>
             <!-- Blocco alto-->
             <div id="first-block" class="row row-cols-1">
-              <!--Icona 3 puntini-->
-              <div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-three-dots m-3"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"
-                  />
-                </svg>
-              </div>
-              <div id="home-icon" class="d-flex">
-                <!--Icona Home-->
-                <svg
-                  role="img"
-                  height="24"
-                  width="24"
-                  aria-hidden="true"
-                  class="Svg-sc-ytk21e-0 haNxPq home-active-icon mx-3"
-                  viewBox="0 0 24 24"
-                  data-encore-id="icon"
-                >
-                  <path
-                    d="M13.5 1.515a3 3 0 0 0-3 0L3 5.845a2 2 0 0 0-1 1.732V21a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6h4v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V7.577a2 2 0 0 0-1-1.732l-7.5-4.33z"
-                  ></path>
-                </svg>
-                <p>Home</p>
+              <div id="home-icon" class="d-flex mt-3">
+                <!--Img png Home-->
+                <img src="assets/imgs/gg/home.PNG" id="home" class="mx-1" />
+
+                <p class="my-1 mx-2 px-1">Home</p>
               </div>
               <div id="search-icon" class="d-flex">
-                <!--Icona cerca-->
-                <svg
-                  role="img"
-                  height="24"
-                  width="24"
-                  aria-hidden="true"
-                  class="Svg-sc-ytk21e-0 haNxPq search-icon mx-3 my-2"
-                  viewBox="0 0 24 24"
-                  data-encore-id="icon"
-                >
-                  <path
-                    d="M10.533 1.279c-5.18 0-9.407 4.14-9.407 9.279s4.226 9.279 9.407 9.279c2.234 0 4.29-.77 5.907-2.058l4.353 4.353a1 1 0 1 0 1.414-1.414l-4.344-4.344a9.157 9.157 0 0 0 2.077-5.816c0-5.14-4.226-9.28-9.407-9.28zm-7.407 9.279c0-4.006 3.302-7.28 7.407-7.28s7.407 3.274 7.407 7.28-3.302 7.279-7.407 7.279-7.407-3.273-7.407-7.28z"
-                  ></path>
-                </svg>
-                <p class="my-2">Cerca</p>
+                <!--Img png cerca-->
+                <img src="assets/imgs/gg/lente.PNG" id="lente" />
+                <p class="my-2 mx-2">Cerca</p>
               </div>
             </div>
             <!-- Blocco basso -->
@@ -87,25 +63,21 @@
                 <!-- Libreria -->
                 <div id="library">
                   <!-- La tua libreria block -->
-                  <div id="my-library" class="d-flex align-items-center">
-                    <!-- Icona libreria-->
-                    <svg
-                      role="img"
-                      height="24"
-                      width="24"
-                      aria-hidden="true"
-                      viewBox="0 0 24 24"
-                      data-encore-id="icon"
-                      class="Svg-sc-ytk21e-0 haNxPq mx-3"
-                    >
-                      <path
-                        d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 14 3v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6.464a1 1 0 0 0-.5-.866l-6-3.464zM9 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1z"
-                      ></path>
-                    </svg>
+                  <div
+                    id="my-library"
+                    class="d-flex align-items-center border border-top-0 border-dark"
+                  >
+                    <!-- Img png libreria-->
+                    <img
+                      src="assets/imgs/gg/libreria.PNG"
+                      id="libreria"
+                      class="mx-3"
+                    />
                     <p class="my-2">La tua libreria</p>
                   </div>
                 </div>
               </div>
+
               <!-- Carosello filtri -->
               <div class="row row-cols-1">
                 <div id="filter-carousel"></div>
@@ -113,7 +85,7 @@
               <!-- Libreria Main -->
               <div class="row row-cols-1">
                 <div id="library-main">
-                  <div id="filters">
+                  <div id="filters" class="ms-4">
                     <img />
                     <p id="dropdown-filters">
                       early stage emily syndrome (sett-ott 2022)
@@ -135,7 +107,7 @@
                     <p>Lidia * Emily</p>
                     <p>minecraft e nintendo switch (sep-oct 2021)</p>
                     <p>silvano d'orba? I hardly know her (lug - ago 2021)</p>
-                    <p>Culo 2021</p>
+                    <p>Song 2021</p>
                     <p>Caparezza</p>
                     <p>Suspense</p>
                     <p></p>
