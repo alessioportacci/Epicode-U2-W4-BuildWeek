@@ -28,7 +28,7 @@
         <!-- Colonna di sinistra -->
         <div
           id="left-column"
-          class="container-fluid p-0 d-none d-md-block lateral-column"
+          class="container-fluid p-0 d-none d-md-block lateral-column col-3 m-0"
         >
           <section id="left-column-content">
             <!-- Blocco alto-->
@@ -249,7 +249,7 @@
         </div>
 
         <!-- Colonna centrale -->
-        <div>
+        <div class="col-12 col-md-7">
           <section>
             <div class="row row-cols-3"></div>
             <!-- Barra in alto -->
@@ -269,17 +269,265 @@
         <!-- Colonna di destra -->
         <div
           id="right-column"
-          class="container-fluid p-0 d-none d-md-block lateral-column"
+          class="container-fluid col-2 p-0 d-none d-lg-block lateral-column m-0 bg-black"
         >
-          <section>
+          <section id="right-column-content">
             <!-- Attività amici -->
-            <div id="activities" class="row row-cols-1">
-              <p>Attività amici</p>
-              <img />
-              <img />
+            <div
+              id="activities"
+              class="row row-cols-2 m-0 p-4 justify-content-between align-items-center"
+            >
+              <div>
+                <p>Attività&nbsp;amici</p>
+              </div>
+              <div class="text-end">
+                <img src="assets/imgs/icons/delete_icon.png" width="25px" />
+                <img
+                  src="assets/imgs/icons/add_friends_icon.png"
+                  width="25px"
+                />
+              </div>
             </div>
             <!-- Amichetti -->
-            <div id="amici" class="row row-cols-1"></div>
+            <div
+              id="friends"
+              class="row row-cols-1 pt-0 p-3 text-spotify-secondary"
+            >
+              <div>
+                <!-- Amico 1-->
+                <div class="row m-1">
+                  <!-- propic -->
+                  <div class="col-12 col-md-2 p-1">
+                    <img
+                      src="https://pm1.narvii.com/6286/eb429bdc7ee7472eff3ca3f30c15440265910a9d_00.jpg"
+                      class="friend-propic"
+                    />
+                  </div>
+                  <!-- Musica -->
+                  <div class="col-12 col-md-10">
+                    <div class="row">
+                      <!-- Nome -->
+                      <div>
+                        <h6 class="friend-name">Razputin Aquato</h6>
+                      </div>
+                      <!-- Canzone / artista -->
+                      <div>
+                        <p class="friend-music">
+                          <span class="friend-song">Megalovania</span> •
+                          <span class="friend-artist">Toby Fox</span>
+                        </p>
+                      </div>
+                      <!-- Album -->
+                      <div>
+                        <p class="friend-music">
+                          <img
+                            src="assets/imgs/icons/vinyl_icon.svg"
+                            width="10px"
+                          />
+                          <span class="friend-artist"
+                            >UNDERTALE Soundtrack</span
+                          >
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Amico 2-->
+                <div class="row m-1 mt-4">
+                  <!-- propic -->
+                  <div class="col-12 col-md-2 p-1">
+                    <img
+                      src="https://pbs.twimg.com/profile_images/1637821718705086464/6iTRB6_c_400x400.png"
+                      class="friend-propic"
+                    />
+                  </div>
+                  <!-- Musica -->
+                  <div class="col-12 col-md-10">
+                    <div class="row">
+                      <!-- Nome -->
+                      <div>
+                        <h6 class="friend-name">Mario Mario</h6>
+                      </div>
+                      <!-- Canzone / artista -->
+                      <div>
+                        <p class="friend-music">
+                          <span class="friend-song">Disasterpiece</span> •
+                          <span class="friend-artist">Slipknot</span>
+                        </p>
+                      </div>
+                      <!-- Album -->
+                      <div>
+                        <p class="friend-music">
+                          <img
+                            src="assets/imgs/icons/vinyl_icon.svg"
+                            width="10px"
+                          />
+                          <span class="friend-artist">Iowa</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Amico 3-->
+                <div class="row m-1 mt-4">
+                  <!-- propic -->
+                  <div class="col-12 col-md-2 p-1">
+                    <img
+                      src="https://i1.sndcdn.com/avatars-oq1XjQtIKXa4C3J5-vIsUtQ-t500x500.jpg"
+                      class="friend-propic"
+                    />
+                  </div>
+                  <!-- Musica -->
+                  <div class="col-12 col-md-10">
+                    <div class="row">
+                      <!-- Nome -->
+                      <div>
+                        <h6 class="friend-name">Jotaro Kujo</h6>
+                      </div>
+                      <!-- Canzone / artista -->
+                      <div>
+                        <p class="friend-music">
+                          <span class="friend-song"
+                            >Girls just wanna have fun</span
+                          >
+                          •
+                          <span class="friend-artist">Cindy Lauper</span>
+                        </p>
+                      </div>
+                      <!-- Album -->
+                      <div>
+                        <p class="friend-music">
+                          <img
+                            src="assets/imgs/icons/vinyl_icon.svg"
+                            width="10px"
+                          />
+                          <span class="friend-artist">She's So Unusual</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Amico 4-->
+                <div class="row m-1 mt-4">
+                  <!-- propic -->
+                  <div class="col-12 col-md-2 p-1">
+                    <img
+                      src="https://www.ansa.it/crop/crop.php?file=https://www.ansa.it/webimages/cl_1100x/2023/5/17/7b28ad5c5d29e1c8d264d11ac8bc1ae7.jpg&w=1100&h=600&face=Detection&c=u2yNGi7_GmgfDtTeZANxRw"
+                      class="friend-propic"
+                    />
+                  </div>
+                  <!-- Musica -->
+                  <div class="col-12 col-md-10">
+                    <div class="row">
+                      <!-- Nome -->
+                      <div>
+                        <h6 class="friend-name">Johnny Depp</h6>
+                      </div>
+                      <!-- Canzone / artista -->
+                      <div>
+                        <p class="friend-music">
+                          <span class="friend-song">Bootstra's Bootstraps</span>
+                          •
+                          <span class="friend-artist">Klaus Badelt</span>
+                        </p>
+                      </div>
+                      <!-- Album -->
+                      <div>
+                        <p class="friend-music">
+                          <img
+                            src="assets/imgs/icons/vinyl_icon.svg"
+                            width="10px"
+                          />
+                          <span class="friend-artist"
+                            >Pirates of the caribbean Original Soundtrack</span
+                          >
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Amico 5-->
+                <div class="row m-1 mt-4">
+                  <!-- propic -->
+                  <div class="col-12 col-md-2 p-1">
+                    <img
+                      src="https://cdn.vox-cdn.com/thumbor/HOWiq29vUhGGTVTcjNqMA7refT4=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/23249598/mgid_arc_imageassetref_comedycentral.jpeg"
+                      class="friend-propic"
+                    />
+                  </div>
+                  <!-- Musica -->
+                  <div class="col-12 col-md-10">
+                    <div class="row">
+                      <!-- Nome -->
+                      <div>
+                        <h6 class="friend-name">Bender</h6>
+                      </div>
+                      <!-- Canzone / artista -->
+                      <div>
+                        <p class="friend-music">
+                          <span class="friend-song"
+                            >Bangarang (feat. Sirah)</span
+                          >
+                          •
+                          <span class="friend-artist">Skrillex</span>
+                        </p>
+                      </div>
+                      <!-- Album -->
+                      <div>
+                        <p class="friend-music">
+                          <img
+                            src="assets/imgs/icons/vinyl_icon.svg"
+                            width="10px"
+                          />
+                          <span class="friend-artist">Bangarang EP</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Amico 6 -->
+                <div class="row m-1 mt-4">
+                  <!-- propic -->
+                  <div class="col-12 col-md-2 p-1">
+                    <img
+                      src="https://lamedicinaestetica.files.wordpress.com/2017/02/medicina-online-tafazzi-trio-aldo-giovanni-e-giacomo-masochista-sospensorio-tafazzina-dna-gene-tafazzismo.jpg"
+                      class="friend-propic"
+                    />
+                  </div>
+                  <!-- Musica -->
+                  <div class="col-12 col-md-10">
+                    <div class="row">
+                      <!-- Nome -->
+                      <div>
+                        <h6 class="friend-name">Tafazi</h6>
+                      </div>
+                      <!-- Canzone / artista -->
+                      <div>
+                        <p class="friend-music">
+                          <span class="friend-song"
+                            >The four Seasons - Summer in G minor</span
+                          >
+                          •
+                          <span class="friend-artist">Antonio Vivaldi</span>
+                        </p>
+                      </div>
+                      <!-- Album -->
+                      <div>
+                        <p class="friend-music">
+                          <img
+                            src="assets/imgs/icons/vinyl_icon.svg"
+                            width="10px"
+                          />
+                          <span class="friend-artist text-truncate"
+                            >The Four Seasons & Concertos for Bassoon</span
+                          >
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </section>
         </div>
       </div>
