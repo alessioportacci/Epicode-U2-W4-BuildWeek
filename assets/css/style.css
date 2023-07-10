@@ -1,3 +1,14 @@
+/* Font */
+
+@font-face {
+    font-family: CircularStd-black;
+    src: url("./../fonts/CircularStd-Black.otf") format("opentype");
+}
+
+body
+{
+}
+
 /* BACKGROUNDS*/
 
 .bg-black
@@ -35,9 +46,14 @@
 
 /* COLONNA SINISTRA*/
 
+#left-column
+{
+}
+
 #first-block
 {
     margin: 0px 0px 0px 0px !important;
+    font-family: CircularStd-black;
 }
 
 #second-block
@@ -56,7 +72,7 @@ p
     margin: auto !important;
 }
 
-#left-column
+.lateral-column
 {
     z-index: 5;
 }
@@ -64,7 +80,8 @@ p
 #left-column-content
 {
     resize: horizontal !important;
-    min-width: 230px;
+    min-width: 250px;
+    max-width: 100%;
     overflow: auto;
     overflow: hidden;
     left: 0px !important;

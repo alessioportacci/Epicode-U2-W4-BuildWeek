@@ -26,7 +26,10 @@
     <main class="container-fluid">
       <div class="row row-cols-3">
         <!-- Colonna di sinistra -->
-        <div id="left-column" class="container-fluid p-0">
+        <div
+          id="left-column"
+          class="container-fluid p-0 d-none d-md-block lateral-column"
+        >
           <section id="left-column-content">
             <!-- Blocco alto-->
             <div id="first-block" class="row row-cols-1 bg-black">
@@ -244,6 +247,7 @@
             </div>
           </section>
         </div>
+
         <!-- Colonna centrale -->
         <div>
           <section>
@@ -261,8 +265,12 @@
             <div class="row row-cols-2 row-cols-md-1"></div>
           </section>
         </div>
+
         <!-- Colonna di destra -->
-        <div>
+        <div
+          id="right-column"
+          class="container-fluid p-0 d-none d-md-block lateral-column"
+        >
           <section>
             <!-- Attività amici -->
             <div id="activities" class="row row-cols-1">
