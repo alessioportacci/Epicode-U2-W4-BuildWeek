@@ -10,6 +10,12 @@
     src: url("./../fonts/CircularStd-book.otf") format("opentype");
 }
 
+
+body
+{
+    overflow-x: hidden;
+}
+
 /* BACKGROUNDS*/
 
 .bg-black
@@ -53,10 +59,21 @@
 
 /* COLONNA SINISTRA*/
 
+#left-column
+{
+    height: 100%;
+}
+
 #first-block
 {
     margin: 0px 0px 0px 0px !important;
     font-family: CircularStd-black;
+}
+
+#first-block p:hover
+{
+    color: white;
+    cursor: pointer;
 }
 
 #second-block
@@ -90,6 +107,21 @@ p
     left: 0px !important;
 }
 
+#playlist-library
+{
+    list-style: none;
+    padding: 0px;
+    padding-right: 20px;
+    margin: 0px;
+}
+
+#playlist-library li:hover
+{
+    color: white;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 /* Colonna di destra */
 
 #activities
@@ -105,15 +137,32 @@ p
     object-fit: cover;
 }
 
-.friend-name{
+.friend-name
+{
     margin:0;
     font-family: CircularStd-black;
     font-size: 15px;
+    display: inline;
 }
+
+.friend-name:hover
+{
+    text-decoration: underline;
+    color: white;
+    cursor: pointer;
+}
+
 
 .friend-music
 {
     font-size: 10px;
     font-family: CircularStd-book;
     margin: 30px;
+}
+
+.friend-music :hover
+{
+    text-decoration: underline;
+    cursor: pointer;
+    color: white;
 }
