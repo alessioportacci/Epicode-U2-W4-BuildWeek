@@ -1,0 +1,50 @@
+.bg-black
+{
+    background-color: #000000 !important
+}
+
+.bg-spotify
+{
+    background-color: #202020 !important
+}
+
+.bg-spotify-card
+{
+    background-color: #161616 !important;
+}
+
+.bg-spotify-welcome-card
+{
+    background-color: #2c2c2c !important
+}
+
+.text-spotify
+{
+    color: #2c2c2c !important
+}
+
+.btn-spotify
+{
+    background-color: #1ed760 !important
+}
+
+.spotify-leftcolumn-top
+{
+    margin: 20px !important
+}
+
+#first-block
+{
+    margin: 0px 0px 0px 0px !important;
+}
+
+#second-block
+{
+    margin: 0px 0px 0px 0px !important;
+}
+
+p
+{
+    margin: 0px !important;
+    padding: 0px !important;
+}
