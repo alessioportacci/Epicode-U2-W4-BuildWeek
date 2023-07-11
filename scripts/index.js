@@ -1,7 +1,7 @@
 //Mi prendo lo spinner
 const spinnerContainer = document.getElementById("spinner-container");
 
-//Mi prendo l'url per i gurppi rock
+//Mi prendo l'url per i gruppi rock
 const myUrl = "https://striveschool-api.herokuapp.com/api/deezer/search?q=rock";
 const getRemoteData = function () {
   fetch(myUrl, {
@@ -23,15 +23,13 @@ const getRemoteData = function () {
       elements.data
         .forEach((element) => {
           let newCol = document.createElement("div");
-          newCol.classList.add("col", "col-4");
+          newCol.classList.add("col", "col-3");
           newCol.innerHTML = `
                          <div class="card" style="width: 18rem;">
                             <img src="${element.album.cover}" style="object-fit: cover;" class="card-img-top" alt="copertina">
                             <div class="card-body">
                               <h5 class="card-title">${element.title}</h5>
-                              <p class="card-text">${element.price}</p>
-                              <a href="#" class="btn btn-primary" id='delete-button'>Scarta</a>
-                              <a href="#" class="btn btn-primary" id='buy-now'>Compra ora</a>
+                              <p class="card-text">${element.artist.name}</p>
                             </div>
                           </div>
                          `;

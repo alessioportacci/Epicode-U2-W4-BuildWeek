@@ -345,6 +345,15 @@
             <div></div>
             <!-- Main Home -->
             <div class="row row-cols-2 row-cols-md-1"></div>
+            <!-- Genero degli album dinamicamente -->
+            <div class="container mt-4">
+              <div class="row" id="row-to-append-children"></div>
+            </div>
+            <div class="d-flex justify-content-center" id="spinner-container">
+              <div class="spinner-border text-success" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </div>
           </section>
         </div>
 
@@ -638,17 +647,8 @@
           </div>
         </div>
       </div>
-      <!-- Provo a generare degli album dinamicamente.. -->
-      <div class="container mt-4">
-        <div class="row" id="row-to-append-children"></div>
-      </div>
-      <div class="d-flex justify-content-center" id="spinner-container">
-        <div class="spinner-border text-success" role="status">
-          <span class="visually-hidden">Loading...</span>
-        </div>
-      </div>
-      <!-- Fine prova -->
     </main>
+
     <!-- Footer Tablet / Desktop -->
     <footer
       id="footer"
