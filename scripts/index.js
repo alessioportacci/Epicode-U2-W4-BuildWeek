@@ -1,3 +1,7 @@
+//Mi prendo lo spinner
+const spinnerContainer = document.getElementById("spinner-container");
+
+//Mi prendo l'url per i gurppi rock
 const myUrl = "https://striveschool-api.herokuapp.com/api/deezer/search?q=rock";
 const getRemoteData = function () {
   fetch(myUrl, {
@@ -8,33 +12,28 @@ const getRemoteData = function () {
     },
   })
     .then((res) => {
-      console.log("Fetch finita!");
-      console.log(res);
-      if (res.ok) {
-        return res.json();
-      } else {
-        throw new Error("Errore nella chiamata");
-      }
+      if (res.ok) return res.json();
+      else throw new Error("Errore nella chiamata");
     })
 
     .then((elements) => {
-      console.log("elements", elements);
-      let spinnerContainer = document.getElementById("spinner-container");
-      spinnerContainer.classList.add("d-none");
+      console.log(elements);
+      spinnerContainer.classList.toggle("d-none");
       let row = document.getElementById("row-to-append-children");
-      const myElements= function() {
-        for(let i=0; i>elements.length; i++)
+      elements.data
+        .forEach((element) => {
           let newCol = document.createElement("div");
           newCol.classList.add("col", "col-4");
           newCol.innerHTML = `
-          <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
+                         <div class="card" style="width: 18rem;">
+                            <img src="${element.album.cover}" style="object-fit: cover;" class="card-img-top" alt="copertina">
+                            <div class="card-body">
+                              <h5 class="card-title">${element.title}</h5>
+                              <p class="card-text">${element.price}</p>
+                              <a href="#" class="btn btn-primary" id='delete-button'>Scarta</a>
+                              <a href="#" class="btn btn-primary" id='buy-now'>Compra ora</a>
+                            </div>
+                          </div>
                          `;
           row.appendChild(newCol);
         })

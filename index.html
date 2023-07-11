@@ -16,6 +16,7 @@
     <!-- Riferimenti CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="assets/css/textAnimation.css" />
 
     <!-- Icona e titolo -->
     <link rel="icon" type="image/x-icon" href="./assets/imgs/logo.png" />
@@ -648,7 +649,7 @@
       </div>
       <!-- Fine prova -->
     </main>
-
+    <!-- Footer Tablet / Desktop -->
     <footer
       id="footer"
       class="d-none d-md-block footer-player fixed-bottom bg-spotify-player"
@@ -674,6 +675,7 @@
                 </div>
               </div>
             </div>
+            <!-- Cuore -->
             <div class="col-1 p-3">
               <img src="./assets/imgs/icons/heart_icon.png" width="15px" />
             </div>
@@ -764,6 +766,114 @@
       </div>
     </footer>
 
+    <!-- Footer mobile -->
+    <footer
+      id="footer-mobile"
+      class="d-block d-md-none fixed-bottom text-white"
+    >
+      <!-- Player nel footer -->
+      <div
+        class="row m-3 p-2 bg-spotify-welcome-card rounded justify-content-center align-items-center"
+      >
+        <!-- Canzone -->
+        <div id="scroll-container" class="col-8">
+          <div id="scroll-text" class="p-2">
+            Wet&nbsp;Sand&nbsp;-&nbsp;Red&nbsp;Hot&nbsp;Chili&nbsp;Peppers&nbsp;(Stadium&nbsp;Arcadium)
+          </div>
+        </div>
+        <!-- Casse -->
+        <div class="col-1 p-1">
+          <img src="./assets/imgs/icons/speaker_icon.svg" width="20px" />
+        </div>
+        <!-- Cuore -->
+        <div class="col-1 p-1">
+          <img src="./assets/imgs/icons/heart_icon.png" width="20px" />
+        </div>
+        <div class="col-1 p-1">
+          <img
+            src="./assets/imgs/icons/play-fill-white_icon.svg"
+            width="30px"
+          />
+        </div>
+      </div>
+      <!-- Menù-->
+      <div class="container-fluid bottom-nav p-3">
+        <div class="row justify-content-center align-items-center">
+          <!-- Home -->
+          <div class="col-3">
+            <div
+              class="row row-cols-1 align-items-center justify-content-center"
+            >
+              <div class="text-center">
+                <svg
+                  role="img"
+                  height="24"
+                  width="24"
+                  aria-hidden="true"
+                  class="Svg-sc-ytk21e-0 haNxPq home-active-icon text-white text-center"
+                  viewBox="0 0 24 24"
+                  data-encore-id="icon"
+                  fill="white"
+                >
+                  <path
+                    d="M13.5 1.515a3 3 0 0 0-3 0L3 5.845a2 2 0 0 0-1 1.732V21a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6h4v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V7.577a2 2 0 0 0-1-1.732l-7.5-4.33z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="text-center">Home</div>
+            </div>
+          </div>
+          <!-- Cerca -->
+          <div class="col-3">
+            <div
+              class="row row-cols-1 align-items-center justify-content-center"
+            >
+              <div class="text-center">
+                <svg
+                  role="img"
+                  height="24"
+                  width="24"
+                  aria-hidden="true"
+                  class="Svg-sc-ytk21e-0 haNxPq search-icon"
+                  viewBox="0 0 24 24"
+                  data-encore-id="icon"
+                  fill="white"
+                >
+                  <path
+                    d="M10.533 1.279c-5.18 0-9.407 4.14-9.407 9.279s4.226 9.279 9.407 9.279c2.234 0 4.29-.77 5.907-2.058l4.353 4.353a1 1 0 1 0 1.414-1.414l-4.344-4.344a9.157 9.157 0 0 0 2.077-5.816c0-5.14-4.226-9.28-9.407-9.28zm-7.407 9.279c0-4.006 3.302-7.28 7.407-7.28s7.407 3.274 7.407 7.28-3.302 7.279-7.407 7.279-7.407-3.273-7.407-7.28z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="text-center">Cerca</div>
+            </div>
+          </div>
+          <!-- Libreria-->
+          <div class="col-3">
+            <div
+              class="row row-cols-1 align-items-center justify-content-center"
+            >
+              <div class="text-center">
+                <svg
+                  role="img"
+                  height="24"
+                  width="24"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  data-encore-id="icon"
+                  class="Svg-sc-ytk21e-0 haNxPq"
+                  fill="white"
+                >
+                  <path
+                    d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 14 3v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6.464a1 1 0 0 0-.5-.866l-6-3.464zM9 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="text-center">La tua libreria</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
     <!-- Bootstrap 5 -->
 
     <script
