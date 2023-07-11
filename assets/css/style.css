@@ -59,6 +59,7 @@ body
 {
     margin: 0px 0px 0px 0px !important;
     font-family: CircularStd-black;
+    height: 32vh !important;
 }
 
 #first-block p:hover
@@ -70,6 +71,12 @@ body
 #second-block
 {
     margin: 0px 0px 0px 0px !important;
+    height: 68vh !important;
+}
+
+#main-library
+{
+  height: 100% !important;
 }
 
 p {
@@ -100,6 +107,7 @@ p {
     padding: 0px;
     padding-right: 20px;
     margin: 0px;
+    height: 100% !important;
 }
 
 #playlist-library li:hover
@@ -110,6 +118,10 @@ p {
 }
 
 /* Colonna di destra */
+
+#right-column{
+  height: 100vh;
+}
 
 #activities {
   font-family: CircularStd-black;
