@@ -18,3 +18,13 @@
     object-fit: cover !important; 
     height: 100% !important;
 }
+
+.text-shadow
+{
+    text-shadow: 1px 2px 2px #000000;
+}
+
+.top-artist
+{
+    height: 20em !important
+}
