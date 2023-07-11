@@ -41,6 +41,55 @@
       ::-webkit-scrollbar-thumb {
         background-color: #4d4d4d;
       }
+      /*css bottone proflo*/
+      #profilo {
+        -webkit-tap-highlight-color: transparent;
+
+        background-color: rgba(0, 0, 0, 0.54);
+        color: #ffffff;
+        display: flex;
+        border-radius: 500px;
+      }
+      /*Delete scrollbar*/
+      * {
+        overflow-y: hidden;
+      }
+      /*css album*/
+
+      #main-a {
+        border-radius: 10px;
+
+        display: flex;
+
+        background: #000000;
+        background: -moz-linear-gradient(
+          45deg,
+          #000000 0%,
+          #171717 50%,
+          #2e2e2e 100%
+        );
+        background: -webkit-linear-gradient(
+          45deg,
+          #000000 0%,
+          #171717 50%,
+          #2e2e2e 100%
+        );
+        background: linear-gradient(
+          45deg,
+          #000000 0%,
+          #171717 50%,
+          #2e2e2e 100%
+        );
+        border-radius: 3px;
+        margin-right: auto;
+        margin-left: auto;
+        display: flex;
+        flex-direction: reverse;
+      }
+
+      .testo {
+        padding-left: 15px;
+      }
     </style>
   </head>
 
@@ -327,15 +376,65 @@
           <section>
             <div class="row row-cols-3"></div>
             <!-- Barra in alto -->
+
             <div class="row row-cols-2 justify-content-between">
-              <!-- Freccette-->
-              <div><img src="" alt="" /><img src="" alt="" /></div>
-              <!-- Amici e profilo -->
-              <div><img src="" alt="" /><img src="" alt="" /></div>
+              <div>
+                <!--Freccette-->
+                <a href="#"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-chevron-left"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+                    /></svg
+                ></a>
+                <a href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-chevron-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <!--Profilo-->
+              <div class="d-flex justify-content-end">
+                <button id="profilo" class="btn btn-dark m-2">Suspense</button>
+              </div>
             </div>
-            <!-- Card annunci -->
-            <div></div>
-            <!-- Main Home -->
+            <!--Main-->
+            <main
+              id="main-a"
+              class="d-flex justify-content-start align-items-center"
+            >
+              <img
+                src="assets/imgs/main/image-15.jpg"
+                alt="album"
+                id="imgAlbum"
+                class="h-25"
+              />
+              <div class="testo">
+                <h6>ALBUM</h6>
+                <h1>SONG NAME</h1>
+                <p>Artista</p>
+                <p>Ascolta il nuovo singolo di ... e ...</p>
+              </div>
+            </main>
+
+            <!-- Home -->
             <div class="row row-cols-2 row-cols-md-1"></div>
           </section>
         </div>
