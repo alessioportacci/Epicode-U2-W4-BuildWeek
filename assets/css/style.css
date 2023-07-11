@@ -16,6 +16,13 @@ body
     overflow-x: hidden;
 }
 
+.text-hover:hover
+{
+  color: white;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 /* BACKGROUNDS*/
 
 .bg-black {
@@ -153,12 +160,7 @@ p {
     display: inline;
 }
 
-.friend-name:hover
-{
-    text-decoration: underline;
-    color: white;
-    cursor: pointer;
-}
+
 
 
 .friend-music
@@ -168,12 +170,10 @@ p {
     margin: 30px;
 }
 
-.friend-music :hover
+/* Footer */
+
+.footer-player
 {
-    text-decoration: underline;
-    cursor: pointer;
-    color: white;
-}
-
-
-
+  box-shadow: 0px 0px 1px 0px #a8a8a8;
+  z-index: 5;
+} 
