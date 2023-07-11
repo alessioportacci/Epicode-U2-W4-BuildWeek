@@ -639,8 +639,11 @@
       </div>
     </main>
 
-    <footer id="footer" class="footer-player fixed-bottom bg-spotify-player">
-      <div class="row row-cols-3 d-flex justify-between">
+    <footer
+      id="footer"
+      class="d-none d-md-block footer-player fixed-bottom bg-spotify-player"
+    >
+      <div class="row row-cols-3 d-flex justify-between align-items-center">
         <!-- Album cover -->
         <div id="player-album">
           <div class="row align-items-center">
@@ -648,15 +651,17 @@
             <div class="col-2 p-3 d-none d-xxl-block">
               <img
                 src="./assets/imgs/album/stadium arcadium.jpg"
-                width="60px"
-                height="60px"
+                width="50px"
+                height="50px"
               />
             </div>
             <!-- Canzone e Artista -->
             <div class="col-6 p-3">
-              <div class="row row-cols-1">
-                <div class="text-white text-hover">Wet Sand</div>
-                <div class="text-hover">Red Hot Chili Peppers</div>
+              <div class="row row-cols-1 fs-7">
+                <div class="text-white text-hover text-truncate">Wet Sand</div>
+                <div class="text-hover text-truncate">
+                  Red Hot Chili Peppers
+                </div>
               </div>
             </div>
             <div class="col-1 p-3">
@@ -664,10 +669,49 @@
             </div>
           </div>
         </div>
-        <!-- audio player -->
+
+        <!-- Audio player -->
         <div id="player-player"></div>
+
         <!-- Impostazioni Audio -->
-        <div id="player-options">OPTIONS</div>
+        <div id="player-options">
+          <div class="row align-items-center justify-content-end m-0">
+            <!-- Microfono -->
+            <div class="col-1">
+              <img src="./assets/imgs/icons/microphone_icon.png" width="15px" />
+            </div>
+
+            <!-- Lista -->
+            <div class="col-1">
+              <img src="./assets/imgs/icons/list_icon.svg" width="15px" />
+            </div>
+
+            <!-- Casse -->
+            <div class="col-1">
+              <img src="./assets/imgs/icons/speaker_icon.svg" width="15px" />
+            </div>
+
+            <!-- Audio -->
+            <div class="col-1 col-xl-3">
+              <div class="row align-items-center">
+                <div class="col-12 col-xl-1 mb-1">
+                  <img src="./assets/imgs/icons/volume-down_icon.svg" />
+                </div>
+                <div class="col-9">
+                  <div class="audio d-none d-xl-block"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- FullScreen -->
+            <div class="col-1">
+              <img
+                src="./assets/imgs/icons/arrows-angle-expand_icon.svg"
+                width="15px"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
 
