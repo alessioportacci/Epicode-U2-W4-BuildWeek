@@ -57,14 +57,18 @@ body
 
 #left-column
 {
-    height: 100%;
+    height: 100vh !important;
+}
+
+#left-column-content
+{
+  height: 100% !important;
 }
 
 #first-block
 {
     margin: 0px 0px 0px 0px !important;
     font-family: CircularStd-black;
-    height: 32vh !important;
 }
 
 #first-block p:hover
@@ -76,7 +80,6 @@ body
 #second-block
 {
     margin: 0px 0px 0px 0px !important;
-    height: 68vh !important;
 }
 
 #main-library
