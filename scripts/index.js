@@ -23,10 +23,10 @@ const getRemoteData = function () {
       elements.data
         .forEach((element) => {
           let newCol = document.createElement("div");
-          newCol.classList.add("col", "col-3");
+          newCol.classList.add("col", "col-3", "my-5");
           newCol.innerHTML = `
                          <div class="card h-100 bg-dark" style=";">
-                            <img src="${element.album.cover}" style="" class="card-img-top" alt="copertina">
+                            <img src="${element.album.cover}" class="card-img-top p-2" alt="copertina">
                             <div class="card-body">
                               <h5 class="card-title" id="card-title">${element.title}</h5>
                               <p class="card-text" id="card-text">${element.artist.name}</p>
