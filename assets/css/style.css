@@ -63,6 +63,7 @@ body
 #left-column-content
 {
   height: 100% !important;
+  width: 100% !important;
 }
 
 #first-block
@@ -102,7 +103,6 @@ p {
 
 #left-column-content {
   resize: horizontal !important;
-  min-width: 250px;
   max-width: 100%;
   overflow: auto;
   overflow: hidden;
@@ -174,3 +174,6 @@ p {
     cursor: pointer;
     color: white;
 }
+
+
+
