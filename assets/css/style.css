@@ -60,6 +60,11 @@ body
   font-size: 11px;
 }
 
+.m-6
+{
+  margin: 1.72rem!important;
+}
+
 /* BACKGROUNDS*/
 
 .bg-black {
