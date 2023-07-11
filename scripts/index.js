@@ -1,40 +1,42 @@
+//Mi prendo lo spinner
+const spinnerContainer = document.getElementById("spinner-container");
+
+//Mi prendo l'url per i gurppi rock
 const myUrl = "https://striveschool-api.herokuapp.com/api/deezer/search?q=rock";
 const getRemoteData = function () {
-  fetch(myUrl, {
-    headers: {
-      Authorization:
+  fetch(myUrl, 
+  {
+    headers: 
+      {
+        Authorization:
         "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGFkMWZhNWNhMTA2NTAwMTQzMWU2ZTIiLCJpYXQiOjE2ODkwNjc0MjksImV4cCI6MTY5MDI3NzAyOX0.FL8mUJf9S_KVjNoDFWB16CJ0Ik-fXXPOzyH5-oETFdw",
-      "Content-Type": "application/jason",
+        "Content-Type": "application/jason",
     },
   })
     .then((res) => {
-      console.log("Fetch finita!");
-      console.log(res);
-      if (res.ok) {
+      if (res.ok)
         return res.json();
-      } else {
+      else
         throw new Error("Errore nella chiamata");
-      }
-    })
+      })
 
     .then((elements) => {
       console.log(elements);
-      let spinnerContainer = document.getElementById("spinner-container");
-      spinnerContainer.classList.add("d-none");
+      spinnerContainer.classList.toggle("d-none");
       let row = document.getElementById("row-to-append-children");
-      elements.forEach((element) => {
+      elements.data.forEach((element) => {
         let newCol = document.createElement("div");
         newCol.classList.add("col", "col-4");
         newCol.innerHTML = `
                          <div class="card" style="width: 18rem;">
-                   <img src="${element.img}" class="card-img-top" alt="copertina">
-                   <div class="card-body">
-                     <h5 class="card-title">${element.title}</h5>
-                     <p class="card-text">${element.price}</p>
-                     <a href="#" class="btn btn-primary" id='delete-button'>Scarta</a>
-                     <a href="#" class="btn btn-primary" id='buy-now'>Compra ora</a>
-                   </div>
-                 </div>
+                            <img src="${element.album.cover}" style="object-fit: cover;" class="card-img-top" alt="copertina">
+                            <div class="card-body">
+                              <h5 class="card-title">${element.title}</h5>
+                              <p class="card-text">${element.price}</p>
+                              <a href="#" class="btn btn-primary" id='delete-button'>Scarta</a>
+                              <a href="#" class="btn btn-primary" id='buy-now'>Compra ora</a>
+                            </div>
+                          </div>
                          `;
         row.appendChild(newCol);
         const deleteButton = function () {
@@ -60,4 +62,5 @@ const getRemoteData = function () {
       console.log("Errore!", err);
     });
 };
+
 getRemoteData();
