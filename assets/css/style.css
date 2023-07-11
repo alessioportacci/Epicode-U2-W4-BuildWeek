@@ -16,6 +16,23 @@ body
     overflow-x: hidden;
 }
 
+.text-hover:hover
+{
+  color: white;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.fs-7
+{
+  font-size: 15px;
+}
+
+.fs-8
+{
+  font-size: 11px;
+}
+
 /* BACKGROUNDS*/
 
 .bg-black {
@@ -153,12 +170,7 @@ p {
     display: inline;
 }
 
-.friend-name:hover
-{
-    text-decoration: underline;
-    color: white;
-    cursor: pointer;
-}
+
 
 
 .friend-music
@@ -168,12 +180,30 @@ p {
     margin: 30px;
 }
 
-.friend-music :hover
+/* Footer */
+
+.footer-player
 {
-    text-decoration: underline;
-    cursor: pointer;
-    color: white;
+  box-shadow: 0px 0px 1px 0px #a8a8a8;
+  z-index: 5;
+} 
+
+.audio
+{
+  height: 1px;
+  border: solid white 1px;
+
 }
 
+.player-button
+{
+  background-color: white;
+  width: 25px;
+  border-radius: 100%;
+  padding-left: 6px;
+}
 
-
+.player-button-icon
+{
+  margin-bottom: 3.5px
+}
