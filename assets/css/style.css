@@ -1,3 +1,30 @@
+/* CSS Nicole */
+
+.scrolling-box {
+  display: block;
+  width: auto;
+  height: 627px;
+  padding: 1em;
+  overflow-y: scroll;
+}
+#second-block {
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar  {
+  display:none
+}
+::-webkit-scrollbar-track {
+  background-color: black;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #4d4d4d;
+}
+
+
 /* Font */
 
 @font-face {
@@ -31,6 +58,11 @@ body
 .fs-8
 {
   font-size: 11px;
+}
+
+.m-6
+{
+  margin: 1.72rem!important;
 }
 
 /* BACKGROUNDS*/
