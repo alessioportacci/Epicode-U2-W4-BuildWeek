@@ -671,7 +671,46 @@
         </div>
 
         <!-- Audio player -->
-        <div id="player-player"></div>
+        <div id="player-player">
+          <!-- pulsanti -->
+          <div class="row align-items-center justify-content-center">
+            <!-- Shuffle -->
+            <div class="col-1">
+              <img src="./assets/imgs/icons/shuffle_icon.svg" />
+            </div>
+            <!-- Indietro -->
+            <div class="col-2 col-lg-1 text-center">
+              <img src="./assets/imgs/icons/skip-start-fill_icon.svg" />
+            </div>
+            <!-- Centrale -->
+            <div class="col-1">
+              <div class="row row-cols-1 justify-content-center">
+                <div class="player-button">
+                  <img
+                    class="player-button-icon"
+                    src="./assets/imgs/icons/play-fill_icon.svg"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- Avanti -->
+            <div class="col-2 col-lg-1 text-center">
+              <img src="./assets/imgs/icons/skip-end-fill_icon.svg" />
+            </div>
+            <!-- Repeat -->
+            <div class="col-1">
+              <img src="./assets/imgs/icons/repeat_icon.svg" />
+            </div>
+          </div>
+          <!-- Player bar-->
+          <div id="player-bar">
+            <div class="row align-items-center justify-content-center">
+              <div class="col-1 fs-8 text-truncate">5:09</div>
+              <div class="col-9 m-2 audio"></div>
+              <div class="col-1 fs-8 p-0 text-truncate">5:09</div>
+            </div>
+          </div>
+        </div>
 
         <!-- Impostazioni Audio -->
         <div id="player-options">

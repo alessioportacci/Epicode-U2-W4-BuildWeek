@@ -28,6 +28,11 @@ body
   font-size: 15px;
 }
 
+.fs-8
+{
+  font-size: 11px;
+}
+
 /* BACKGROUNDS*/
 
 .bg-black {
@@ -188,4 +193,17 @@ p {
   height: 1px;
   border: solid white 1px;
 
+}
+
+.player-button
+{
+  background-color: white;
+  width: 25px;
+  border-radius: 100%;
+  padding-left: 6px;
+}
+
+.player-button-icon
+{
+  margin-bottom: 3.5px
 }
