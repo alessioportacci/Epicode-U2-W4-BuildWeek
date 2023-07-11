@@ -21,28 +21,6 @@
     <!-- Icona e titolo -->
     <link rel="icon" type="image/x-icon" href="./assets/imgs/logo.png" />
     <title>Spotify</title>
-    <style>
-      /* css scrollbar*/
-      .scrolling-box {
-        display: block;
-        width: auto;
-        height: 627px;
-        padding: 1em;
-        overflow-y: scroll;
-      }
-      * {
-        overflow-x: hidden;
-      }
-      ::-webkit-scrollbar {
-        width: 15px;
-      }
-      ::-webkit-scrollbar-track {
-        background-color: black;
-      }
-      ::-webkit-scrollbar-thumb {
-        background-color: #4d4d4d;
-      }
-    </style>
   </head>
 
   <body class="bg-spotify text-spotify-secondary">
@@ -51,7 +29,7 @@
         <!-- Colonna di sinistra -->
         <div
           id="left-column"
-          class="container-fluid p-0 d-none d-md-block lateral-column col-2 m-0"
+          class="container-fluid p-0 d-none d-md-block lateral-column col-2 m-0 sticky-top"
         >
           <section id="left-column-content">
             <!-- Blocco alto-->
@@ -360,291 +338,280 @@
         <!-- Colonna di destra -->
         <div
           id="right-column"
-          class="col-2 p-0 d-none d-lg-block lateral-column m-0 bg-black"
+          class="col-2 p-0 d-none d-lg-block lateral-column m-0 bg-black sticky-top"
         >
-          <div class="sticky-top">
-            <section id="right-column-content">
-              <!-- Attività amici -->
-              <div
-                id="activities"
-                class="row m-0 p-4 justify-content-between align-items-center text-white"
-              >
-                <div class="col-8">
-                  <p class="text-truncate">Attività&nbsp;amici</p>
-                </div>
-                <div class="text-end col-12 col-xxl-4">
-                  <img src="assets/imgs/icons/delete_icon.png" width="25px" />
-                  <img
-                    src="assets/imgs/icons/add_friends_icon.png"
-                    width="25px"
-                  />
-                </div>
+          <section id="right-column-content">
+            <!-- Attività amici -->
+            <div
+              id="activities"
+              class="row m-0 p-4 justify-content-between align-items-center text-white"
+            >
+              <div class="col-8">
+                <p class="text-truncate">Attività&nbsp;amici</p>
               </div>
-              <!-- Amichetti -->
-              <div
-                id="friends"
-                class="row row-cols-1 pt-0 p-3 text-spotify-secondary"
-              >
-                <div>
-                  <!-- Amico 1-->
-                  <div class="row row-cols-2 m-1">
-                    <!-- propic -->
-                    <div class="col-12 col-xxl-2 p-1">
-                      <img
-                        src="https://pm1.narvii.com/6286/eb429bdc7ee7472eff3ca3f30c15440265910a9d_00.jpg"
-                        class="friend-propic"
-                      />
-                    </div>
-                    <!-- Musica -->
-                    <div class="col-12 col-md-10">
-                      <div class="row">
-                        <!-- Nome -->
-                        <div>
-                          <h6 class="friend-name text-hover">
-                            Razputin Aquato
-                          </h6>
-                        </div>
-                        <!-- Canzone / artista -->
-                        <div>
-                          <p class="friend-music">
-                            <span class="friend-song text-hover"
-                              >Megalovania</span
-                            >
-                            •
-                            <span class="friend-artist text-hover"
-                              >Toby Fox</span
-                            >
-                          </p>
-                        </div>
-                        <!-- Album -->
-                        <div>
-                          <p class="friend-music text-hover">
-                            <img
-                              src="assets/imgs/icons/vinyl_icon.svg"
-                              width="10px"
-                            />
-                            <span class="friend-artist text-hover"
-                              >UNDERTALE Soundtrack</span
-                            >
-                          </p>
-                        </div>
+              <div class="text-end col-12 col-xxl-4">
+                <img src="assets/imgs/icons/delete_icon.png" width="25px" />
+                <img
+                  src="assets/imgs/icons/add_friends_icon.png"
+                  width="25px"
+                />
+              </div>
+            </div>
+            <!-- Amichetti -->
+            <div
+              id="friends"
+              class="row row-cols-1 pt-0 p-3 text-spotify-secondary"
+            >
+              <div>
+                <!-- Amico 1-->
+                <div class="row row-cols-2 m-1">
+                  <!-- propic -->
+                  <div class="col-12 col-xxl-2 p-1">
+                    <img
+                      src="https://pm1.narvii.com/6286/eb429bdc7ee7472eff3ca3f30c15440265910a9d_00.jpg"
+                      class="friend-propic"
+                    />
+                  </div>
+                  <!-- Musica -->
+                  <div class="col-12 col-md-10">
+                    <div class="row">
+                      <!-- Nome -->
+                      <div>
+                        <h6 class="friend-name text-hover">Razputin Aquato</h6>
+                      </div>
+                      <!-- Canzone / artista -->
+                      <div>
+                        <p class="friend-music">
+                          <span class="friend-song text-hover"
+                            >Megalovania</span
+                          >
+                          •
+                          <span class="friend-artist text-hover">Toby Fox</span>
+                        </p>
+                      </div>
+                      <!-- Album -->
+                      <div>
+                        <p class="friend-music text-hover">
+                          <img
+                            src="assets/imgs/icons/vinyl_icon.svg"
+                            width="10px"
+                          />
+                          <span class="friend-artist text-hover"
+                            >UNDERTALE Soundtrack</span
+                          >
+                        </p>
                       </div>
                     </div>
                   </div>
-                  <!-- Amico 2-->
-                  <div class="row m-1 mt-4">
-                    <!-- propic -->
-                    <div class="col-12 col-xxl-2 p-1">
-                      <img
-                        src="https://pbs.twimg.com/profile_images/1637821718705086464/6iTRB6_c_400x400.png"
-                        class="friend-propic"
-                      />
-                    </div>
-                    <!-- Musica -->
-                    <div class="col-12 col-md-10">
-                      <div class="row">
-                        <!-- Nome -->
-                        <div>
-                          <h6 class="friend-name text-hover">Mario Mario</h6>
-                        </div>
-                        <!-- Canzone / artista -->
-                        <div>
-                          <p class="friend-music">
-                            <span class="friend-song text-hover"
-                              >Disasterpiece</span
-                            >
-                            •
-                            <span class="friend-artist text-hover"
-                              >Slipknot</span
-                            >
-                          </p>
-                        </div>
-                        <!-- Album -->
-                        <div>
-                          <p class="friend-music">
-                            <img
-                              src="assets/imgs/icons/vinyl_icon.svg"
-                              width="10px"
-                            />
-                            <span class="friend-artist text-hover">Iowa</span>
-                          </p>
-                        </div>
+                </div>
+                <!-- Amico 2-->
+                <div class="row m-1 mt-4">
+                  <!-- propic -->
+                  <div class="col-12 col-xxl-2 p-1">
+                    <img
+                      src="https://pbs.twimg.com/profile_images/1637821718705086464/6iTRB6_c_400x400.png"
+                      class="friend-propic"
+                    />
+                  </div>
+                  <!-- Musica -->
+                  <div class="col-12 col-md-10">
+                    <div class="row">
+                      <!-- Nome -->
+                      <div>
+                        <h6 class="friend-name text-hover">Mario Mario</h6>
+                      </div>
+                      <!-- Canzone / artista -->
+                      <div>
+                        <p class="friend-music">
+                          <span class="friend-song text-hover"
+                            >Disasterpiece</span
+                          >
+                          •
+                          <span class="friend-artist text-hover">Slipknot</span>
+                        </p>
+                      </div>
+                      <!-- Album -->
+                      <div>
+                        <p class="friend-music">
+                          <img
+                            src="assets/imgs/icons/vinyl_icon.svg"
+                            width="10px"
+                          />
+                          <span class="friend-artist text-hover">Iowa</span>
+                        </p>
                       </div>
                     </div>
                   </div>
-                  <!-- Amico 3-->
-                  <div class="row m-1 mt-4">
-                    <!-- propic -->
-                    <div class="col-12 col-xxl-2 p-1">
-                      <img
-                        src="https://i1.sndcdn.com/avatars-oq1XjQtIKXa4C3J5-vIsUtQ-t500x500.jpg"
-                        class="friend-propic"
-                      />
-                    </div>
-                    <!-- Musica -->
-                    <div class="col-12 col-md-10">
-                      <div class="row">
-                        <!-- Nome -->
-                        <div>
-                          <h6 class="friend-name text-hover">Jotaro Kujo</h6>
-                        </div>
-                        <!-- Canzone / artista -->
-                        <div>
-                          <p class="friend-music">
-                            <span class="friend-song text-hover"
-                              >Girls just wanna have fun</span
-                            >
-                            •
-                            <span class="friend-artist text-hover"
-                              >Cindy Lauper</span
-                            >
-                          </p>
-                        </div>
-                        <!-- Album -->
-                        <div>
-                          <p class="friend-music text-hover">
-                            <img
-                              src="assets/imgs/icons/vinyl_icon.svg"
-                              width="10px"
-                            />
-                            <span class="friend-artist">She's So Unusual</span>
-                          </p>
-                        </div>
+                </div>
+                <!-- Amico 3-->
+                <div class="row m-1 mt-4">
+                  <!-- propic -->
+                  <div class="col-12 col-xxl-2 p-1">
+                    <img
+                      src="https://i1.sndcdn.com/avatars-oq1XjQtIKXa4C3J5-vIsUtQ-t500x500.jpg"
+                      class="friend-propic"
+                    />
+                  </div>
+                  <!-- Musica -->
+                  <div class="col-12 col-md-10">
+                    <div class="row">
+                      <!-- Nome -->
+                      <div>
+                        <h6 class="friend-name text-hover">Jotaro Kujo</h6>
+                      </div>
+                      <!-- Canzone / artista -->
+                      <div>
+                        <p class="friend-music">
+                          <span class="friend-song text-hover"
+                            >Girls just wanna have fun</span
+                          >
+                          •
+                          <span class="friend-artist text-hover"
+                            >Cindy Lauper</span
+                          >
+                        </p>
+                      </div>
+                      <!-- Album -->
+                      <div>
+                        <p class="friend-music text-hover">
+                          <img
+                            src="assets/imgs/icons/vinyl_icon.svg"
+                            width="10px"
+                          />
+                          <span class="friend-artist">She's So Unusual</span>
+                        </p>
                       </div>
                     </div>
                   </div>
-                  <!-- Amico 4-->
-                  <div class="row m-1 mt-4">
-                    <!-- propic -->
-                    <div class="col-12 col-xxl-2 p-1">
-                      <img
-                        src="https://www.ansa.it/crop/crop.php?file=https://www.ansa.it/webimages/cl_1100x/2023/5/17/7b28ad5c5d29e1c8d264d11ac8bc1ae7.jpg&w=1100&h=600&face=Detection&c=u2yNGi7_GmgfDtTeZANxRw"
-                        class="friend-propic"
-                      />
-                    </div>
-                    <!-- Musica -->
-                    <div class="col-12 col-md-10">
-                      <div class="row">
-                        <!-- Nome -->
-                        <div>
-                          <h6 class="friend-name text-hover">Johnny Depp</h6>
-                        </div>
-                        <!-- Canzone / artista -->
-                        <div>
-                          <p class="friend-music text-hover">
-                            <span class="friend-song text-hover"
-                              >Bootstra's Bootstraps</span
-                            >
-                            •
-                            <span class="friend-artist text-hover"
-                              >Klaus Badelt</span
-                            >
-                          </p>
-                        </div>
-                        <!-- Album -->
-                        <div>
-                          <p class="friend-music text-hover">
-                            <img
-                              src="assets/imgs/icons/vinyl_icon.svg"
-                              width="10px"
-                            />
-                            <span class="friend-artist"
-                              >Pirates of the caribbean Original
-                              Soundtrack</span
-                            >
-                          </p>
-                        </div>
+                </div>
+                <!-- Amico 4-->
+                <div class="row m-1 mt-4">
+                  <!-- propic -->
+                  <div class="col-12 col-xxl-2 p-1">
+                    <img
+                      src="https://www.ansa.it/crop/crop.php?file=https://www.ansa.it/webimages/cl_1100x/2023/5/17/7b28ad5c5d29e1c8d264d11ac8bc1ae7.jpg&w=1100&h=600&face=Detection&c=u2yNGi7_GmgfDtTeZANxRw"
+                      class="friend-propic"
+                    />
+                  </div>
+                  <!-- Musica -->
+                  <div class="col-12 col-md-10">
+                    <div class="row">
+                      <!-- Nome -->
+                      <div>
+                        <h6 class="friend-name text-hover">Johnny Depp</h6>
+                      </div>
+                      <!-- Canzone / artista -->
+                      <div>
+                        <p class="friend-music text-hover">
+                          <span class="friend-song text-hover"
+                            >Bootstra's Bootstraps</span
+                          >
+                          •
+                          <span class="friend-artist text-hover"
+                            >Klaus Badelt</span
+                          >
+                        </p>
+                      </div>
+                      <!-- Album -->
+                      <div>
+                        <p class="friend-music text-hover">
+                          <img
+                            src="assets/imgs/icons/vinyl_icon.svg"
+                            width="10px"
+                          />
+                          <span class="friend-artist"
+                            >Pirates of the caribbean Original Soundtrack</span
+                          >
+                        </p>
                       </div>
                     </div>
                   </div>
-                  <!-- Amico 5-->
-                  <div class="row m-1 mt-4">
-                    <!-- propic -->
-                    <div class="col-12 col-xxl-2 p-1">
-                      <img
-                        src="https://cdn.vox-cdn.com/thumbor/HOWiq29vUhGGTVTcjNqMA7refT4=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/23249598/mgid_arc_imageassetref_comedycentral.jpeg"
-                        class="friend-propic"
-                      />
-                    </div>
-                    <!-- Musica -->
-                    <div class="col-12 col-md-10">
-                      <div class="row">
-                        <!-- Nome -->
-                        <div>
-                          <h6 class="friend-name text-hover">Bender</h6>
-                        </div>
-                        <!-- Canzone / artista -->
-                        <div>
-                          <p class="friend-music">
-                            <span class="friend-song text-hover"
-                              >Bangarang (feat. Sirah)</span
-                            >
-                            •
-                            <span class="friend-artist text-hover"
-                              >Skrillex</span
-                            >
-                          </p>
-                        </div>
-                        <!-- Album -->
-                        <div>
-                          <p class="friend-music text-hover">
-                            <img
-                              src="assets/imgs/icons/vinyl_icon.svg"
-                              width="10px"
-                            />
-                            <span class="friend-artist">Bangarang EP</span>
-                          </p>
-                        </div>
+                </div>
+                <!-- Amico 5-->
+                <div class="row m-1 mt-4">
+                  <!-- propic -->
+                  <div class="col-12 col-xxl-2 p-1">
+                    <img
+                      src="https://cdn.vox-cdn.com/thumbor/HOWiq29vUhGGTVTcjNqMA7refT4=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/23249598/mgid_arc_imageassetref_comedycentral.jpeg"
+                      class="friend-propic"
+                    />
+                  </div>
+                  <!-- Musica -->
+                  <div class="col-12 col-md-10">
+                    <div class="row">
+                      <!-- Nome -->
+                      <div>
+                        <h6 class="friend-name text-hover">Bender</h6>
+                      </div>
+                      <!-- Canzone / artista -->
+                      <div>
+                        <p class="friend-music">
+                          <span class="friend-song text-hover"
+                            >Bangarang (feat. Sirah)</span
+                          >
+                          •
+                          <span class="friend-artist text-hover">Skrillex</span>
+                        </p>
+                      </div>
+                      <!-- Album -->
+                      <div>
+                        <p class="friend-music text-hover">
+                          <img
+                            src="assets/imgs/icons/vinyl_icon.svg"
+                            width="10px"
+                          />
+                          <span class="friend-artist">Bangarang EP</span>
+                        </p>
                       </div>
                     </div>
                   </div>
-                  <!-- Amico 6 -->
-                  <div class="row m-1 mt-4">
-                    <!-- propic -->
-                    <div class="col-12 col-xxl-2 p-1">
-                      <img
-                        src="https://lamedicinaestetica.files.wordpress.com/2017/02/medicina-online-tafazzi-trio-aldo-giovanni-e-giacomo-masochista-sospensorio-tafazzina-dna-gene-tafazzismo.jpg"
-                        class="friend-propic"
-                      />
-                    </div>
-                    <!-- Musica -->
-                    <div class="col-12 col-md-10">
-                      <div class="row">
-                        <!-- Nome -->
-                        <div>
-                          <h6 class="friend-name text-hover">Tafazi</h6>
-                        </div>
-                        <!-- Canzone / artista -->
-                        <div>
-                          <p class="friend-music">
-                            <span class="friend-song text-hover"
-                              >The four Seasons</span
-                            >
-                            •
-                            <span class="friend-artist text-hover"
-                              >Antonio Vivaldi</span
-                            >
-                          </p>
-                        </div>
-                        <!-- Album -->
-                        <div>
-                          <p class="friend-music text-hover">
-                            <img
-                              src="assets/imgs/icons/vinyl_icon.svg"
-                              width="10px"
-                            />
-                            <span class="friend-artist text-truncate"
-                              >The Four Seasons</span
-                            >
-                          </p>
-                        </div>
+                </div>
+                <!-- Amico 6 -->
+                <div class="row m-1 mt-4">
+                  <!-- propic -->
+                  <div class="col-12 col-xxl-2 p-1">
+                    <img
+                      src="https://lamedicinaestetica.files.wordpress.com/2017/02/medicina-online-tafazzi-trio-aldo-giovanni-e-giacomo-masochista-sospensorio-tafazzina-dna-gene-tafazzismo.jpg"
+                      class="friend-propic"
+                    />
+                  </div>
+                  <!-- Musica -->
+                  <div class="col-12 col-md-10">
+                    <div class="row">
+                      <!-- Nome -->
+                      <div>
+                        <h6 class="friend-name text-hover">Tafazi</h6>
+                      </div>
+                      <!-- Canzone / artista -->
+                      <div>
+                        <p class="friend-music">
+                          <span class="friend-song text-hover"
+                            >The four Seasons</span
+                          >
+                          •
+                          <span class="friend-artist text-hover"
+                            >Antonio Vivaldi</span
+                          >
+                        </p>
+                      </div>
+                      <!-- Album -->
+                      <div>
+                        <p class="friend-music text-hover">
+                          <img
+                            src="assets/imgs/icons/vinyl_icon.svg"
+                            width="10px"
+                          />
+                          <span class="friend-artist text-truncate"
+                            >The Four Seasons</span
+                          >
+                        </p>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </section>
-          </div>
+            </div>
+          </section>
         </div>
       </div>
     </main>
