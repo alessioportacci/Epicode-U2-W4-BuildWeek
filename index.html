@@ -615,6 +615,16 @@
           </div>
         </div>
       </div>
+      <!-- Provo a generare degli album dinamicamente.. -->
+      <div class="container mt-4">
+        <div class="row" id="row-to-append-children"></div>
+      </div>
+      <div class="d-flex justify-content-center" id="spinner-container">
+        <div class="spinner-border text-success" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+      <!-- Fine prova -->
     </main>
 
     <footer id="footer" class="fixed-bottom bg-spotify-player">
@@ -625,24 +635,26 @@
             <div></div>
           </div>
         </div>
-        <!-- audio player -->
-        <div id="player-player">
+        <!-- audio player (commento un attimo il player)-->
+        <!-- <div id="player-player">
           <audio controls>
             <source src="horse.ogg" type="audio/ogg" />
             <source src="horse.mp3" type="audio/mpeg" />
             Your browser does not support the audio element.
           </audio>
-        </div>
+        </div> -->
 
         <div id="player-options">OPTIONS</div>
       </div>
     </footer>
 
     <!-- Bootstrap 5 -->
+
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossodigin="anonymous"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
     ></script>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>
