@@ -23,15 +23,17 @@ const getRemoteData = function () {
       elements.data.forEach((element) => {
         let newCol = document.createElement("div");
         newCol.classList.add("col", "col-3", "my-5");
-        newCol.innerHTML = `<div class="card h-100 bg-dark bg-light-subtle-hover my-cards">
+        newCol.innerHTML = `<div class="bg-spotify-card spotify-card"> 
+        <div class="card h-100 bg-card bg-light-subtle-hover my-cards">
         <div class="p-2 d-flex">
-                              <img src="${element.album.cover}" class="card-img-top position-relative" alt="copertina">
+                              <img src="${element.album.cover_big}" class="card-img-top position-relative" alt="copertina">
                               <img src="../assets/imgs/logo.png" class="position-absolute">
                               </div>
                               <div class="card-body">
-                                <h5 class="card-title album-redirect text-hover" id="card-title" value="${element.album.id}">${element.title}</h5>
-                                <p class="card-text artist-redirect text-hover" id="card-text" value="${element.artist.id}">${element.artist.name}</p>
+                                <h5 class="card-title album-redirect text-hover text-truncate" id="card-title" value="${element.album.id}">${element.title}</h5>
+                                <p class="card-text artist-redirect text-hover text-truncate" id="card-text" value="${element.artist.id}">${element.artist.name}</p>
                               </div>
+                            </div>
                             </div>`;
         row.appendChild(newCol);
       });
