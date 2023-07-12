@@ -26,7 +26,7 @@ const getRemoteData = function () {
         newCol.innerHTML = `<div class="card h-100 bg-dark" style=";">
                               <img src="${element.album.cover}" class="card-img-top p-2" alt="copertina">
                               <div class="card-body">
-                                <h5 class="card-title album-redirect" id="card-title" value="${element.album.id}">${element.title}</h5>
+                                <h5 class="card-title album-redirect text-hover" id="card-title" value="${element.album.id}">${element.title}</h5>
                                 <p class="card-text artist-redirect text-hover" id="card-text" value="${element.artist.id}">${element.artist.name}</p>
                               </div>
                             </div>`;
