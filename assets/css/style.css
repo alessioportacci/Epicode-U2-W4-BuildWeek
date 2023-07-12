@@ -23,7 +23,59 @@
 ::-webkit-scrollbar-thumb {
   background-color: #4d4d4d;
 }
+/*css bottone proflo*/
+#profilo {
+  -webkit-tap-highlight-color: transparent;
 
+  background-color: rgba(0, 0, 0, 0.54);
+  color: #ffffff;
+  display: flex;
+  border-radius: 500px;
+}
+/*Delete scrollbar*/
+* {
+  overflow-y: hidden;
+}
+/*css album*/
+
+#main-a {
+  border-radius: 10px;
+
+  display: flex;
+
+  background: #000000;
+  background: -moz-linear-gradient(
+    45deg,
+    #000000 0%,
+    #171717 50%,
+    #2e2e2e 100%
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    #000000 0%,
+    #171717 50%,
+    #2e2e2e 100%
+  );
+  background: linear-gradient(
+    45deg,
+    #000000 0%,
+    #171717 50%,
+    #2e2e2e 100%
+  );
+  border-radius: 3px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-direction: reverse;
+}
+/*css img first*/
+#imgAlbum {
+  width: 20%;
+}
+.card {
+  background-color: rgba(112, 112, 112, 0.393);
+  color: #ffffff;
+}
 
 /* Font */
 
