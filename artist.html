@@ -60,7 +60,7 @@
               <div>
                 <!--Icona Home -->
                 <div id="home-icon" class="m-1 mb-2">
-                  <div class="row row-cols-2">
+                  <div class="row row-cols-2 home-nav">
                     <!-- Icona -->
                     <div class="col-2">
                       <svg
@@ -309,7 +309,7 @@
         </div>
 
         <!-- Colonna centrale -->
-        <div class="col-12 col-md-10 col-lg-8 p-0">
+        <div class="col-12 col-md-10 col-lg-8 p-0" style="height: 100vh">
           <section>
             <!-- Header Artista -->
             <div class="card bg-dark text-white top-artist">
@@ -359,7 +359,9 @@
                   />
                 </button>
                 <!-- Follower -->
-                <button class="btn-follower p-1 m-3">Following</button>
+                <button class="btn-follower p-1 m-3 text-hover">
+                  Following
+                </button>
                 <!-- Tre puntini -->
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -382,7 +384,7 @@
                 <!-- Scritta popolari -->
                 <div class="row mb-3">
                   <div>
-                    <h5>Popolari</h5>
+                    <h5 class="text-hover">Popolari</h5>
                   </div>
                 </div>
                 <!-- Brani popolari -->
@@ -401,19 +403,70 @@
                 <!-- Visualizza altro -->
                 <div class="row mb-3">
                   <div>
-                    <h5>Visualizza altro</h5>
+                    <h5 class="text-hover text-mono fs-7">VISUALIZZA ALTRO</h5>
                   </div>
                 </div>
               </div>
 
               <!-- Che ti piacciono -->
-              <div class="col-12 col-md-4">
+              <div class="col-12 col-md-4 order-first order-md-last">
                 <!-- Scritta Brani che ti piacciono -->
                 <div class="row row-cols-1 mb-3">
                   <div>
                     <h5>Brani che ti piacciono</h5>
                   </div>
+                  <!-- Spinner -->
+                  <div
+                    class="d-flex justify-content-center align-items-center mt-5 pt-5"
+                    id="spinner-container-liked"
+                  >
+                    <div class="spinner-border text-success" role="status">
+                      <span class="visually-hidden">Loading...</span>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center align-items-center">
+                    <div class="col-12 col-md-1 p-0 m-1" style="width: 40px">
+                      <img
+                        class="liked-artist-image rounded-circle"
+                        src=""
+                        width="50px"
+                      />
+                    </div>
+                    <div class="col-10">
+                      <div class="row row-cols-1">
+                        <div class="number-of-likes fs-7 fw-bold"></div>
+                        <div
+                          class="liked-artist fs-8 text-spotify-secondary"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
+            </div>
+
+            <!-- Discografia -->
+            <div class="row text-white m-1 m-md-3">
+              <!-- Scritta Discografia -->
+              <div>
+                <div class="row mb-3">
+                  <div>
+                    <h5 class="text-hover">Discografia</h5>
+                  </div>
+                </div>
+              </div>
+              <!-- Discografia -->
+              <div class="col-12">
+                <!-- Spinner -->
+                <div
+                  class="d-flex justify-content-center align-items-center mt-5 pt-5"
+                  id="spinner-container-discography"
+                >
+                  <div class="spinner-border text-success" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                </div>
+                <div class="row discography"></div>
               </div>
             </div>
           </section>
@@ -855,7 +908,7 @@
           <!-- Home -->
           <div class="col-3">
             <div
-              class="row row-cols-1 align-items-center justify-content-center"
+              class="row row-cols-1 align-items-center justify-content-center home-nav"
             >
               <div class="text-center">
                 <svg
@@ -935,5 +988,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="./scripts/artist.js"></script>
+    <script src="./scripts/script.js"></script>
   </body>
 </html>
