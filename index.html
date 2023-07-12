@@ -32,6 +32,7 @@
           class="container-fluid p-0 d-none d-md-block lateral-column col-2 m-0 sticky-top"
         >
           <section id="left-column-content">
+          <section id="left-column-content" class="position-relative">
             <!-- Blocco alto-->
             <div
               id="first-block"
@@ -200,13 +201,22 @@
             </div>
             <!-- Blocco basso -->
             <div id="second-block" class="bg-black" style="height: 100%">
+            <div id="second-block" class="bg-black" style="height: 100%">
               <!-- Libreria Main -->
+              <div
+                id="main-library"
+                class="row row-cols-1 text-spotify-secondary"
+              >
               <div
                 id="main-library"
                 class="row row-cols-1 text-spotify-secondary"
               >
                 <div id="library-main">
                   <div class="ms-4 my-2">
+                    <ul
+                      id="playlist-library"
+                      class="text-truncate scrolling-box"
+                    >
                     <ul
                       id="playlist-library"
                       class="text-truncate scrolling-box"
@@ -301,6 +311,8 @@
                       <li class="text-truncate">Caparezza</li>
                       <li class="text-truncate">Suspense</li>
                     </ul>
+                  <!-- </div> -->
+                </div>
                   </div>
                 </div>
               </div>
@@ -315,11 +327,45 @@
           <section>
             <div class="row row-cols-3"></div>
             <!-- Barra in alto -->
+
             <div class="row row-cols-2 justify-content-between">
-              <!-- Freccette-->
-              <div><img src="" alt="" /><img src="" alt="" /></div>
-              <!-- Amici e profilo -->
-              <div><img src="" alt="" /><img src="" alt="" /></div>
+              <div>
+                <!--Freccette-->
+                <a href="#"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-chevron-left text-white rounded-circle"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+                    />
+                  </svg>
+                </a>
+                <a href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-chevron-right text-white rounded-circle"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <!--Profilo-->
+              <div class="d-flex justify-content-end">
+                <button id="profilo" class="btn btn-dark m-2">Suspense</button>
+              </div>
             </div>
             <!-- Card annunci -->
             <div></div>
@@ -333,6 +379,155 @@
             <div class="d-flex justify-content-center" id="spinner-container">
               <div class="spinner-border text-success" role="status">
                 <span class="visually-hidden">Loading...</span>
+            <!--Main-->
+            <main
+              id="main-a"
+              class="d-flex justify-content-start align-items-center m-4"
+            >
+              <img
+                src="assets/imgs/main/image-15.jpg"
+                alt="album"
+                id="imgAlbum"
+                class="mx-3 my-4 p-2"
+              />
+              <div>
+                <h6>ALBUM</h6>
+                <h1>SONG NAME</h1>
+                <p>Artista</p>
+                <p>Ascolta il nuovo singolo di ... e ...</p>
+                <!--Bottoni-->
+                <div>
+                  <button
+                    type="button"
+                    class="btn btn-success text-dark rounded-pill fw-bold px-4 m-1 mt-3 me-3"
+                  >
+                    Play
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-outline-light rounded-pill fw-bold px-4 m-1 mt-3"
+                  >
+                    Salva
+                  </button>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-three-dots mx-3"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </main>
+
+            <!-- Home buonasera -->
+            <div
+              class="row row-cols-2 row-cols-md-1 d-flex justify-content-center"
+              style="margin-right: auto; margin-left: auto"
+            >
+              <!--Titolo-->
+              <h2 class="mx-4 mb-4 text-white">Laku noc</h2>
+              <!--Cards-->
+              <div class="card mb-3 mx-3 p-0" style="max-width: 305px">
+                <div class="row g-0">
+                  <div class="col-md-2">
+                    <img
+                      src="assets/imgs/main/image-5.jpg"
+                      class="img-fluid rounded-start"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h6 class="card-title m-1">Lofi Beats</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-3 mx-3 p-0" style="max-width: 306px">
+                <div class="row g-0">
+                  <div class="col-md-2">
+                    <img
+                      src="assets/imgs/main/image-3.jpg"
+                      class="img-fluid rounded-start"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h6 class="card-title m-1">Max Concentrazione</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-3 mx-3 p-0" style="max-width: 306px">
+                <div class="row g-0">
+                  <div class="col-md-2">
+                    <img
+                      src="assets/imgs/main/image-6.jpg"
+                      class="img-fluid rounded-start"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h6 class="card-title m-1">Jazz Vibes</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-3 mx-3 p-0" style="max-width: 306px">
+                <div class="row g-0">
+                  <div class="col-md-2">
+                    <img
+                      src="assets/imgs/icons/brani_che_ti_piacciono_icon.jpg"
+                      class="img-fluid rounded-start"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h6 class="card-title m-1">Brani che ti piacciono</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-3 mx-3 p-0" style="max-width: 306px">
+                <div class="row g-0">
+                  <div class="col-md-2">
+                    <img
+                      src="assets/imgs/main/image-18.jpg"
+                      class="img-fluid rounded-start"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h6 class="card-title m-1">Estate 2022</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-3 mx-3 p-0" style="max-width: 306px">
+                <div class="row g-0">
+                  <div class="col-md-2">
+                    <img
+                      src="assets/imgs/main/image-4.jpg"
+                      class="img-fluid rounded-start"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h6 class="card-title m-1">Peaceful Piano</h6>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
@@ -618,6 +813,22 @@
         </div>
       </div>
     </main>
+
+    <footer id="footer" class="fixed-bottom bg-spotify-player">
+      <div class="row row-cols-3 d-flex justify-between">
+        <div id="player-album">ALBUM COVER</div>
+        <div id="player-player">PLAYER</div>
+        <div id="player-options">OPTIONS</div>
+      </div>
+    </footer>
+
+    <footer id="footer" class="fixed-bottom bg-spotify-player">
+      <div class="row row-cols-3 d-flex justify-between">
+        <div id="player-album">ALBUM COVER</div>
+        <div id="player-player">PLAYER</div>
+        <div id="player-options">OPTIONS</div>
+      </div>
+    </footer>
 
     <div class="m-6">&nbsp;</div>
 
