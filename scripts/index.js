@@ -35,22 +35,6 @@ const getRemoteData = function () {
                          `;
           row.appendChild(newCol);
         })
-        // const deleteButton = function () {
-        //   const dButton = document.getElementById("delete-button");
-        //   newCol.classList.add("d-none");
-        // }
-        // const buyMovies = function () {
-        //   const buyButton = document.getElementById("buy-now");
-        //   const getUl = document.querySelector("ul");
-        //   const newLi = document.createElement("li");
-        //   newLi.innerHTML = `<h4>${element.title}</h4>
-        //             <p>${element.price}</p>`;
-        //   getUl.appendChild(newLi);
-        //   localStorage.setItem("Elementi nel carrello", element.title);
-        // };
-
-        // newCol.addEventListener("click", deleteButton);
-        // newCol.addEventListener("click", buyMovies);
 
         .catch((err) => {
           console.log("Errore!", err);
