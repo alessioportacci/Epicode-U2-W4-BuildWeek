@@ -15,6 +15,7 @@
 
     <!-- Riferimenti CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/album.css" />
     <link rel="stylesheet" href="assets/css/index.css" />
     <link rel="stylesheet" href="assets/css/textAnimation.css" />
 
@@ -309,29 +310,79 @@
           </div>
            
           <!--Colonna centrale album-->
-        <div class="col-12 col-md-8">
+        <div class="col-12 col-md-8 p-0">
           <section>
             <div class="row row-cols-3"></div>
             <!-- Barra in alto -->
             <div class="row row-cols-2 justify-content-between">
               <!-- Freccette-->
-              <div><img src="" alt="" /><img src="" alt="" /></div>
-              <!-- Amici e profilo -->
-              <div><img src="" alt="" /><img src="" alt="" /></div>
+              <div>                
+                <a href="#"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-chevron-left text-white rounded-circle"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+                  />
+                </svg>
+              </a>
+              <a href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-chevron-left text-white rounded-circle"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                  />
+                </svg>
+              </a>
             </div>
-            <!-- Card album -->
-            <div></div>
+            <!--Profilo-->
+            <div class="d-flex justify-content-end">
+              <button id="profilo" class="btn btn-dark m-2">Suspense</button>
+            </div>
+          </div>
+          <!--Main Album-->
+          <main
+              id="main-b"
+              class="d-flex justify-content-start align-items-center"
+            >
+              <img
+                src="assets/imgs/main/image-18.jpg"
+                alt="album"
+                id="imgAlbum"
+                class="mx-3 my-4 p-2"
+              />
+              <div>
+                <h7>ALBUM</h7>
+                <h1>ALBUM NAME</h1>
+                <p>Artista  •  Anno uscita album  •  N. brani , durata </p>
+              </div>
+            
+            </main>
             <!-- Main Home -->
             <div class="row row-cols-2 row-cols-md-1"></div>
             <!-- Canzoni album-->
-            
-            <div class="d-flex justify-content-center" id="spinner-container">
+            <div class="row row-cols-2 row-cols-md-1"></div>
+            <!--<div class="d-flex justify-content-center" id="spinner-container">
               <div class="spinner-border text-success" role="status">
                 <span class="visually-hidden">Loading...</span>
               </div>
-            </div>
+            </div>-->
           </section>
         </div>
+      
           <!--Fine colonna centrale-->
 
           <!-- Colonna di destra -->

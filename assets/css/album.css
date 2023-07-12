@@ -1,0 +1,17 @@
+/*Css gabriele*/
+#main-b {
+    border-radius: 10px;
+  
+    display: flex;
+  
+    background: #FFF32F;
+    background: -moz-linear-gradient(top, #FFF32F 0%, #FF7100 50%, #C525B9 100%);
+    background: -webkit-linear-gradient(top, #FFF32F 0%, #FF7100 50%, #C525B9 100%);
+    background: linear-gradient(to bottom, #FFF32F 0%, #FF7100 50%, #C525B9 100%);
+
+    border-radius: 3px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: reverse;
+  }
