@@ -320,10 +320,10 @@
           <section>
             <div class="row row-cols-3"></div>
             <!-- Barra in alto -->
-            <div class="row row-cols-2 justify-content-between">
+            <div class="row row-cols-2 justify-content-between mt-1 me-2 ms-1">
               <div>
                 <!--Freccette-->
-                <a href="#"
+                <a href="#" class="arrow-link"
                   ><svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -338,7 +338,7 @@
                     />
                   </svg>
                 </a>
-                <a href="#">
+                <a href="#" class="arrow-link">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -811,9 +811,9 @@
       id="footer"
       class="d-none d-md-block footer-player fixed-bottom bg-spotify-player"
     >
-      <div class="row row-cols-3 d-flex justify-between align-items-center">
+      <div class="row d-flex justify-between align-items-center">
         <!-- Album cover -->
-        <div id="player-album">
+        <div id="player-album" class="col-4">
           <div class="row align-items-center">
             <!-- Immagine -->
             <div class="col-2 p-3 d-none d-xxl-block">
@@ -840,7 +840,7 @@
         </div>
 
         <!-- Audio player -->
-        <div id="player-player">
+        <div id="player-player" class="col-8 col-xl-4">
           <!-- pulsanti -->
           <div class="row align-items-center justify-content-center">
             <!-- Shuffle -->
@@ -882,7 +882,7 @@
         </div>
 
         <!-- Impostazioni Audio -->
-        <div id="player-options">
+        <div id="player-options" class="col-4 d-none d-xl-block">
           <div class="row align-items-center justify-content-end m-0">
             <!-- Microfono -->
             <div class="col-1">
@@ -901,12 +901,15 @@
 
             <!-- Audio -->
             <div class="col-1 col-xl-3">
-              <div class="row align-items-center">
-                <div class="col-12 col-xl-1 mb-1">
-                  <img src="./assets/imgs/icons/volume-down_icon.svg" />
+              <div class="row">
+                <div class="col-xl-1 mb-1">
+                  <img
+                    src="./assets/imgs/icons/volume-down_icon.svg"
+                    style="color: white"
+                  />
                 </div>
                 <div class="col-9">
-                  <div class="audio d-none d-xl-block"></div>
+                  <input type="range" id="slider" />
                 </div>
               </div>
             </div>
@@ -922,7 +925,6 @@
         </div>
       </div>
     </footer>
-
     <!-- Footer mobile -->
     <footer
       id="footer-mobile"
