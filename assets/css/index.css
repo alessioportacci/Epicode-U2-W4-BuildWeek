@@ -8,3 +8,9 @@
 #card-text {
   font-size: 0.5em;
 }
+.my-cards {
+  border-radius: 6%;
+}
+.card-img-top {
+  border-radius: 6%;
+}

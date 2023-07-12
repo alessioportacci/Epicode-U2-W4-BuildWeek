@@ -223,7 +223,6 @@ p {
 }
 
 #left-column-content {
-  resize: horizontal !important;
   max-width: 100%;
   overflow: auto;
   overflow: hidden;
