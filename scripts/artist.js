@@ -83,7 +83,7 @@ const loadDiscography = function(discographyURL)
                 card.classList.add("col-6", "col-md-3", "my-3", "p-5", "p-md-1","h-100",)
                 card.innerHTML = `<div class="bg-spotify-card"> 
                                     <div class="card h-100">
-                                        <img src="${album.cover}" class="card-img-top p-2" alt="copertina">
+                                        <img src="${album.cover_big}" class="card-img-top p-2" alt="copertina">
                                         <div class="card-body">
                                         <h5 class="card-title album-redirect text-hover text-truncate" id="card-title" value="${album.id}">${album.title}</h5>
                                         <p class="card-text artist-redirect text-hover  text-truncate" id="card-text" value="${artistId}">${artistName}</p>
@@ -95,6 +95,19 @@ const loadDiscography = function(discographyURL)
             })
           })
     
+          .then(() => {
+                // Percorso per arrivare alla pagina dell'artista tramite l'id
+                document.querySelectorAll(".artist-redirect").forEach((title) =>
+                title.addEventListener("click", function () {
+                    location.href = "artist.html" + "?id=" + title.getAttribute("value");
+                }));
+                // Percorso per arrivare alla pagina album tramite l'id
+                document.querySelectorAll(".album-redirect").forEach((title) =>
+                title.addEventListener("click", function () {
+                    location.href = "album.html" + "?id=" + title.getAttribute("value");
+                }));                
+          } )
+
           .catch((err) => {
           console.log("Errore!", err);
           });

@@ -31,3 +31,16 @@
     display: flex;
     flex-direction: reverse;
   }
+
+  #cuore:hover,
+  #cuore:focus {
+    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+ }
+  #dow:hover,
+  #dow:focus {
+    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+  }
+  #arrow:hover,
+  #arrow:focus {
+    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+  }

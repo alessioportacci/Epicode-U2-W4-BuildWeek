@@ -311,45 +311,51 @@
            
           <!--Colonna centrale album-->
         <div class="col-12 col-md-8 p-0">
-          <section>
-            <div class="row row-cols-3"></div>
-            <!-- Barra in alto -->
-            <div class="row row-cols-2 justify-content-between">
-              <!-- Freccette-->
+          <!--Main Album-->
+          <main id="main-b" class="d-flex justify-content-start align-items-center text-light">
+            <section>
+              <div class="row row-cols-3"></div>
+              <!-- Barra in alto -->
+              <div class="row row-cols-2 justify-content-between">
+                <!-- Freccette -->
                 <div>
-                  <a href="#" class="arrow-link">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                  <a href="#" class="arrow-link" >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-chevron-left " viewBox="0 0 16 16">
                       <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
                     </svg>
                   </a>
                   <a href="#" class="arrow-link">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
                       <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
                     </svg>
                   </a>
                 </div>
-              <!--Profilo-->
-              <div class="d-flex justify-content-end">
-                <button id="profilo" class="btn btn-dark m-2">Suspense</button>
+                <!-- Profilo -->
+                <div class="d-flex justify-content-end">
+                  <button id="profilo" class="btn btn-dark m-2">Suspense</button>
+                </div>
               </div>
-            </div>
-            <!--Main Album-->
-            <main
-                id="main-b"
-                class="d-flex justify-content-start align-items-center text-light"
-              >
-                <img
-                  src="assets/imgs/main/image-18.jpg"
-                  alt="album"
-                  id="imgAlbum"
-                  class="mx-3 my-4 p-2"
-                />
+              <!--Album -->
+              <div class="d-flex justify-content-start align-items-center text-light">
+                <img src="assets/imgs/main/image-18.jpg" alt="album" id="imgAlbum" class="mx-3 my-4 p-2" />
                 <div>
                   <h7>ALBUM</h7>
                   <h1>ALBUM NAME</h1>
-                  <p>Artista  •  Anno uscita album  •  N. brani , durata </p>
+                  <p>Artista • Anno uscita album • N. brani, durata</p>
                 </div>
-              </main>
+              </div>
+              <!-- Main Home -->
+              <div class="row row-cols-2 row-cols-md-1"></div>
+              <!-- Canzoni album -->
+              <div class="row row-cols-2 row-cols-md-1"></div>
+              <!--<div class="d-flex justify-content-center" id="spinner-container">
+                <div class="spinner-border text-success" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+              </div>-->
+            </section>
+          </main>
+          
             <!-- Main Home -->
             <div class="row row-cols-2 row-cols-md-1"></div>
             <!-- Canzoni album-->
@@ -370,9 +376,9 @@
                 />
               </button>
               <!-- Heart -->
-              <img src="assets/imgs/icons/heart_icon.png" style="width: 2.5%;">
+              <img src="assets/imgs/icons/heart_icon.png" style="width: 2.5%;" id="cuore">
               <!--Simbolo-->
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-circle text-light ms-3 "     viewBox="0 0 16 16">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-circle text-light ms-3 "  viewBox="0 0 16 16" id="arrow">
                 <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/>
               </svg>
              <!-- Tre puntini -->
@@ -383,7 +389,7 @@
              fill="currentColor"
              class="bi bi-three-dots m-3"
              viewBox="0 0 16 16"
-             
+             id="dow"
              >
              <path
              d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"
@@ -391,7 +397,8 @@
            </svg>
          </div>
        </div>
-       <div class="row row-cols-2 row-cols-md-1 m-4 me-5">
+       <!--Inizio tabella-->
+       <div class="row row-cols-2 row-cols-md-1  me-5">
          <table class="table">
            <thead>
              <tr class="text-light">
@@ -462,6 +469,7 @@
              
            </tbody>
          </table>
+
        </div>
        </div>
         
