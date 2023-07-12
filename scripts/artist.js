@@ -1,5 +1,5 @@
 //Mi prendo l'url dell'artista
-const myUrl = "https://striveschool-api.herokuapp.com/api/deezer/artist/412";
+const myUrl = "https://striveschool-api.herokuapp.com/api/deezer/artist/" + new URL(window.location.href).searchParams.get("id");
 
 //Mi creo una funzione per i comma
 function numberWithCommas(number) 
