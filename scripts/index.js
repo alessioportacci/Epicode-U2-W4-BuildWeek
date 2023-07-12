@@ -11,6 +11,7 @@ const getRemoteData = function () {
       "Content-Type": "application/jason",
     },
   })
+
     .then((res) => {
       if (res.ok) return res.json();
       else throw new Error("Errore nella chiamata");
@@ -19,43 +20,34 @@ const getRemoteData = function () {
     .then((elements) => {
       console.log(elements);
       spinnerContainer.classList.toggle("d-none");
-      let row = document.getElementById("row-to-append-children");
-      elements.data
-        .forEach((element) => {
-          let newCol = document.createElement("div");
-          newCol.classList.add("col", "col-3");
-          newCol.innerHTML = `
-                         <div class="card" style="width: 18rem;">
-                            <img src="${element.album.cover}" style="object-fit: cover;" class="card-img-top" alt="copertina">
-                            <div class="card-body">
-                              <h5 class="card-title">${element.title}</h5>
-                              <p class="card-text">${element.artist.name}</p>
-                            </div>
-                          </div>
-                         `;
-          row.appendChild(newCol);
-        })
-        // const deleteButton = function () {
-        //   const dButton = document.getElementById("delete-button");
-        //   newCol.classList.add("d-none");
-        // }
-        // const buyMovies = function () {
-        //   const buyButton = document.getElementById("buy-now");
-        //   const getUl = document.querySelector("ul");
-        //   const newLi = document.createElement("li");
-        //   newLi.innerHTML = `<h4>${element.title}</h4>
-        //             <p>${element.price}</p>`;
-        //   getUl.appendChild(newLi);
-        //   localStorage.setItem("Elementi nel carrello", element.title);
-        // };
+      const row = document.getElementById("row-to-append-children");
+      elements.data.forEach((element) => 
+      {
+        let newCol = document.createElement("div");
+        newCol.classList.add("col", "col-3", "my-5");
+        newCol.innerHTML = `<div class="card h-100 bg-dark" style=";">
+                              <img src="${element.album.cover}" class="card-img-top p-2" alt="copertina">
+                              <div class="card-body">
+                                <h5 class="card-title" id="card-title">${element.title}</h5>
+                                <p class="card-text artist-redirect text-hover" id="card-text" value="${element.artist.id}">${element.artist.name}</p>
+                              </div>
+                            </div>`
+        row.appendChild(newCol);
+      })
+    })
+      
+    .then(() => {
+      //Per ogni elemento classe .artist-redirect mettiamo un redirect a artist.html con l'id contenuto nel suo value
+      document.querySelectorAll(".artist-redirect").forEach(artist =>
+        artist.addEventListener("click", function(){
+          location.href = "artist.html" + "?id=" + artist.getAttribute("value")
+        }
+        ))
+    }) 
 
-        // newCol.addEventListener("click", deleteButton);
-        // newCol.addEventListener("click", buyMovies);
-
-        .catch((err) => {
-          console.log("Errore!", err);
-        });
-    });
+    .catch((err) => {
+        console.log("Errore!", err);
+      });
 };
 
 getRemoteData();
