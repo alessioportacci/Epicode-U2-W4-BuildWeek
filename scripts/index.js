@@ -29,7 +29,7 @@ const getRemoteData = function () {
                             <img src="${element.album.cover}" class="card-img-top p-2" alt="copertina">
                             <div class="card-body">
                               <h5 class="card-title" id="card-title">${element.title}</h5>
-                              <p class="card-text" id="card-text">${element.artist.name}</p>
+                              <a href="../album.html"><p class="card-text" id="card-text">${element.artist.name}</p></a>
                             </div>
                           </div>
                          `;
