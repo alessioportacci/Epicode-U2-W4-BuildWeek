@@ -32,10 +32,7 @@
   display: flex;
   border-radius: 500px;
 }
-/*Delete scrollbar*/
-* {
-  overflow-y: hidden;
-}
+
 /*css album*/
 
 #main-a {
