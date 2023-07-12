@@ -34,13 +34,13 @@
 
   #cuore:hover,
   #cuore:focus {
-    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+    filter: brightness(0) saturate(100%) invert(83%) sepia(32%) saturate(4763%) hue-rotate(82deg) brightness(93%) contrast(84%);
  }
   #dow:hover,
   #dow:focus {
-    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+    filter: brightness(0) saturate(100%) invert(83%) sepia(32%) saturate(4763%) hue-rotate(82deg) brightness(93%) contrast(84%);
   }
   #arrow:hover,
   #arrow:focus {
-    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+    filter: brightness(0) saturate(100%) invert(83%) sepia(32%) saturate(4763%) hue-rotate(82deg) brightness(93%) contrast(84%);
   }
