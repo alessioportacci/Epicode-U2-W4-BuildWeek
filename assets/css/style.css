@@ -209,6 +209,14 @@ body
 .spotify-card-image
 {
   border-radius: 15px;
+  box-shadow: 5px 15px 31px -8px #000000;
+  padding: 0px !important;
+  z-index: 2;
+}
+
+.card-container
+{
+  padding: 5px !important;
 }
 
 
