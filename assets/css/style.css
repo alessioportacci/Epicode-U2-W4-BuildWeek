@@ -123,6 +123,13 @@ body
   margin: 1.72rem!important;
 }
 
+#slider
+{
+  accent-color: #1ed760;
+  height: 3px;
+  width: 110%;
+}
+
 /* BACKGROUNDS*/
 
 .bg-black {
