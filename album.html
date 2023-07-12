@@ -13,10 +13,887 @@
       crossorigin="anonymous"
     />
 
-    <title>Hello, world!</title>
+    <!-- Riferimenti CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/album.css" />
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="assets/css/textAnimation.css" />
+
+    <!-- Icona e titolo -->
+    <link rel="icon" type="image/x-icon" href="./assets/imgs/logo.png" />
+    <title>Spotify</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <body class="bg-spotify text-spotify-secondary">
+      <main class="container-fluid">
+        <div class="row row-cols-3">
+          <!-- Colonna di sinistra -->
+          <div
+            id="left-column"
+            class="container-fluid p-0 d-none d-md-block lateral-column col-2 m-0 sticky-top"
+          >
+            <section id="left-column-content">
+              <!-- Blocco alto-->
+              <div
+                id="first-block"
+                class="row row-cols-1 bg-black sticky-top mb-3"
+              >
+                <!-- Icone 3 puntini -->
+                <div>
+                  <!--Icona 3 puntini-->
+                  <div class="m-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-three-dots"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+  
+                <!-- 3 icone minimal -->
+                <div>
+                  <!--Icona Home -->
+                  <div id="home-icon" class="m-1 mb-2">
+                    <div class="row row-cols-2">
+                      <!-- Icona -->
+                      <div class="col-2">
+                        <svg
+                          role="img"
+                          height="24"
+                          width="24"
+                          aria-hidden="true"
+                          class="Svg-sc-ytk21e-0 haNxPq home-active-icon text-white d-none d-xxl-block"
+                          viewBox="0 0 24 24"
+                          data-encore-id="icon"
+                          fill="white"
+                        >
+                          <path
+                            d="M13.5 1.515a3 3 0 0 0-3 0L3 5.845a2 2 0 0 0-1 1.732V21a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6h4v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V7.577a2 2 0 0 0-1-1.732l-7.5-4.33z"
+                          ></path>
+                        </svg>
+                      </div>
+                      <!-- Testo -->
+                      <div class="col-12 col-xxl-10">
+                        <p class="text-truncate">Home</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Icona cerca -->
+                  <div id="search-icon" class="m-1 mb-2">
+                    <div class="row row-cols-2">
+                      <!-- Icona -->
+                      <div class="col-2">
+                        <svg
+                          role="img"
+                          height="24"
+                          width="24"
+                          aria-hidden="true"
+                          class="Svg-sc-ytk21e-0 haNxPq search-icon d-none d-xxl-block"
+                          viewBox="0 0 24 24"
+                          data-encore-id="icon"
+                          fill="white"
+                        >
+                          <path
+                            d="M10.533 1.279c-5.18 0-9.407 4.14-9.407 9.279s4.226 9.279 9.407 9.279c2.234 0 4.29-.77 5.907-2.058l4.353 4.353a1 1 0 1 0 1.414-1.414l-4.344-4.344a9.157 9.157 0 0 0 2.077-5.816c0-5.14-4.226-9.28-9.407-9.28zm-7.407 9.279c0-4.006 3.302-7.28 7.407-7.28s7.407 3.274 7.407 7.28-3.302 7.279-7.407 7.279-7.407-3.273-7.407-7.28z"
+                          ></path>
+                        </svg>
+                      </div>
+                      <!-- Testo-->
+                      <div class="col-12 col-xxl-10">
+                        <p class="text-truncate">Cerca</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Icona libreria -->
+                  <div id="search-icon" class="m-1 mb-2">
+                    <div class="row row-cols-2">
+                      <!-- Icona -->
+                      <div class="col-2">
+                        <svg
+                          role="img"
+                          height="24"
+                          width="24"
+                          aria-hidden="true"
+                          viewBox="0 0 24 24"
+                          data-encore-id="icon"
+                          class="Svg-sc-ytk21e-0 haNxPq d-none d-xxl-block"
+                          fill="white"
+                        >
+                          <path
+                            d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 14 3v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6.464a1 1 0 0 0-.5-.866l-6-3.464zM9 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1z"
+                          ></path>
+                        </svg>
+                      </div>
+                      <!-- Testo-->
+                      <div class="col-12 col-xxl-10">
+                        <p class="text-truncate">La tua libreria</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                <!-- 3 icone material -->
+                <div class="mt-4">
+                  <!-- Icona playlist -->
+                  <div id="playlist-icon" class="m-0 mb-2">
+                    <div class="row row-cols-2 align-items-center">
+                      <!-- Icona -->
+                      <div class="col-2">
+                        <img
+                          src="./assets/imgs/icons/nuova_playlist_icon.png"
+                          width="30px"
+                          class="d-none d-xxl-block"
+                        />
+                      </div>
+                      <!-- Testo -->
+                      <div class="col-12 col-xxl-10">
+                        <p class="text-truncate">Crea playlist</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Icona Brani -->
+                  <div id="brani-icon" class="m-0 mb-2">
+                    <div class="row row-cols-2 align-items-center">
+                      <!-- Icona -->
+                      <div class="col-2">
+                        <img
+                          src="./assets/imgs/icons/brani_che_ti_piacciono_icon.jpg"
+                          width="30px"
+                          class="d-none d-xxl-block"
+                        />
+                      </div>
+                      <!-- Testo -->
+                      <div class="col-12 col-xxl-10">
+                        <p class="text-truncate">Brani che ti piacciono</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Icona Episodi -->
+                  <div id="episodi-icon" class="m-0 mb-2">
+                    <div class="row row-cols-2 align-items-center">
+                      <!-- Icona -->
+                      <div class="col-2">
+                        <img
+                          src="./assets/imgs/icons/i_tuoi_episodi_icon.png"
+                          width="30px"
+                          class="d-none d-xxl-block"
+                        />
+                      </div>
+                      <!-- Testo -->
+                      <div class="col-12 col-xxl-10">
+                        <p class="text-truncate">I tuoi episodi</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                <!-- Separatore -->
+                <div class="mt-3">
+                  <hr id="hr-separatore" class="" />
+                </div>
+              </div>
+              <!-- Blocco basso -->
+              <div id="second-block" class="bg-black" style="height: 100%">
+                <!-- Libreria Main -->
+                <div
+                  id="main-library"
+                  class="row row-cols-1 text-spotify-secondary"
+                >
+                  <div id="library-main">
+                    <div class="ms-4 my-2">
+                      <ul
+                        id="playlist-library"
+                        class="text-truncate scrolling-box"
+                      >
+                        <li class="text-truncate">
+                          early stage emily syndrome (sett-ott 2022)
+                        </li>
+                        <li class="text-truncate">Be The Young</li>
+                        <li class="text-truncate">cit. Kimiko (lug-ago 2022)</li>
+                        <li class="text-truncate">saggio vibes</li>
+                        <li class="text-truncate">
+                          main character energy (mag-giu 2022)
+                        </li>
+                        <li class="text-truncate">that fucking mood</li>
+                        <li class="text-truncate">
+                          VEE, CARLOTTA E GIACOMO VANNO A BOSIO
+                        </li>
+                        <li class="text-truncate">
+                          An Emily Winchester kind of mood landing page (mar-apr
+                          2022)
+                        </li>
+                        <li class="text-truncate">2021 lol</li>
+                        <li class="text-truncate">
+                          cosa cazzo vuol dire questa affermazione gen-fe...
+                        </li>
+                        <li class="text-truncate">
+                          honey and glass (nov-dic 2021)
+                        </li>
+                        <li class="text-truncate">(Revenge) Training Arc</li>
+                        <li class="text-truncate">Lidia * Emily</li>
+                        <li class="text-truncate">
+                          minecraft e nintendo switch (sep-oct 2021)
+                        </li>
+                        <li class="text-truncate">
+                          silvano d'orba? I hardly know her (lug - ago 2021)
+                        </li>
+                        <li class="text-truncate">Song 2021</li>
+                        <li class="text-truncate">Caparezza</li>
+                        <li class="text-truncate">Suspense</li>
+                        <li class="text-truncate">2021 lol</li>
+                        <li class="text-truncate">
+                          cosa cazzo vuol dire questa affermazione gen-fe...
+                        </li>
+                        <li class="text-truncate">
+                          honey and glass (nov-dic 2021)
+                        </li>
+                        <li class="text-truncate">(Revenge) Training Arc</li>
+                        <li class="text-truncate">Lidia * Emily</li>
+                        <li class="text-truncate">
+                          minecraft e nintendo switch (sep-oct 2021)
+                        </li>
+                        <li class="text-truncate">
+                          silvano d'orba? I hardly know her (lug - ago 2021)
+                        </li>
+                        <li class="text-truncate">Song 2021</li>
+                        <li class="text-truncate">Caparezza</li>
+                        <li class="text-truncate">Suspense</li>
+                        <li class="text-truncate">2021 lol</li>
+                        <li class="text-truncate">
+                          cosa cazzo vuol dire questa affermazione gen-fe...
+                        </li>
+                        <li class="text-truncate">
+                          honey and glass (nov-dic 2021)
+                        </li>
+                        <li class="text-truncate">(Revenge) Training Arc</li>
+                        <li class="text-truncate">Lidia * Emily</li>
+                        <li class="text-truncate">
+                          minecraft e nintendo switch (sep-oct 2021)
+                        </li>
+                        <li class="text-truncate">
+                          silvano d'orba? I hardly know her (lug - ago 2021)
+                        </li>
+                        <li class="text-truncate">Song 2021</li>
+                        <li class="text-truncate">Caparezza</li>
+                        <li class="text-truncate">Suspense</li>
+                        <li class="text-truncate">2021 lol</li>
+                        <li class="text-truncate">
+                          cosa cazzo vuol dire questa affermazione gen-fe...
+                        </li>
+                        <li class="text-truncate">
+                          honey and glass (nov-dic 2021)
+                        </li>
+                        <li class="text-truncate">(Revenge) Training Arc</li>
+                        <li class="text-truncate">Lidia * Emily</li>
+                        <li class="text-truncate">
+                          minecraft e nintendo switch (sep-oct 2021)
+                        </li>
+                        <li class="text-truncate">
+                          silvano d'orba? I hardly know her (lug - ago 2021)
+                        </li>
+                        <li class="text-truncate">Song 2021</li>
+                        <li class="text-truncate">Caparezza</li>
+                        <li class="text-truncate">Suspense</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+           
+          <!--Colonna centrale album-->
+        <div class="col-12 col-md-8 p-0">
+          <section>
+            <div class="row row-cols-3"></div>
+            <!-- Barra in alto -->
+            <div class="row row-cols-2 justify-content-between">
+              <!-- Freccette-->
+              <div>                
+                <a href="#"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-chevron-left text-white rounded-circle"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+                  />
+                </svg>
+              </a>
+              <a href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-chevron-left text-white rounded-circle"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                  />
+                </svg>
+              </a>
+            </div>
+            <!--Profilo-->
+            <div class="d-flex justify-content-end">
+              <button id="profilo" class="btn btn-dark m-2">Suspense</button>
+            </div>
+          </div>
+          <!--Main Album-->
+          <main
+              id="main-b"
+              class="d-flex justify-content-start align-items-center"
+            >
+              <img
+                src="assets/imgs/main/image-18.jpg"
+                alt="album"
+                id="imgAlbum"
+                class="mx-3 my-4 p-2"
+              />
+              <div>
+                <h7>ALBUM</h7>
+                <h1>ALBUM NAME</h1>
+                <p>Artista  •  Anno uscita album  •  N. brani , durata </p>
+              </div>
+            
+            </main>
+            <!-- Main Home -->
+            <div class="row row-cols-2 row-cols-md-1"></div>
+            <!-- Canzoni album-->
+            <div class="row row-cols-2 row-cols-md-1"></div>
+            <!--<div class="d-flex justify-content-center" id="spinner-container">
+              <div class="spinner-border text-success" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </div>-->
+          </section>
+        </div>
+      
+          <!--Fine colonna centrale-->
+
+          <!-- Colonna di destra -->
+        <div
+        id="right-column"
+        class="col-2 p-0 d-none d-lg-block lateral-column m-0 bg-black sticky-top"
+      >
+        <section id="right-column-content">
+          <!-- Attività amici -->
+          <div
+            id="activities"
+            class="row m-0 p-4 justify-content-between align-items-center text-white"
+          >
+            <div class="col-8">
+              <p class="text-truncate">Attività&nbsp;amici</p>
+            </div>
+            <div class="text-end col-12 col-xxl-4">
+              <img src="assets/imgs/icons/delete_icon.png" width="25px" />
+              <img
+                src="assets/imgs/icons/add_friends_icon.png"
+                width="25px"
+              />
+            </div>
+          </div>
+          <!-- Amichetti -->
+          <div
+            id="friends"
+            class="row row-cols-1 pt-0 p-3 text-spotify-secondary"
+          >
+            <div>
+              <!-- Amico 1-->
+              <div class="row row-cols-2 m-1">
+                <!-- propic -->
+                <div class="col-12 col-xxl-2 p-1">
+                  <img
+                    src="https://pm1.narvii.com/6286/eb429bdc7ee7472eff3ca3f30c15440265910a9d_00.jpg"
+                    class="friend-propic"
+                  />
+                </div>
+                <!-- Musica -->
+                <div class="col-12 col-md-10">
+                  <div class="row">
+                    <!-- Nome -->
+                    <div>
+                      <h6 class="friend-name text-hover">Razputin Aquato</h6>
+                    </div>
+                    <!-- Canzone / artista -->
+                    <div>
+                      <p class="friend-music">
+                        <span class="friend-song text-hover"
+                          >Megalovania</span
+                        >
+                        •
+                        <span class="friend-artist text-hover">Toby Fox</span>
+                      </p>
+                    </div>
+                    <!-- Album -->
+                    <div>
+                      <p class="friend-music text-hover">
+                        <img
+                          src="assets/imgs/icons/vinyl_icon.svg"
+                          width="10px"
+                        />
+                        <span class="friend-artist text-hover"
+                          >UNDERTALE Soundtrack</span
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Amico 2-->
+              <div class="row m-1 mt-4">
+                <!-- propic -->
+                <div class="col-12 col-xxl-2 p-1">
+                  <img
+                    src="https://pbs.twimg.com/profile_images/1637821718705086464/6iTRB6_c_400x400.png"
+                    class="friend-propic"
+                  />
+                </div>
+                <!-- Musica -->
+                <div class="col-12 col-md-10">
+                  <div class="row">
+                    <!-- Nome -->
+                    <div>
+                      <h6 class="friend-name text-hover">Mario Mario</h6>
+                    </div>
+                    <!-- Canzone / artista -->
+                    <div>
+                      <p class="friend-music">
+                        <span class="friend-song text-hover"
+                          >Disasterpiece</span
+                        >
+                        •
+                        <span class="friend-artist text-hover">Slipknot</span>
+                      </p>
+                    </div>
+                    <!-- Album -->
+                    <div>
+                      <p class="friend-music">
+                        <img
+                          src="assets/imgs/icons/vinyl_icon.svg"
+                          width="10px"
+                        />
+                        <span class="friend-artist text-hover">Iowa</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Amico 3-->
+              <div class="row m-1 mt-4">
+                <!-- propic -->
+                <div class="col-12 col-xxl-2 p-1">
+                  <img
+                    src="https://i1.sndcdn.com/avatars-oq1XjQtIKXa4C3J5-vIsUtQ-t500x500.jpg"
+                    class="friend-propic"
+                  />
+                </div>
+                <!-- Musica -->
+                <div class="col-12 col-md-10">
+                  <div class="row">
+                    <!-- Nome -->
+                    <div>
+                      <h6 class="friend-name text-hover">Jotaro Kujo</h6>
+                    </div>
+                    <!-- Canzone / artista -->
+                    <div>
+                      <p class="friend-music">
+                        <span class="friend-song text-hover"
+                          >Girls just wanna have fun</span
+                        >
+                        •
+                        <span class="friend-artist text-hover"
+                          >Cindy Lauper</span
+                        >
+                      </p>
+                    </div>
+                    <!-- Album -->
+                    <div>
+                      <p class="friend-music text-hover">
+                        <img
+                          src="assets/imgs/icons/vinyl_icon.svg"
+                          width="10px"
+                        />
+                        <span class="friend-artist">She's So Unusual</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Amico 4-->
+              <div class="row m-1 mt-4">
+                <!-- propic -->
+                <div class="col-12 col-xxl-2 p-1">
+                  <img
+                    src="https://www.ansa.it/crop/crop.php?file=https://www.ansa.it/webimages/cl_1100x/2023/5/17/7b28ad5c5d29e1c8d264d11ac8bc1ae7.jpg&w=1100&h=600&face=Detection&c=u2yNGi7_GmgfDtTeZANxRw"
+                    class="friend-propic"
+                  />
+                </div>
+                <!-- Musica -->
+                <div class="col-12 col-md-10">
+                  <div class="row">
+                    <!-- Nome -->
+                    <div>
+                      <h6 class="friend-name text-hover">Johnny Depp</h6>
+                    </div>
+                    <!-- Canzone / artista -->
+                    <div>
+                      <p class="friend-music text-hover">
+                        <span class="friend-song text-hover"
+                          >Bootstra's Bootstraps</span
+                        >
+                        •
+                        <span class="friend-artist text-hover"
+                          >Klaus Badelt</span
+                        >
+                      </p>
+                    </div>
+                    <!-- Album -->
+                    <div>
+                      <p class="friend-music text-hover">
+                        <img
+                          src="assets/imgs/icons/vinyl_icon.svg"
+                          width="10px"
+                        />
+                        <span class="friend-artist"
+                          >Pirates of the caribbean Original Soundtrack</span
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Amico 5-->
+              <div class="row m-1 mt-4">
+                <!-- propic -->
+                <div class="col-12 col-xxl-2 p-1">
+                  <img
+                    src="https://cdn.vox-cdn.com/thumbor/HOWiq29vUhGGTVTcjNqMA7refT4=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/23249598/mgid_arc_imageassetref_comedycentral.jpeg"
+                    class="friend-propic"
+                  />
+                </div>
+                <!-- Musica -->
+                <div class="col-12 col-md-10">
+                  <div class="row">
+                    <!-- Nome -->
+                    <div>
+                      <h6 class="friend-name text-hover">Bender</h6>
+                    </div>
+                    <!-- Canzone / artista -->
+                    <div>
+                      <p class="friend-music">
+                        <span class="friend-song text-hover"
+                          >Bangarang (feat. Sirah)</span
+                        >
+                        •
+                        <span class="friend-artist text-hover">Skrillex</span>
+                      </p>
+                    </div>
+                    <!-- Album -->
+                    <div>
+                      <p class="friend-music text-hover">
+                        <img
+                          src="assets/imgs/icons/vinyl_icon.svg"
+                          width="10px"
+                        />
+                        <span class="friend-artist">Bangarang EP</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Amico 6 -->
+              <div class="row m-1 mt-4">
+                <!-- propic -->
+                <div class="col-12 col-xxl-2 p-1">
+                  <img
+                    src="https://lamedicinaestetica.files.wordpress.com/2017/02/medicina-online-tafazzi-trio-aldo-giovanni-e-giacomo-masochista-sospensorio-tafazzina-dna-gene-tafazzismo.jpg"
+                    class="friend-propic"
+                  />
+                </div>
+                <!-- Musica -->
+                <div class="col-12 col-md-10">
+                  <div class="row">
+                    <!-- Nome -->
+                    <div>
+                      <h6 class="friend-name text-hover">Tafazi</h6>
+                    </div>
+                    <!-- Canzone / artista -->
+                    <div>
+                      <p class="friend-music">
+                        <span class="friend-song text-hover"
+                          >The four Seasons</span
+                        >
+                        •
+                        <span class="friend-artist text-hover"
+                          >Antonio Vivaldi</span
+                        >
+                      </p>
+                    </div>
+                    <!-- Album -->
+                    <div>
+                      <p class="friend-music text-hover">
+                        <img
+                          src="assets/imgs/icons/vinyl_icon.svg"
+                          width="10px"
+                        />
+                        <span class="friend-artist text-truncate"
+                          >The Four Seasons</span
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <div class="m-6">&nbsp;</div>
+
+  <!-- Footer Tablet / Desktop -->
+  <footer
+    id="footer"
+    class="d-none d-md-block footer-player fixed-bottom bg-spotify-player"
+  >
+    <div class="row row-cols-3 d-flex justify-between align-items-center">
+      <!-- Album cover -->
+      <div id="player-album">
+        <div class="row align-items-center">
+          <!-- Immagine -->
+          <div class="col-2 p-3 d-none d-xxl-block">
+            <img
+              src="./assets/imgs/album/stadium arcadium.jpg"
+              width="50px"
+              height="50px"
+            />
+          </div>
+          <!-- Canzone e Artista -->
+          <div class="col-6 p-3">
+            <div class="row row-cols-1 fs-7">
+              <div class="text-white text-hover text-truncate">Wet Sand</div>
+              <div class="text-hover text-truncate">
+                Red Hot Chili Peppers
+              </div>
+            </div>
+          </div>
+          <!-- Cuore -->
+          <div class="col-1 p-3">
+            <img src="./assets/imgs/icons/heart_icon.png" width="15px" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Audio player -->
+      <div id="player-player">
+        <!-- pulsanti -->
+        <div class="row align-items-center justify-content-center">
+          <!-- Shuffle -->
+          <div class="col-1">
+            <img src="./assets/imgs/icons/shuffle_icon.svg" />
+          </div>
+          <!-- Indietro -->
+          <div class="col-2 col-lg-1 text-center">
+            <img src="./assets/imgs/icons/skip-start-fill_icon.svg" />
+          </div>
+          <!-- Centrale -->
+          <div class="col-1">
+            <div class="row row-cols-1 justify-content-center">
+              <div class="player-button">
+                <img
+                  class="player-button-icon"
+                  src="./assets/imgs/icons/play-fill_icon.svg"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- Avanti -->
+          <div class="col-2 col-lg-1 text-center">
+            <img src="./assets/imgs/icons/skip-end-fill_icon.svg" />
+          </div>
+          <!-- Repeat -->
+          <div class="col-1">
+            <img src="./assets/imgs/icons/repeat_icon.svg" />
+          </div>
+        </div>
+        <!-- Player bar-->
+        <div id="player-bar">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-1 fs-8 text-truncate">5:09</div>
+            <div class="col-9 m-2 audio"></div>
+            <div class="col-1 fs-8 p-0 text-truncate">5:09</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Impostazioni Audio -->
+      <div id="player-options">
+        <div class="row align-items-center justify-content-end m-0">
+          <!-- Microfono -->
+          <div class="col-1">
+            <img src="./assets/imgs/icons/microphone_icon.png" width="15px" />
+          </div>
+
+          <!-- Lista -->
+          <div class="col-1">
+            <img src="./assets/imgs/icons/list_icon.svg" width="15px" />
+          </div>
+
+          <!-- Casse -->
+          <div class="col-1">
+            <img src="./assets/imgs/icons/speaker_icon.svg" width="15px" />
+          </div>
+
+          <!-- Audio -->
+          <div class="col-1 col-xl-3">
+            <div class="row align-items-center">
+              <div class="col-12 col-xl-1 mb-1">
+                <img src="./assets/imgs/icons/volume-down_icon.svg" />
+              </div>
+              <div class="col-9">
+                <div class="audio d-none d-xl-block"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FullScreen -->
+          <div class="col-1">
+            <img
+              src="./assets/imgs/icons/arrows-angle-expand_icon.svg"
+              width="15px"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Footer mobile -->
+  <footer
+    id="footer-mobile"
+    class="d-block d-md-none fixed-bottom text-white"
+  >
+    <!-- Player nel footer -->
+    <div
+      class="row m-3 p-2 bg-spotify-welcome-card rounded justify-content-center align-items-center"
+    >
+      <!-- Canzone -->
+      <div id="scroll-container" class="col-8">
+        <div id="scroll-text" class="p-2">
+          Wet&nbsp;Sand&nbsp;-&nbsp;Red&nbsp;Hot&nbsp;Chili&nbsp;Peppers&nbsp;(Stadium&nbsp;Arcadium)
+        </div>
+      </div>
+      <!-- Casse -->
+      <div class="col-1 p-1">
+        <img src="./assets/imgs/icons/speaker_icon.svg" width="20px" />
+      </div>
+      <!-- Cuore -->
+      <div class="col-1 p-1">
+        <img src="./assets/imgs/icons/heart_icon.png" width="20px" />
+      </div>
+      <div class="col-1 p-1">
+        <img
+          src="./assets/imgs/icons/play-fill-white_icon.svg"
+          width="30px"
+        />
+      </div>
+    </div>
+    <!-- Menù-->
+    <div class="container-fluid bottom-nav p-3">
+      <div class="row justify-content-center align-items-center">
+        <!-- Home -->
+        <div class="col-3">
+          <div
+            class="row row-cols-1 align-items-center justify-content-center"
+          >
+            <div class="text-center">
+              <svg
+                role="img"
+                height="24"
+                width="24"
+                aria-hidden="true"
+                class="Svg-sc-ytk21e-0 haNxPq home-active-icon text-white text-center"
+                viewBox="0 0 24 24"
+                data-encore-id="icon"
+                fill="white"
+              >
+                <path
+                  d="M13.5 1.515a3 3 0 0 0-3 0L3 5.845a2 2 0 0 0-1 1.732V21a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6h4v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V7.577a2 2 0 0 0-1-1.732l-7.5-4.33z"
+                ></path>
+              </svg>
+            </div>
+            <div class="text-center">Home</div>
+          </div>
+        </div>
+        <!-- Cerca -->
+        <div class="col-3">
+          <div
+            class="row row-cols-1 align-items-center justify-content-center"
+          >
+            <div class="text-center">
+              <svg
+                role="img"
+                height="24"
+                width="24"
+                aria-hidden="true"
+                class="Svg-sc-ytk21e-0 haNxPq search-icon"
+                viewBox="0 0 24 24"
+                data-encore-id="icon"
+                fill="white"
+              >
+                <path
+                  d="M10.533 1.279c-5.18 0-9.407 4.14-9.407 9.279s4.226 9.279 9.407 9.279c2.234 0 4.29-.77 5.907-2.058l4.353 4.353a1 1 0 1 0 1.414-1.414l-4.344-4.344a9.157 9.157 0 0 0 2.077-5.816c0-5.14-4.226-9.28-9.407-9.28zm-7.407 9.279c0-4.006 3.302-7.28 7.407-7.28s7.407 3.274 7.407 7.28-3.302 7.279-7.407 7.279-7.407-3.273-7.407-7.28z"
+                ></path>
+              </svg>
+            </div>
+            <div class="text-center">Cerca</div>
+          </div>
+        </div>
+        <!-- Libreria-->
+        <div class="col-3">
+          <div
+            class="row row-cols-1 align-items-center justify-content-center"
+          >
+            <div class="text-center">
+              <svg
+                role="img"
+                height="24"
+                width="24"
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                data-encore-id="icon"
+                class="Svg-sc-ytk21e-0 haNxPq"
+                fill="white"
+              >
+                <path
+                  d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 14 3v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6.464a1 1 0 0 0-.5-.866l-6-3.464zM9 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1z"
+                ></path>
+              </svg>
+            </div>
+            <div class="text-center">La tua libreria</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
 
     <!-- Bootstrap 5 -->
     <script

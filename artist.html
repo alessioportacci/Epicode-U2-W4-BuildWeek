@@ -312,36 +312,110 @@
         <div class="col-12 col-md-10 col-lg-8 p-0">
           <section>
             <!-- Header Artista -->
-            <div
-              class="card bg-dark text-white"
-              style="height: 25em !important"
-            >
+            <div class="card bg-dark text-white top-artist">
               <!-- Immagine artista -->
               <img
                 class="card-img artist-img"
-                src="https://i0.wp.com/liveforlivemusic.com/wp-content/uploads/2022/03/red-hot-chili-peppers-not-the-one.jpeg?resize=740%2C390&ssl=1"
+                src="assets/imgs/invisible.png"
                 alt="Card image"
               />
               <div class="card-img-overlay">
+                <!-- Spinner -->
+                <div
+                  class="d-flex justify-content-center align-items-center mt-5 pt-5"
+                  id="spinner-container-image"
+                >
+                  <div class="spinner-border text-success" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                </div>
+                <!-- Contenuto -->
                 <div class="position-absolute bot-5">
                   <div class="row justify-content-center align-items-center">
                     <div class="col-12">
                       <img
                         src="assets/imgs/icons/verified_icon.png"
                         width="30px"
+                        class="text-shadow"
                       />
-                      <p class="verified-text">Artista verificato</p>
+                      <p class="verified-text text-shadow">
+                        Artista verificato
+                      </p>
                     </div>
                   </div>
-                  <h5 class="card-title artist-name">Red Hot Chili Peppers</h5>
-                  <p class="card-text monthly-listeners">
-                    30000 ascoltatori mensili
-                  </p>
+                  <h5 class="card-title artist-name text-shadow"></h5>
+                  <p class="card-text monthly-listeners text-shadow"></p>
                 </div>
               </div>
             </div>
+            <!-- Pulsantiera -->
+            <div class="row m-1">
+              <div class="col-12">
+                <!-- Play Button -->
+                <button class="btn-spotify rounded-circle p-2 m-3">
+                  <img
+                    src="assets/imgs/icons/play-fill_icon.svg"
+                    width="25px"
+                  />
+                </button>
+                <!-- Follower -->
+                <button class="btn-follower p-1 m-3">Following</button>
+                <!-- Tre puntini -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                  class="bi bi-three-dots m-3"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <!-- Brani popolari / Che ti piacciono -->
+            <div class="row text-white m-1 m-md-3">
+              <!-- Popolari -->
+              <div class="col-12 col-md-8">
+                <!-- Scritta popolari -->
+                <div class="row mb-3">
+                  <div>
+                    <h5>Popolari</h5>
+                  </div>
+                </div>
+                <!-- Brani popolari -->
+                <div>
+                  <!-- Spinner -->
+                  <div
+                    class="d-flex justify-content-center align-items-center mt-5 pt-5"
+                    id="spinner-container-tracks"
+                  >
+                    <div class="spinner-border text-success" role="status">
+                      <span class="visually-hidden">Loading...</span>
+                    </div>
+                  </div>
+                  <ol id="popular-songs" class="text-spotify-secondary"></ol>
+                </div>
+                <!-- Visualizza altro -->
+                <div class="row mb-3">
+                  <div>
+                    <h5>Visualizza altro</h5>
+                  </div>
+                </div>
+              </div>
 
-            <div class="row"></div>
+              <!-- Che ti piacciono -->
+              <div class="col-12 col-md-4">
+                <!-- Scritta Brani che ti piacciono -->
+                <div class="row row-cols-1 mb-3">
+                  <div>
+                    <h5>Brani che ti piacciono</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
           </section>
         </div>
 
