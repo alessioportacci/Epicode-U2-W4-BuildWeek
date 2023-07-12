@@ -316,10 +316,20 @@
               <!-- Immagine artista -->
               <img
                 class="card-img artist-img"
-                src="https://i0.wp.com/liveforlivemusic.com/wp-content/uploads/2022/03/red-hot-chili-peppers-not-the-one.jpeg?resize=740%2C390&ssl=1"
+                src="assets/imgs/invisible.png"
                 alt="Card image"
               />
               <div class="card-img-overlay">
+                <!-- Spinner -->
+                <div
+                  class="d-flex justify-content-center align-items-center mt-5 pt-5"
+                  id="spinner-container-image"
+                >
+                  <div class="spinner-border text-success" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                </div>
+                <!-- Contenuto -->
                 <div class="position-absolute bot-5">
                   <div class="row justify-content-center align-items-center">
                     <div class="col-12">
@@ -333,12 +343,8 @@
                       </p>
                     </div>
                   </div>
-                  <h5 class="card-title artist-name text-shadow">
-                    Red Hot Chili Peppers
-                  </h5>
-                  <p class="card-text monthly-listeners text-shadow">
-                    30000 ascoltatori mensili
-                  </p>
+                  <h5 class="card-title artist-name text-shadow"></h5>
+                  <p class="card-text monthly-listeners text-shadow"></p>
                 </div>
               </div>
             </div>
@@ -374,22 +380,29 @@
               <!-- Popolari -->
               <div class="col-12 col-md-8">
                 <!-- Scritta popolari -->
-                <div class="row row-cols-1 mb-3">
+                <div class="row mb-3">
                   <div>
                     <h5>Popolari</h5>
                   </div>
                 </div>
                 <!-- Brani popolari -->
                 <div>
-                  <ol id="popular-songs">
-                    <li>
-                      <div class="row row-cols-3">
-                        <div>CANZONE</div>
-                        <div>ASCOLTI</div>
-                        <div>MINUTAGGIO</div>
-                      </div>
-                    </li>
-                  </ol>
+                  <!-- Spinner -->
+                  <div
+                    class="d-flex justify-content-center align-items-center mt-5 pt-5"
+                    id="spinner-container-tracks"
+                  >
+                    <div class="spinner-border text-success" role="status">
+                      <span class="visually-hidden">Loading...</span>
+                    </div>
+                  </div>
+                  <ol id="popular-songs" class="text-spotify-secondary"></ol>
+                </div>
+                <!-- Visualizza altro -->
+                <div class="row mb-3">
+                  <div>
+                    <h5>Visualizza altro</h5>
+                  </div>
                 </div>
               </div>
 
