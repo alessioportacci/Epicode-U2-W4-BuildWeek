@@ -133,12 +133,17 @@ body
   background-color: #202020 !important;
 }
 
+.bg-card{
+  background-color: rgba(112, 112, 112, 0);
+}
+
 .bg-spotify-card {
-  background-color:  #171717!important;
+  background-color:  #202020!important;
+  box-shadow: 1px 7px 46px 4px #000000;
 }
 
 .bg-spotify-card :hover {
-  background-color:  #161616!important;
+  background-color:  #2e2e2e!important;
 }
 
 .bg-spotify-player
@@ -173,6 +178,17 @@ body
   padding-left: 25px !important;
   padding-right: 25px !important;
 }
+
+.spotify-card
+{
+  border-radius: 5px;
+}
+
+.spotify-card-image
+{
+  border-radius: 15px;
+}
+
 
 /* COLONNA SINISTRA*/
 
