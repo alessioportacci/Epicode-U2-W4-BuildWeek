@@ -14,3 +14,7 @@
 .card-img-top {
   border-radius: 6%;
 }
+.position-absolute {
+  padding: 5px;
+  width: 1.5em;
+}
