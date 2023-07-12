@@ -1,3 +1,30 @@
+/* CSS Nicole */
+
+.scrolling-box {
+  display: block;
+  width: auto;
+  height: 627px;
+  padding: 1em;
+  overflow-y: scroll;
+}
+#second-block {
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar  {
+  display:none
+}
+::-webkit-scrollbar-track {
+  background-color: black;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #4d4d4d;
+}
+
+
 /* Font */
 
 @font-face {
@@ -16,6 +43,28 @@ body
     overflow-x: hidden;
 }
 
+.text-hover:hover
+{
+  color: white;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.fs-7
+{
+  font-size: 15px;
+}
+
+.fs-8
+{
+  font-size: 11px;
+}
+
+.m-6
+{
+  margin: 1.72rem!important;
+}
+
 /* BACKGROUNDS*/
 
 .bg-black {
@@ -28,6 +77,11 @@ body
 
 .bg-spotify-card {
   background-color: #161616 !important;
+}
+
+.bg-spotify-player
+{
+  background-color: #181818 !important
 }
 
 .bg-spotify-welcome-card {
@@ -52,7 +106,13 @@ body
 
 #left-column
 {
-    height: 100%;
+    height: 100vh !important;
+}
+
+#left-column-content
+{
+  height: 100% !important;
+  width: 100% !important;
 }
 
 #first-block
@@ -72,6 +132,11 @@ body
     margin: 0px 0px 0px 0px !important;
 }
 
+#main-library
+{
+  height: 100% !important;
+}
+
 p {
   margin: 0px !important;
   padding: 0px !important;
@@ -87,7 +152,6 @@ p {
 
 #left-column-content {
   resize: horizontal !important;
-  min-width: 250px;
   max-width: 100%;
   overflow: auto;
   overflow: hidden;
@@ -100,6 +164,7 @@ p {
     padding: 0px;
     padding-right: 20px;
     margin: 0px;
+    height: 100% !important;
 }
 
 #playlist-library li:hover
@@ -110,6 +175,10 @@ p {
 }
 
 /* Colonna di destra */
+
+#right-column{
+  height: 100vh;
+}
 
 #activities {
   font-family: CircularStd-black;
@@ -133,12 +202,7 @@ p {
     display: inline;
 }
 
-.friend-name:hover
-{
-    text-decoration: underline;
-    color: white;
-    cursor: pointer;
-}
+
 
 
 .friend-music
@@ -148,9 +212,34 @@ p {
     margin: 30px;
 }
 
-.friend-music :hover
+/* Footer */
+
+.footer-player
 {
-    text-decoration: underline;
-    cursor: pointer;
-    color: white;
+  box-shadow: 0px 0px 1px 0px #a8a8a8;
+  z-index: 5;
+} 
+
+.audio
+{
+  height: 1px;
+  border: solid white 1px;
+
 }
+
+.player-button
+{
+  background-color: white;
+  width: 25px;
+  border-radius: 100%;
+  padding-left: 6px;
+}
+
+.player-button-icon
+{
+  margin-bottom: 3.5px
+}
+
+.bottom-nav
+{
+  background: linear-gradient(180deg, rgba(0,0,0,0.2274159663865546) 0%, rgba(0,0,0,0.7540266106442577) 35%, rgba(0,0,0,0.9332983193277311) 100%);}
