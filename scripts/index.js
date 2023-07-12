@@ -20,11 +20,10 @@ const getRemoteData = function () {
       console.log(elements);
       spinnerContainer.classList.toggle("d-none");
       let row = document.getElementById("row-to-append-children");
-      elements.data
-        .forEach((element) => {
-          let newCol = document.createElement("div");
-          newCol.classList.add("col", "col-3", "my-5");
-          newCol.innerHTML = `
+      elements.data.forEach((element) => {
+        let newCol = document.createElement("div");
+        newCol.classList.add("col", "col-3", "my-5");
+        newCol.innerHTML = `
                          <div class="card h-100 bg-dark" style=";">
                             <img src="${element.album.cover}" class="card-img-top p-2" alt="copertina">
                             <div class="card-body">
@@ -33,12 +32,16 @@ const getRemoteData = function () {
                             </div>
                           </div>
                          `;
-          row.appendChild(newCol);
-        })
-
-        .catch((err) => {
-          console.log("Errore!", err);
+        row.appendChild(newCol);
+        const artistsId = elements.data.map((element) => {
+          return element.id;
         });
+        console.log("artisti id", artistsId);
+      });
+
+      // .catch((err) => {
+      //   console.log("Errore!", err);
+      // });
     });
 };
 
