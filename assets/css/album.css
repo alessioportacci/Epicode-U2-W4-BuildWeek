@@ -1,4 +1,20 @@
 /*Css gabriele*/
+
+.arrow-link {
+    display: inline-block;
+    background-color: black;
+    border-radius: 100%;
+    height: 48%;
+    padding: 5px;
+    margin: 5px;
+}
+  
+.arrow-link svg {
+    margin-top: -13px;
+    color: white;
+}
+
+/*album*/
 #main-b {
     border-radius: 10px;
   
