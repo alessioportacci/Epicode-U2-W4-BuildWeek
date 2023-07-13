@@ -61,7 +61,7 @@
                 <div>
                   <!--Icona Home -->
                   <div id="home-icon" class="m-1 mb-2">
-                    <div class="row row-cols-2">
+                    <div class="row row-cols-2 home-nav">
                       <!-- Icona -->
                       <div class="col-2">
                         <svg
@@ -81,7 +81,12 @@
                       </div>
                       <!-- Testo -->
                       <div class="col-12 col-xxl-10">
-                        <p class="text-truncate">Home</p>
+                        <p
+                          class="text-truncate"
+                          onclick="location.href='index.html'"
+                        >
+                          Home
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -319,8 +324,8 @@
               class="d-flex justify-content-start align-items-center text-light"
             >
               <div class="row row-cols-1">
+                <!-- Parte alta -->
                 <div>
-                  <!-- Parte alta -->
                   <section class="w-100 h-100">
                     <div class="row row-cols-3"></div>
                     <!-- Barra in alto -->
@@ -329,7 +334,7 @@
                     >
                       <!-- Freccette -->
                       <div>
-                        <a href="#" class="arrow-link">
+                        <a href="#" class="arrow-link" onclick="history.back()">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="16"
@@ -344,7 +349,11 @@
                             />
                           </svg>
                         </a>
-                        <a href="#" class="arrow-link">
+                        <a
+                          href="#"
+                          class="arrow-link"
+                          onclick="history.forward()"
+                        >
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="16"
@@ -367,15 +376,23 @@
                         </button>
                       </div>
                     </div>
-
                     <!--Album -->
+                    <!-- Spinner album -->
                     <div
-                      class="d-flex justify-content-start align-items-center text-light"
+                      class="d-flex justify-content-center align-items-center mt-5 pt-5"
+                      id="spinner-container-album-top"
+                    >
+                      <div class="spinner-border text-success" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                      </div>
+                    </div>
+                    <div
+                      class="d-flex justify-content-start align-items-center text-light text-shadow"
                     >
                       <div id="album-image" class="col-4"></div>
                       <!-- Testo in alto -->
                       <div>
-                        <h7>ALBUM</h7>
+                        <h7 class="scritta-album">ALBUM</h7>
                         <h1 class="album-name"></h1>
                         <p>
                           <span class="artist-name artist-redirect text-hover">
@@ -392,8 +409,9 @@
                     <div class="row row-cols-2 row-cols-md-1"></div>
                   </section>
                 </div>
+
                 <!-- Sezione Album -->
-                <div>
+                <div class="text-spotify-secondary">
                   <section class="album-info-section bg-spotify h-100">
                     <!-- Pulsanti alti -->
                     <div class="row m-1">
@@ -444,6 +462,16 @@
                     </div>
                     <!--Inizio tabella-->
                     <div class="row row-cols-1 m-5">
+                      <!-- Spinner tracce -->
+                      <div
+                        class="d-flex justify-content-center align-items-center mt-5 pt-5"
+                        id="spinner-container-tracks"
+                      >
+                        <div class="spinner-border text-success" role="status">
+                          <span class="visually-hidden">Loading...</span>
+                        </div>
+                      </div>
+
                       <!-- Prima riga -->
                       <div>
                         <div class="row table-head">
@@ -451,7 +479,7 @@
                           <div class="col-8 col-md-7">Titolo</div>
                           <div class="col-2">Riproduzioni</div>
                           <div class="col-1 d-none d-md-block"></div>
-                          <div>
+                          <div class="col-1">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="16"
@@ -479,11 +507,15 @@
                     </div>
                   </section>
                 </div>
+
+                <!-- Crediti -->
+                <div class="bg-spotify px-5 text-spotify-secondary">
+                  <div class="date fw-bold"></div>
+                  <div class="label"></div>
+                </div>
               </div>
             </main>
           </div>
-
-          <!--Fine colonna centrale-->
 
           <!-- Colonna di destra -->
           <div
