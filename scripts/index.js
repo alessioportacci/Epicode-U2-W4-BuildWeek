@@ -1,6 +1,8 @@
 //Mi prendo lo spinner
 const spinnerContainer = document.getElementById("spinner-container");
 
+
+
 //Mi prendo l'url per i gruppi rock
 const myUrl = "https://striveschool-api.herokuapp.com/api/deezer/search?q=rock";
 const getRemoteData = function () {
@@ -67,3 +69,53 @@ const getRemoteData = function () {
 };
 
 getRemoteData();
+
+//Nascondo main
+const collapser = document.getElementById("collapser");
+const mainSection = document.getElementById("main-a");
+
+const hide = function (el) {
+  el.classList.toggle("d-none");
+  if (el.classList.contains("d-none")) {
+    collapser.textContent = "Mostra annunci";
+  } else {
+    collapser.textContent = "Nascondi annunci";
+  }
+};
+
+collapser.addEventListener("click", function () {
+  hide(mainSection);
+});
+
+//Nascondi album
+const collapser2 = document.getElementById("collapser-2");
+const rowToAppendChildren = document.getElementById("row-to-append-children");
+
+const hideSection = function (el) {
+  el.classList.toggle("d-none");
+  if (el.classList.contains("d-none")) {
+    collapser2.textContent = "Mostra album";
+  } else {
+    collapser2.textContent = "Nascondi album";
+  }
+};
+
+collapser2.addEventListener("click", function () {
+  hideSection(rowToAppendChildren);
+});
+
+//Saluto in base all'orario
+function salutoInBaseAllOrario() {
+  var data = new Date();
+  var ora = data.getHours();
+  var titolo = document.getElementById("saluto");
+
+  if (ora >= 0 && ora < 12) {
+      titolo.innerText = "Buongiorno";
+  } else if (ora >= 12 && ora < 19) {
+      titolo.innerText = "Buon pomeriggio";
+  } else {
+      titolo.innerText = "Buonasera";
+  }
+}
+
