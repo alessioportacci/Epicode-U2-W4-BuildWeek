@@ -359,10 +359,16 @@
                 <button id="profilo" class="btn btn-dark m-2">Suspense</button>
               </div>
             </div>
+            <!--Collapser annunci-->
+            <div class="ms-auto">
+              <p class="text-muted text-end mx-4" id="collapser">
+                Nascondi annunci
+              </p>
+            </div>
             <!--Main-->
             <main
               id="main-a"
-              class="d-flex justify-content-start align-items-center m-4 text-light"
+              class="d-flex justify-content-start align-items-center m-4 mt-0 text-light"
             >
               <img
                 src="assets/imgs/main/image-15.jpg"
@@ -375,7 +381,7 @@
                 <h1>SONG NAME</h1>
                 <p>Artista</p>
                 <p>Ascolta il nuovo singolo di ... e ...</p>
-                <!--Bottoni-->
+                <!-- Bottoni -->
                 <div>
                   <button
                     type="button"
@@ -405,13 +411,14 @@
               </div>
             </main>
 
-            <!-- Home buonasera -->
+            <!-- Home saluti -->
             <div
               class="row row-cols-2 row-cols-md-1 d-flex justify-content-center"
               style="margin-right: auto; margin-left: auto"
             >
               <!--Titolo-->
-              <h2 class="mx-4 mb-4 text-white">Laku noc</h2>
+              <body onload="salutoInBaseAllOrario()">
+                <h2 class="mb-4 text-white" id="saluto" style="margin-left: 20px;"></h2>
               <!--Cards-->
               <div class="card mb-3 mx-3 p-0" style="max-width: 305px">
                 <div class="row g-0">
@@ -511,9 +518,15 @@
               </div>
             </div>
             <!--Genero degli album dinamicamente-->
-            <h3 class="text-light">Altro di ciò che ti piace</h3>
+            <div class="row mx-2 mt-4">
+              <div class="col-12 d-flex justify-content-between">
+                <h2 class="text-light mx-1">Altro di ciò che ti piace</h2>
+                <p class="text-muted" id="collapser-2">Nascondi album</p>
+              </div>
+            </div>
             <div class="container mt-4">
-              <div class="row" id="row-to-append-children"></div>
+              <div class="row" id="row-to-append-children">
+              </div>
             </div>
             <div class="d-flex justify-content-center" id="spinner-container">
               <div class="spinner-border text-success" role="status">
@@ -806,14 +819,6 @@
 
     <div class="m-6">&nbsp;</div>
 
-    <!-- Lettore musicale nascosto-->
-    <div class="d-none">
-      <audio id="myAudio">
-        <source src="" type="audio/mpeg" class="audio-player-source" />
-        Your browser does not support the audio element.
-      </audio>
-    </div>
-
     <!-- Footer Tablet / Desktop -->
     <footer
       id="footer"
@@ -826,24 +831,17 @@
             <!-- Immagine -->
             <div class="col-2 p-3 d-none d-xxl-block">
               <img
-                src="./assets/imgs//invisible.png"
+                src="./assets/imgs/album/stadium arcadium.jpg"
                 width="50px"
                 height="50px"
-                class="footer-album-cover"
               />
             </div>
             <!-- Canzone e Artista -->
             <div class="col-6 p-3">
               <div class="row row-cols-1 fs-7">
-                <div
-                  class="text-white text-hover text-truncate footer-album-song"
-                >
-                  Nessuna canzone selezionata
-                </div>
-                <div
-                  class="text-hover text-truncate footer-album-artist artist-redirect"
-                >
-                  Nessun artista selezionato
+                <div class="text-white text-hover text-truncate">Wet Sand</div>
+                <div class="text-hover text-truncate">
+                  Red Hot Chili Peppers
                 </div>
               </div>
             </div>
@@ -856,28 +854,6 @@
 
         <!-- Audio player -->
         <div id="player-player" class="col-8 col-xl-4">
-          <!-- Player bar-->
-          <div id="player-bar">
-            <div class="row align-items-center justify-content-center">
-              <div
-                class="col-1 fs-8 text-truncate audio-time song-timestamp"
-              ></div>
-              <div class="col-9">
-                <input
-                  type="range"
-                  min="1"
-                  max="30"
-                  value="0"
-                  disabled
-                  class="audio-slider"
-                  style="width: 100%; height: 2px"
-                />
-              </div>
-              <div
-                class="col-1 fs-8 p-0 text-truncate audio-time song-duration"
-              ></div>
-            </div>
-          </div>
           <!-- pulsanti -->
           <div class="row align-items-center justify-content-center">
             <!-- Shuffle -->
@@ -889,16 +865,12 @@
               <img src="./assets/imgs/icons/skip-start-fill_icon.svg" />
             </div>
             <!-- Centrale -->
-            <div class="col-1" onclick="playAudio()">
+            <div class="col-1">
               <div class="row row-cols-1 justify-content-center">
                 <div class="player-button">
                   <img
-                    class="player-button-icon play-player-image"
+                    class="player-button-icon"
                     src="./assets/imgs/icons/play-fill_icon.svg"
-                  />
-                  <img
-                    src="./assets/imgs/icons/pause-fill_icon.svg"
-                    class="pause-player-image d-none"
                   />
                 </div>
               </div>
@@ -910,6 +882,14 @@
             <!-- Repeat -->
             <div class="col-1">
               <img src="./assets/imgs/icons/repeat_icon.svg" />
+            </div>
+          </div>
+          <!-- Player bar-->
+          <div id="player-bar">
+            <div class="row align-items-center justify-content-center">
+              <div class="col-1 fs-8 text-truncate">5:09</div>
+              <div class="col-9 m-2 audio"></div>
+              <div class="col-1 fs-8 p-0 text-truncate">5:09</div>
             </div>
           </div>
         </div>
@@ -958,7 +938,6 @@
         </div>
       </div>
     </footer>
-
     <!-- Footer mobile -->
     <footer
       id="footer-mobile"
@@ -970,7 +949,7 @@
       >
         <!-- Canzone -->
         <div id="scroll-container" class="col-8">
-          <div id="scroll-text" class="p-2 scroll-text">
+          <div id="scroll-text" class="p-2">
             Wet&nbsp;Sand&nbsp;-&nbsp;Red&nbsp;Hot&nbsp;Chili&nbsp;Peppers&nbsp;(Stadium&nbsp;Arcadium)
           </div>
         </div>
@@ -986,15 +965,6 @@
           <img
             src="./assets/imgs/icons/play-fill-white_icon.svg"
             width="30px"
-            onclick="playAudio()"
-            class="play-player-image"
-          />
-
-          <img
-            src="./assets/imgs/icons/pause-fill-white_icon.svg"
-            width="30px"
-            onclick="playAudio()"
-            class="pause-player-image d-none"
           />
         </div>
       </div>
@@ -1004,7 +974,7 @@
           <!-- Home -->
           <div class="col-3">
             <div
-              class="row row-cols-1 align-items-center justify-content-center home-nav"
+              class="row row-cols-1 align-items-center justify-content-center font-family: CircularStd-bold; home-nav"
             >
               <div class="text-center">
                 <svg
@@ -1076,7 +1046,6 @@
         </div>
       </div>
     </footer>
-
     <!-- Bootstrap 5 -->
 
     <script
@@ -1086,6 +1055,5 @@
     ></script>
     <script src="./scripts/index.js"></script>
     <script src="./scripts/script.js"></script>
-    <script src="./scripts/player.js"></script>
   </body>
 </html>
