@@ -31,7 +31,7 @@
     display: flex;
     flex-direction: reverse;
   }
-
+/*Pulsanti-icons*/
   #cuore:hover,
   #cuore:focus {
     filter: brightness(0) saturate(100%) invert(83%) sepia(32%) saturate(4763%) hue-rotate(82deg) brightness(93%) contrast(84%);
