@@ -29,9 +29,11 @@ const loadTracks = function (trackURL) {
     .then((tracks) => {
       console.log(tracks.data);
       //Levo lo spinner
-      // document.getElementById("spinner-container-tracks").classList.toggle("d-none")
-      // const trackListHTML = document.getElementById("popular-songs")
-      //Mi scorro le tracce
+      document
+        .getElementById("spinner-container-tracks")
+        .classList.toggle("d-none");
+      const trackListHTML = document.getElementById("popular-songs");
+      //  Mi scorro le tracce
       tracks.data.forEach((track) => {
         let li = document.createElement("li");
         li.innerHTML = `<div class="row row-cols-3 mb-1 p-1 align-items-center">
@@ -141,8 +143,12 @@ const loadAlbum = function () {
       console.log(artist);
 
       //Levo lo spinner
-      //   document.getElementById("spinner-container-image").classList.toggle("d-none")
-      //   document.getElementById("spinner-container-liked").classList.toggle("d-none")
+      document
+        .getElementById("spinner-container-image")
+        .classList.toggle("d-none");
+      document
+        .getElementById("spinner-container-liked")
+        .classList.toggle("d-none");
 
       //Immagine in alto
       document.querySelector(".artist-img").setAttribute("src", album.cover_xl);
