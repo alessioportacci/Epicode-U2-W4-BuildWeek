@@ -61,7 +61,7 @@
                 <div>
                   <!--Icona Home -->
                   <div id="home-icon" class="m-1 mb-2">
-                    <div class="row row-cols-2">
+                    <div class="row row-cols-2 home-nav">
                       <!-- Icona -->
                       <div class="col-2">
                         <svg
@@ -81,7 +81,12 @@
                       </div>
                       <!-- Testo -->
                       <div class="col-12 col-xxl-10">
-                        <p class="text-truncate">Home</p>
+                        <p
+                          class="text-truncate"
+                          onclick="location.href='index.html'"
+                        >
+                          Home
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -315,164 +320,202 @@
           <div class="col-12 col-md-10 col-lg-8 p-0">
             <!--Main album-->
             <main
-              id="main-b"
+              id="main"
               class="d-flex justify-content-start align-items-center text-light"
             >
-              <section class="w-100 h-100">
-                <div class="row row-cols-3"></div>
-                <!-- Barra in alto -->
-                <div
-                  class="row row-cols-2 justify-content-between mt-1 me-2 ms-1"
-                >
-                  <!-- Freccette -->
-                  <div>
-                    <a href="#" class="arrow-link">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-chevron-left"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
-                        />
-                      </svg>
-                    </a>
-                    <a href="#" class="arrow-link">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-chevron-left"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                  <!-- Profilo -->
-                  <div class="d-flex justify-content-end">
-                    <button id="profilo" class="btn btn-dark m-2">
-                      Suspense
-                    </button>
-                  </div>
-                </div>
-                <!--Album -->
-                <div
-                  class="d-flex justify-content-start align-items-center text-light"
-                >
-                  <div id="album-image" class="col-4"></div>
-                  <!-- Testo in alto -->
-                  <div>
-                    <h7>ALBUM</h7>
-                    <h1 class="album-name"></h1>
-                    <p>
-                      <span class="artist-name artist-redirect text-hover">
-                      </span>
-                      • <span class="album-year"> </span> •
-                      <span class="tracks-number"> </span>,
-                      <span class="album-duration"></span>
-                    </p>
-                  </div>
-                </div>
-                <!-- Main Home -->
-                <div class="row row-cols-2 row-cols-md-1"></div>
-                <!-- Canzoni album -->
-                <div class="row row-cols-2 row-cols-md-1"></div>
-              </section>
-            </main>
-            <div class="row m-1">
-              <div class="col-12">
-                <!-- Play Button -->
-                <button class="btn-spotify rounded-circle p-2 m-3">
-                  <img
-                    src="assets/imgs/icons/play-fill_icon.svg"
-                    width="25px"
-                  />
-                </button>
-                <!-- Heart -->
-                <img
-                  src="assets/imgs/icons/heart_icon.png"
-                  style="width: 2.5%"
-                  id="cuore"
-                />
-                <!--Simbolo-->
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-arrow-down-circle text-light ms-3"
-                  viewBox="0 0 16 16"
-                  id="arrow"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"
-                  />
-                </svg>
-                <!-- Tre puntini -->
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  fill="currentColor"
-                  class="bi bi-three-dots m-3"
-                  viewBox="0 0 16 16"
-                  id="dow"
-                >
-                  <path
-                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"
-                  />
-                </svg>
-              </div>
-            </div>
-
-            <!--Inizio tabella-->
-            <div class="row row-cols-1 m-5">
-              <!-- Prima riga -->
-              <div>
-                <div class="row table-head">
-                  <div class="col-1">#</div>
-                  <div class="col-8 col-md-7">Titolo</div>
-                  <div class="col-2">Riproduzioni</div>
-                  <div class="col-1 d-none d-md-block"></div>
-                  <div>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-clock float-end"
-                      viewBox="0 0 16 16"
+              <div class="row row-cols-1">
+                <!-- Parte alta -->
+                <div>
+                  <section class="w-100 h-100">
+                    <div class="row row-cols-3"></div>
+                    <!-- Barra in alto -->
+                    <div
+                      class="row row-cols-2 justify-content-between mt-1 me-2 ms-1"
                     >
-                      <path
-                        d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"
-                      />
-                      <path
-                        d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"
-                      />
-                    </svg>
-                  </div>
+                      <!-- Freccette -->
+                      <div>
+                        <a href="#" class="arrow-link" onclick="history.back()">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-chevron-left"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+                            />
+                          </svg>
+                        </a>
+                        <a
+                          href="#"
+                          class="arrow-link"
+                          onclick="history.forward()"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-chevron-left"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                      <!-- Profilo -->
+                      <div class="d-flex justify-content-end">
+                        <button id="profilo" class="btn btn-dark m-2">
+                          Suspense
+                        </button>
+                      </div>
+                    </div>
+                    <!--Album -->
+                    <!-- Spinner album -->
+                    <div
+                      class="d-flex justify-content-center align-items-center mt-5 pt-5"
+                      id="spinner-container-album-top"
+                    >
+                      <div class="spinner-border text-success" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                      </div>
+                    </div>
+                    <div
+                      class="d-flex justify-content-start align-items-center text-light text-shadow"
+                    >
+                      <div id="album-image" class="col-4"></div>
+                      <!-- Testo in alto -->
+                      <div>
+                        <h7 class="scritta-album">ALBUM</h7>
+                        <h1 class="album-name"></h1>
+                        <p>
+                          <span class="artist-name artist-redirect text-hover">
+                          </span>
+                          • <span class="album-year"> </span> •
+                          <span class="tracks-number"> </span>,
+                          <span class="album-duration"></span>
+                        </p>
+                      </div>
+                    </div>
+                    <!-- Main Home -->
+                    <div class="row row-cols-2 row-cols-md-1"></div>
+                    <!-- Canzoni album -->
+                    <div class="row row-cols-2 row-cols-md-1"></div>
+                  </section>
+                </div>
+
+                <!-- Sezione Album -->
+                <div class="text-spotify-secondary">
+                  <section class="album-info-section bg-spotify h-100">
+                    <!-- Pulsanti alti -->
+                    <div class="row m-1">
+                      <div class="col-12">
+                        <!-- Play Button -->
+                        <button class="btn-spotify rounded-circle p-2 m-3">
+                          <img
+                            src="assets/imgs/icons/play-fill_icon.svg"
+                            width="25px"
+                          />
+                        </button>
+                        <!-- Heart -->
+                        <img
+                          src="assets/imgs/icons/heart_icon.png"
+                          style="width: 2.5%"
+                          id="cuore"
+                        />
+                        <!--Simbolo-->
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-arrow-down-circle text-light ms-3"
+                          viewBox="0 0 16 16"
+                          id="arrow"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"
+                          />
+                        </svg>
+                        <!-- Tre puntini -->
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          fill="currentColor"
+                          class="bi bi-three-dots m-3"
+                          viewBox="0 0 16 16"
+                          id="dow"
+                        >
+                          <path
+                            d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <!--Inizio tabella-->
+                    <div class="row row-cols-1 m-5">
+                      <!-- Spinner tracce -->
+                      <div
+                        class="d-flex justify-content-center align-items-center mt-5 pt-5"
+                        id="spinner-container-tracks"
+                      >
+                        <div class="spinner-border text-success" role="status">
+                          <span class="visually-hidden">Loading...</span>
+                        </div>
+                      </div>
+
+                      <!-- Prima riga -->
+                      <div>
+                        <div class="row table-head">
+                          <div class="col-1">#</div>
+                          <div class="col-8 col-md-7">Titolo</div>
+                          <div class="col-2">Riproduzioni</div>
+                          <div class="col-1 d-none d-md-block"></div>
+                          <div class="col-1">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              fill="currentColor"
+                              class="bi bi-clock float-end"
+                              viewBox="0 0 16 16"
+                            >
+                              <path
+                                d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"
+                              />
+                              <path
+                                d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Tracce -->
+                      <div>
+                        <div
+                          class="row row-cols-4 row-cols-md-5 table-tracks align-items-center"
+                        ></div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+
+                <!-- Crediti -->
+                <div class="bg-spotify px-5 text-spotify-secondary">
+                  <div class="date fw-bold"></div>
+                  <div class="label"></div>
                 </div>
               </div>
-              <!-- Tracce -->
-              <div>
-                <div
-                  class="row row-cols-4 row-cols-md-5 table-tracks align-items-center"
-                ></div>
-              </div>
-            </div>
+            </main>
           </div>
-
-          <!--Fine colonna centrale-->
 
           <!-- Colonna di destra -->
           <div
@@ -1047,10 +1090,9 @@
         crossorigin="anonymous"
       ></script>
 
+      <script src="scripts/averageColor.js"></script>
       <script src="scripts/album.js"></script>
       <script src="scripts/player.js"></script>
-
-      <script src="scripts/averageColor.js"></script>
     </body>
     <!-- </html> -->
   </body>
