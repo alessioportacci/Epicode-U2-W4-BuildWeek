@@ -26,7 +26,7 @@ const getRemoteData = function () {
         newCol.innerHTML = `<div class="bg-spotify-card spotify-card"> 
         <div class="card h-100 bg-card bg-light-subtle-hover my-cards">
         <div class="p-2 d-flex">
-                              <img src="${element.album.cover_big}" class="card-img-top position-relative" alt="copertina">
+                              <img src="${element.album.cover_big}" class="card-img-top position-relative spotify-card-image" alt="copertina">
                               <img src="../assets/imgs/logo.png" class="position-absolute">
                               </div>
                               <div class="card-body">
