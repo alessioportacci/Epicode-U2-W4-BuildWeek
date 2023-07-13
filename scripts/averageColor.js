@@ -90,7 +90,7 @@ const start = function () {
 
   // se necessario, aggiunge degli '0' per rendere il risultato un valido colore esadecimale
   let mostRecurrentHex = pad(mostRecurrent)
+  sessionStorage.setItem("hex", mostRecurrentHex)
 
   // console.log del risultato
-  console.log(mostRecurrentHex)
 }

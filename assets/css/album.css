@@ -49,3 +49,7 @@
 {
   border-bottom: 1px #a8a8a8 solid;
 }
+
+.album-info-section{
+  background: linear-gradient(180deg, rgba(0,0,0,0.5125699938178396) 0%, rgba(32,32,32,0.9607492655265231) 48%, rgba(32,32,32,1) 100%) !important;
+}

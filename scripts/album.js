@@ -62,11 +62,11 @@ const loadAlbum = function () {
                                                         onload="start()"
                                                       >`   
       //Nome Album
-      console.log(document.querySelector(".album-name"))
       document.querySelector(".album-name").innerHTML = album.title;
       //Nome artista
       document.querySelector(".artist-name").innerHTML = album.artist.name
       document.querySelector(".artist-name").setAttribute("value", album.artist.id)
+      document.querySelector(".artist-name").classList.add("text-shadow")
       //Anno album
       document.querySelector(".album-year").innerHTML = album.release_date
       //Numero brani
@@ -79,6 +79,8 @@ const loadAlbum = function () {
 
     //Carico il colore di sfondo
     .then((album) => {
+      console.log(sessionStorage.getItem("hex"))
+      document.querySelector("#main").style.backgroundColor = "#" + sessionStorage.getItem("hex")
       return album
     })
 
