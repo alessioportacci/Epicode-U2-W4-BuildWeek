@@ -369,21 +369,22 @@
                   class="d-flex justify-content-start align-items-center text-light"
                 >
                   <img
-                    src="assets/imgs/main/image-18.jpg"
+                    src="assets/imgs/invisible.png"
                     alt="album"
                     id="imgAlbum"
                     class="mx-3 my-4 p-2"
                   />
-                  <!-- <img
-                    class="card-img artist-img mx-3 my-4 p-2"
-                    src="assets/imgs/invisible.png"
-                    alt="album"
-                    id="imgAlbum"
-                  /> -->
+                  <!-- Testo in alto -->
                   <div>
                     <h7>ALBUM</h7>
-                    <h1>ALBUM NAME</h1>
-                    <p>Artista • Anno uscita album • N. brani, durata</p>
+                    <h1 class="album-name"></h1>
+                    <p>
+                      <span class="artist-name artist-redirect text-hover">
+                      </span>
+                      • <span class="album-year"> </span> •
+                      <span class="tracks-number"> </span>,
+                      <span class="album-duration"></span>
+                    </p>
                   </div>
                 </div>
                 <!-- Main Home -->
@@ -446,16 +447,10 @@
                 </svg>
               </div>
             </div>
-            <!--Inizio tabella-->
-            <div class="row row-cols-2 row-cols-md-1 me-5">
-              <table class="table">
-                <thead>
-                  <tr class="text-light">
-                    <th scope="col" class="float-end">#</th>
-                    <th scope="col">TITOLO</th>
-                    <th scope="col">RIPRODUZIONI</th>
-                    <th scope="col">
-                      <svg
+
+            <!--  
+
+          <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="16"
                         height="16"
@@ -470,66 +465,41 @@
                           d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"
                         />
                       </svg>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody class="text-light">
-                  <tr>
-                    <th scope="row" class="border border-0 float-end">1</th>
-                    <td class="border border-0">Mark</td>
-                    <td class="border border-0">694.578</td>
-                    <td class="float-end border border-0">1:58</td>
-                  </tr>
-                  <tr>
-                    <th scope="row" class="border border-0 float-end">2</th>
-                    <td class="border border-0">Mark</td>
-                    <td class="border border-0">5.585.178</td>
-                    <td class="float-end border border-0">5:11</td>
-                  </tr>
-                  <tr>
-                    <th scope="row" class="border border-0 float-end">3</th>
-                    <td class="border border-0">Mark</td>
-                    <td class="border border-0">3.412.342</td>
-                    <td class="float-end border border-0">4:04</td>
-                  </tr>
-                  <tr>
-                    <th scope="row" class="border border-0 float-end">4</th>
-                    <td class="border border-0">Mark</td>
-                    <td class="border border-0">6.259.485</td>
-                    <td class="float-end border border-0">3:14</td>
-                  </tr>
-                  <tr>
-                    <th scope="row" class="border border-0 float-end">5</th>
-                    <td class="border border-0">Mark</td>
-                    <td class="border border-0">853.247</td>
-                    <td class="float-end border border-0">1:15</td>
-                  </tr>
-                  <tr>
-                    <th scope="row" class="border border-0 float-end">6</th>
-                    <td class="border border-0">Mark</td>
-                    <td class="border border-0">3.214.958</td>
-                    <td class="float-end border border-0">2:22</td>
-                  </tr>
-                  <tr>
-                    <th scope="row" class="border border-0 float-end">7</th>
-                    <td class="border border-0">Mark</td>
-                    <td class="border border-0">759.267</td>
-                    <td class="float-end border border-0">4:72</td>
-                  </tr>
-                  <tr>
-                    <th scope="row" class="border border-0 float-end">8</th>
-                    <td class="border border-0">Jacob</td>
-                    <td class="border border-0">254.789</td>
-                    <td class="float-end border border-0">3:09</td>
-                  </tr>
-                  <tr>
-                    <th scope="row" class="border border-0 float-end">9</th>
-                    <td class="border border-0">Jacob</td>
-                    <td class="border border-0">92.568.020</td>
-                    <td class="float-end border border-0">2:92</td>
-                  </tr>
-                </tbody>
-              </table>
+
+            -->
+
+            <!--Inizio tabella-->
+            <div class="row row-cols-1 m-5">
+              <!-- Prima riga -->
+              <div>
+                <div class="row row-cols-4 row-cols-md-5">
+                  <div>#</div>
+                  <div>Titolo</div>
+                  <div>Riproduzioni</div>
+                  <div class="d-none d-md-block"></div>
+                  <div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-clock float-end"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"
+                      />
+                      <path
+                        d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <!-- Tracce -->
+              <div>
+                <div class="row row-cols-4 row-cols-md-5 table-tracks"></div>
+              </div>
             </div>
           </div>
 
@@ -1064,6 +1034,8 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"
       ></script>
+
+      <script src="scripts/album.js"></script>
     </body>
     <!-- </html> -->
   </body>
