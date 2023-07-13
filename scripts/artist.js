@@ -30,6 +30,7 @@ const loadTracks = function(trackURL)
         if (res.ok) return res.json();
         else throw new Error("Errore nella chiamata");
       })
+
       //Carico la tracklist ed i brani likati
       .then((tracks) => {
         console.log(tracks.data);
@@ -43,7 +44,7 @@ const loadTracks = function(trackURL)
             li.innerHTML = `<div class="row row-cols-3 mb-1 p-1 align-items-center">
                                 <div class="col-9 text-truncate text-white">
                                     <img src="${track.album.cover_small}">
-                                    <span class="p-2 text-hover"> ${track.title} <span>
+                                    <span class="p-2 text-hover playable-song" onclick="loadAudio(${track.id})"> ${track.title} <span>
                                 </div>
                                 <div class="col-2">${numberWithCommas(track.rank)}</div>
                                 <div class="col-1">${(track.duration / 60).toFixed(2).toString().replace(".",":")}</div>
@@ -165,3 +166,100 @@ const loadArtist = function ()
 };
 
 loadArtist()
+
+
+//Funzione per il delay
+const delay = function (time) 
+{
+  return new Promise(resolve => setTimeout(resolve, time));
+}
+
+//Funzione per far partire la musica
+const audioPlayer = document.getElementById("myAudio"); 
+const sliderAudio = document.querySelector("#slider")
+function playAudio() 
+{ 
+  audioPlayer.volume = sliderAudio.value / 100
+  if(!audioPlayer.paused)
+  {
+    audioPlayer.pause()
+  }
+  else
+  {
+    audioPlayer.play();  
+  }
+
+  document.querySelector(".play-player-image") .classList.toggle("d-none")
+  document.querySelector(".pause-player-image").classList.toggle("d-none")
+} 
+
+//Alla fine della riproduzione
+audioPlayer.onended = function() 
+{
+  document.querySelector(".play-player-image") .classList.remove("d-none")
+  document.querySelector(".pause-player-image").classList.add("d-none")
+}
+
+
+//Funzione per caricare le canzoni nel player
+function loadAudio(id)
+{
+  fetch("https://striveschool-api.herokuapp.com/api/deezer/track/" + id, 
+    {
+      headers: 
+      {
+        Authorization:
+          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGFkMWZhNWNhMTA2NTAwMTQzMWU2ZTIiLCJpYXQiOjE2ODkwNjc0MjksImV4cCI6MTY5MDI3NzAyOX0.FL8mUJf9S_KVjNoDFWB16CJ0Ik-fXXPOzyH5-oETFdw",
+          "Content-Type": "application/jason",
+      },
+    })
+
+      .then((res) => {
+        if (res.ok) return res.json();
+        else throw new Error("Errore nella chiamata");
+      })
+      
+      .then((song) => {
+        console.log(song);
+        //Imposto le visualizzazioni a schermo in basso a destra
+        document.querySelector(".footer-album-song").innerHTML = song.title
+        document.querySelector(".footer-album-artist").innerHTML = song.artist.name
+        document.querySelector(".footer-album-cover").setAttribute("src", song.album.cover_medium)
+        //Lo imposto anche per il mini player
+        document.querySelector(".scroll-text").innerHTML = `${song.title.replaceAll(" ", "&nbsp;")}&nbsp;-&nbsp;${song.artist.name.replaceAll(" ", "&nbsp;")}&nbsp;(${song.album.title.replaceAll(" ", "&nbsp;")}&nbsp;)`
+        //Imposto l'audioplayer
+        document.querySelector(".audio-player-source").setAttribute("src", song.preview)
+        audioPlayer.load()
+
+        document.querySelector(".play-player-image") .classList.remove("d-none")
+        document.querySelector(".pause-player-image").classList.add("d-none")
+      })
+
+      .then(() => {
+          delay(500).then(() =>  document.querySelector(".song-duration").innerHTML = "00:" + audioPlayer.duration.toString().substring(0,2));
+      })
+
+      .catch((err) => {
+      console.log("Errore!", err);
+      });
+}
+
+//Funzione che aggiorna il timestamp
+const songTimestamp = document.querySelector(".song-timestamp")
+const audioSlider =  document.querySelector(".audio-slider")
+const updateTime = function()
+{
+  if(!audioPlayer.paused)
+  if (audioPlayer.currentTime < 10)
+    songTimestamp.innerHTML =  "00:0" + Math.floor(audioPlayer.currentTime)
+  else 
+    songTimestamp.innerHTML =  "00:" + Math.floor(audioPlayer.currentTime)
+  audioSlider.setAttribute("value", Math.floor(audioPlayer.currentTime))
+}
+setInterval(updateTime, 1000)
+
+//Funzione che aggiorna il volume
+sliderAudio.addEventListener("change", function()
+{
+  audioPlayer.volume = sliderAudio.value / 100
+})

@@ -341,7 +341,11 @@ p {
 {
   height: 1px;
   border: solid white 1px;
+}
 
+.audio-time
+{
+  padding-top: 9px !important
 }
 
 .player-button
