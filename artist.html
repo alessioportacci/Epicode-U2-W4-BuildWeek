@@ -774,7 +774,7 @@
             <!-- Immagine -->
             <div class="col-2 p-3 d-none d-xxl-block">
               <img
-                src="./assets/imgs/album/stadium arcadium.jpg"
+                src="./assets/imgs//invisible.png"
                 width="50px"
                 height="50px"
                 class="footer-album-cover"
@@ -786,10 +786,12 @@
                 <div
                   class="text-white text-hover text-truncate footer-album-song"
                 >
-                  Wet Sand
+                  Nessuna canzone selezionata
                 </div>
-                <div class="text-hover text-truncate footer-album-artist">
-                  Red Hot Chili Peppers
+                <div
+                  class="text-hover text-truncate footer-album-artist artist-redirect"
+                >
+                  Nessun artista selezionato
                 </div>
               </div>
             </div>
@@ -805,9 +807,9 @@
           <!-- Player bar-->
           <div id="player-bar">
             <div class="row align-items-center justify-content-center">
-              <div class="col-1 fs-8 text-truncate audio-time song-timestamp">
-                5:09
-              </div>
+              <div
+                class="col-1 fs-8 text-truncate audio-time song-timestamp"
+              ></div>
               <div class="col-9">
                 <input
                   type="range"
@@ -821,9 +823,7 @@
               </div>
               <div
                 class="col-1 fs-8 p-0 text-truncate audio-time song-duration"
-              >
-                5:09
-              </div>
+              ></div>
             </div>
           </div>
           <!-- pulsanti -->
@@ -935,6 +935,14 @@
             src="./assets/imgs/icons/play-fill-white_icon.svg"
             width="30px"
             onclick="playAudio()"
+            class="play-player-image"
+          />
+
+          <img
+            src="./assets/imgs/icons/pause-fill-white_icon.svg"
+            width="30px"
+            onclick="playAudio()"
+            class="pause-player-image d-none"
           />
         </div>
       </div>
@@ -1025,5 +1033,6 @@
     ></script>
     <script src="./scripts/artist.js"></script>
     <script src="./scripts/script.js"></script>
+    <script src="./scripts/player.js"></script>
   </body>
 </html>
