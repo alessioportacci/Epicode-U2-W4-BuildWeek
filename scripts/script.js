@@ -4,3 +4,11 @@ document.querySelectorAll(".home-nav").forEach(Element =>{
     })
 
 })
+
+//Mi creo una funzione per i comma
+function numberWithCommas(number) 
+    {
+        var parts = number.toString().split(".");
+        parts[0]=parts[0].replace(/\B(?=(\d{3})+(?!\d))/g,".");
+        return parts.join(",");
+    }

@@ -11,7 +11,6 @@ const draw = function (img) {
 
 // scompone pixel per pixel e ritorna un oggetto con una mappa della loro frequenza nell'immagine
 const getColors = function (c) {
-  console.log(c)
   let col,
     colors = {}
   let pixels, r, g, b, a
@@ -57,12 +56,28 @@ const pad = function (hex) {
   return ('000000' + hex).slice(-6)
 }
 
+const generateImage = function () {
+  // genero dinamicamente un tag <img /> in un <div> vuoto
 
+  let imageSrc =
+    'https://e-cdns-images.dzcdn.net/images/artist/7f6e8be161417ad8ce8f09b45721544f/500x500-000000-80-0-0.jpg'
+
+  let reference = document.getElementById('album-image')
+
+  // l'event listener "onload" nel tag <img /> si occupa di lanciare la funzione "start()" solamente
+  // al termine del caricamento della src
+  reference.innerHTML = `
+    <img
+      src=${imageSrc}
+      id="img"
+      crossorigin="anonymous"
+      onload="start()"
+    />`
+}
 
 const start = function () {
   // prendo il riferimento all'immagine del dom
   let imgReference = document.querySelector('.get-hex')
-  console.log(imgReference)
 
   // creo il context 2d dell'immagine selezionata
   let context = draw(imgReference)
@@ -79,4 +94,3 @@ const start = function () {
   // console.log del risultato
   console.log(mostRecurrentHex)
 }
-

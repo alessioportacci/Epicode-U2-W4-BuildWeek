@@ -51,7 +51,6 @@ function loadAudio(id)
       })
       
       .then((song) => {
-        console.log(song);
         //Imposto le visualizzazioni a schermo in basso a destra
         document.querySelector(".footer-album-song").innerHTML = song.title
         document.querySelector(".footer-album-artist").innerHTML = song.artist.name

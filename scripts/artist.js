@@ -4,15 +4,6 @@ const myUrl = "https://striveschool-api.herokuapp.com/api/deezer/artist/" + arti
 
 let artistName
 
-//Mi creo una funzione per i comma
-function numberWithCommas(number) 
-    {
-    var parts = number.toString().split(".");
-    parts[0]=parts[0].replace(/\B(?=(\d{3})+(?!\d))/g,".");
-    return parts.join(",");
-    }
-
-
 //Carico la tracklist
 const loadTracks = function(trackURL) 
 {

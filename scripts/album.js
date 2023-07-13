@@ -54,8 +54,15 @@ const loadAlbum = function () {
       */
         
       //Immagine album
-      document.querySelector("#imgAlbum").setAttribute("src", album.cover);
+      console.log(album)
+      document.querySelector("#album-image").innerHTML = ` <img src= "${album.cover_big}"                    alt="album"
+                                                        id="imgAlbum"
+                                                        class="mx-3 my-4 p-2 get-hex"
+                                                        crossorigin="anonymous"
+                                                        onload="start()"
+                                                      >`   
       //Nome Album
+      console.log(document.querySelector(".album-name"))
       document.querySelector(".album-name").innerHTML = album.title;
       //Nome artista
       document.querySelector(".artist-name").innerHTML = album.artist.name
@@ -67,6 +74,11 @@ const loadAlbum = function () {
       //Durata album
       document.querySelector(".album-duration").innerHTML = albumDuration(album.tracks.data).toString().replace("."," min ") + " sec"
 
+      return album
+    })
+
+    //Carico il colore di sfondo
+    .then((album) => {
       return album
     })
 
@@ -95,22 +107,26 @@ const loadAlbum = function () {
         //Appendiamo le riproduzioni
         let trackReproductions = document.createElement("div")
         trackReproductions.classList.add("my-2", "col-2") 
-        trackReproductions.innerHTML = track.rank
+        trackReproductions.innerHTML = numberWithCommas(track.rank)
         table.appendChild(trackReproductions)  
 
         //Mettiamo il cuore
         let trackLikes = document.createElement("div")
         trackLikes.classList.add("my-2", "col-1","d-none", "d-md-block")
-        trackLikes.innerHTML = "<3"
+        trackLikes.innerHTML = `<img
+                                  src="assets/imgs/icons/heart_icon.png"
+                                  style="width: 17px"
+                                  id="cuore"
+                                />`
         table.appendChild(trackLikes)
 
         //Mettiamo la durata della canzone
         let trackDuration = document.createElement("div")
         trackDuration.classList.add("my-2", "col-1", "text-end")
-        trackDuration.innerHTML = (track.duration/60).toFixed(2)
+        trackDuration.innerHTML = (track.duration/60).toFixed(2).toString().replace(".", ":")
         table.appendChild(trackDuration)
-      })
 
+      })
     })
 
     .catch((err) => {
