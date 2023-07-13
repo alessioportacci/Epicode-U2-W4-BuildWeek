@@ -87,14 +87,14 @@ const loadAlbum = function () {
       
         //Appendiamo il titolo
         let trackName = document.createElement("div")
-        trackName.classList.add("my-2", "col-8", "col-md-7", "text-hover")
-        trackName.innerHTML = track.title
-        trackName.setAttribute("onclick", "loadAudio(" + track.id +")")
+        trackName.classList.add("my-2", "col-8", "col-md-7")
+        trackName.innerHTML = `<span class="text-hover" onclick="loadAudio(${track.id})">${track.title}</span> <br> 
+                              <span class="text-hover" onclick="location.href='artist.html?id=${track.artist.id}'"> ${track.artist.name} </span`
         table.appendChild(trackName)  
 
         //Appendiamo le riproduzioni
         let trackReproductions = document.createElement("div")
-        trackReproductions.classList.add("my-2", "col-2")
+        trackReproductions.classList.add("my-2", "col-2") 
         trackReproductions.innerHTML = track.rank
         table.appendChild(trackReproductions)  
 
