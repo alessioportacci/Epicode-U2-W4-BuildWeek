@@ -87,8 +87,9 @@ const loadAlbum = function () {
       
         //Appendiamo il titolo
         let trackName = document.createElement("div")
-        trackName.classList.add("my-2", "col-8", "col-md-7")
+        trackName.classList.add("my-2", "col-8", "col-md-7", "text-hover")
         trackName.innerHTML = track.title
+        trackName.setAttribute("onclick", "loadAudio(" + track.id +")")
         table.appendChild(trackName)  
 
         //Appendiamo le riproduzioni
