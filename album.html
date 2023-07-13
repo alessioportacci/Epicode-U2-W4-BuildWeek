@@ -769,31 +769,44 @@
 
       <div class="m-6">&nbsp;</div>
 
+      <!-- Lettore musicale nascosto-->
+      <div class="d-none">
+        <audio id="myAudio">
+          <source src="" type="audio/mpeg" class="audio-player-source" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+
       <!-- Footer Tablet / Desktop -->
       <footer
         id="footer"
         class="d-none d-md-block footer-player fixed-bottom bg-spotify-player"
       >
-        <div class="row row-cols-3 d-flex justify-between align-items-center">
+        <div class="row d-flex justify-between align-items-center">
           <!-- Album cover -->
-          <div id="player-album">
+          <div id="player-album" class="col-4">
             <div class="row align-items-center">
               <!-- Immagine -->
               <div class="col-2 p-3 d-none d-xxl-block">
                 <img
-                  src="./assets/imgs/album/stadium arcadium.jpg"
+                  src="./assets/imgs//invisible.png"
                   width="50px"
                   height="50px"
+                  class="footer-album-cover"
                 />
               </div>
               <!-- Canzone e Artista -->
               <div class="col-6 p-3">
                 <div class="row row-cols-1 fs-7">
-                  <div class="text-white text-hover text-truncate">
-                    Wet Sand
+                  <div
+                    class="text-white text-hover text-truncate footer-album-song"
+                  >
+                    Nessuna canzone selezionata
                   </div>
-                  <div class="text-hover text-truncate">
-                    Red Hot Chili Peppers
+                  <div
+                    class="text-hover text-truncate footer-album-artist artist-redirect"
+                  >
+                    Nessun artista selezionato
                   </div>
                 </div>
               </div>
@@ -805,7 +818,29 @@
           </div>
 
           <!-- Audio player -->
-          <div id="player-player">
+          <div id="player-player" class="col-8 col-xl-4">
+            <!-- Player bar-->
+            <div id="player-bar">
+              <div class="row align-items-center justify-content-center">
+                <div
+                  class="col-1 fs-8 text-truncate audio-time song-timestamp"
+                ></div>
+                <div class="col-9">
+                  <input
+                    type="range"
+                    min="1"
+                    max="30"
+                    value="0"
+                    disabled
+                    class="audio-slider"
+                    style="width: 100%; height: 2px"
+                  />
+                </div>
+                <div
+                  class="col-1 fs-8 p-0 text-truncate audio-time song-duration"
+                ></div>
+              </div>
+            </div>
             <!-- pulsanti -->
             <div class="row align-items-center justify-content-center">
               <!-- Shuffle -->
@@ -817,12 +852,16 @@
                 <img src="./assets/imgs/icons/skip-start-fill_icon.svg" />
               </div>
               <!-- Centrale -->
-              <div class="col-1">
+              <div class="col-1" onclick="playAudio()">
                 <div class="row row-cols-1 justify-content-center">
                   <div class="player-button">
                     <img
-                      class="player-button-icon"
+                      class="player-button-icon play-player-image"
                       src="./assets/imgs/icons/play-fill_icon.svg"
+                    />
+                    <img
+                      src="./assets/imgs/icons/pause-fill_icon.svg"
+                      class="pause-player-image d-none"
                     />
                   </div>
                 </div>
@@ -836,18 +875,10 @@
                 <img src="./assets/imgs/icons/repeat_icon.svg" />
               </div>
             </div>
-            <!-- Player bar-->
-            <div id="player-bar">
-              <div class="row align-items-center justify-content-center">
-                <div class="col-1 fs-8 text-truncate">5:09</div>
-                <div class="col-9 m-2 audio"></div>
-                <div class="col-1 fs-8 p-0 text-truncate">5:09</div>
-              </div>
-            </div>
           </div>
 
           <!-- Impostazioni Audio -->
-          <div id="player-options">
+          <div id="player-options" class="col-4 d-none d-xl-block">
             <div class="row align-items-center justify-content-end m-0">
               <!-- Microfono -->
               <div class="col-1">
@@ -869,12 +900,15 @@
 
               <!-- Audio -->
               <div class="col-1 col-xl-3">
-                <div class="row align-items-center">
-                  <div class="col-12 col-xl-1 mb-1">
-                    <img src="./assets/imgs/icons/volume-down_icon.svg" />
+                <div class="row">
+                  <div class="col-xl-1 mb-1">
+                    <img
+                      src="./assets/imgs/icons/volume-down_icon.svg"
+                      style="color: white"
+                    />
                   </div>
                   <div class="col-9">
-                    <div class="audio d-none d-xl-block"></div>
+                    <input type="range" id="slider" />
                   </div>
                 </div>
               </div>
@@ -902,7 +936,7 @@
         >
           <!-- Canzone -->
           <div id="scroll-container" class="col-8">
-            <div id="scroll-text" class="p-2">
+            <div id="scroll-text" class="p-2 scroll-text">
               Wet&nbsp;Sand&nbsp;-&nbsp;Red&nbsp;Hot&nbsp;Chili&nbsp;Peppers&nbsp;(Stadium&nbsp;Arcadium)
             </div>
           </div>
@@ -918,6 +952,15 @@
             <img
               src="./assets/imgs/icons/play-fill-white_icon.svg"
               width="30px"
+              onclick="playAudio()"
+              class="play-player-image"
+            />
+
+            <img
+              src="./assets/imgs/icons/pause-fill-white_icon.svg"
+              width="30px"
+              onclick="playAudio()"
+              class="pause-player-image d-none"
             />
           </div>
         </div>
@@ -927,7 +970,7 @@
             <!-- Home -->
             <div class="col-3">
               <div
-                class="row row-cols-1 align-items-center justify-content-center"
+                class="row row-cols-1 align-items-center justify-content-center home-nav"
               >
                 <div class="text-center">
                   <svg
@@ -1008,6 +1051,8 @@
       ></script>
 
       <script src="scripts/album.js"></script>
+      <script src="scripts/player.js"></script>
+
       <script src="scripts/averageColor.js"></script>
     </body>
     <!-- </html> -->
