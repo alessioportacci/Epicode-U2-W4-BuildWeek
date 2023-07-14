@@ -44,7 +44,7 @@ const getRemoteData = function () {
         <div class="card h-100 bg-card bg-light-subtle-hover my-cards">
         <div class="p-2 d-flex">
                               <img src="${element.album.cover_big}" class="card-img-top spotify-card-image z-1 position-relative" alt="copertina">
-                              <img src="../assets/imgs/logo.png" class="z-2 position-absolute">
+                              <img src="./assets/imgs/logo.png" class="z-2 position-absolute">
                               </div>
                               <div class="card-body">
                                 <h5 class="card-title album-redirect text-hover text-truncate" id="card-title" value="${element.album.id}">${element.title}</h5>
