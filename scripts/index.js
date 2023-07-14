@@ -22,10 +22,10 @@ const getRemoteData = function () {
       const row = document.getElementById("row-to-append-children");
       elements.data.forEach((element) => {
         let newCol = document.createElement("div");
-        newCol.classList.add("col", "col-3", "my-5");
+        newCol.classList.add("col", "col-12", "col-md-3", "my-5");
         newCol.innerHTML = `<div class="bg-spotify-card spotify-card"> 
-        <div class="card h-100 bg-card bg-light-subtle-hover my-cards">
-        <div class="p-2 d-flex">
+                              <div class="card h-100 bg-card bg-light-subtle-hover my-cards">
+                              <div class="p-2 d-flex">
                               <img src="${element.album.cover_big}" class="card-img-top position-relative spotify-card-image" alt="copertina">
                               <img src="../assets/imgs/logo.png" class="position-absolute">
                               </div>
