@@ -53,6 +53,7 @@ function loadAudio(id)
       .then((song) => {
         //Imposto le visualizzazioni a schermo in basso a destra
         document.querySelector(".footer-album-song").innerHTML = song.title
+        document.querySelector(".footer-album-song").setAttribute("onclick", "location.href='album.html?id=" + song.album.id + "'")
         document.querySelector(".footer-album-artist").innerHTML = song.artist.name
         document.querySelector(".footer-album-artist").setAttribute("value", song.artist.id)
         document.querySelector(".footer-album-cover").setAttribute("src", song.album.cover_medium)
