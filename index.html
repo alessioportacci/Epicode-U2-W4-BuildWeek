@@ -390,222 +390,305 @@
                 </div>
               </div>
             </div>
-            <!--Collapser annunci-->
-            <div class="ms-auto">
-              <p class="text-muted text-end mx-4" id="collapser">
-                Nascondi annunci
-              </p>
-            </div>
             <!--Main-->
-            <main
-              id="main-a"
-              class="d-flex justify-content-start align-items-center m-4 mt-0 text-light"
-            >
-              <img
-                src="assets/imgs/main/image-15.jpg"
-                alt="album"
-                id="imgAlbum"
-                class="mx-3 my-4 p-2"
-              />
-              <!-- Parte alta -->
-              <div>
-                <h6>ALBUM</h6>
-                <h1>Casa Dolce Casa</h1>
-                <p>Un cane sul divano</p>
-                <p>
-                  Ascolta il nuovo album scritto e prodotto da un cane su un
-                  divano (che carino!)
+            <main>
+              <!--Collapser annunci-->
+              <div class="ms-auto">
+                <p class="text-muted text-end mx-4" id="collapser">
+                  Nascondi annunci
                 </p>
-                <!--Bottoni-->
+              </div>
+              <!-- Parte alta -->
+              <div
+                id="main-a"
+                class="d-flex justify-content-start align-items-center m-4 mt-0 text-light"
+              >
+                <img
+                  src="assets/imgs/main/image-15.jpg"
+                  alt="album"
+                  id="imgAlbum"
+                  class="mx-3 my-4 p-2"
+                />
+                <!-- Parte alta -->
                 <div>
-                  <button
-                    type="button"
-                    class="btn btn-spotify text-dark rounded-pill fw-bold px-4 m-1 mt-3 me-3"
-                    onclick="location.href='album.html?id=8668997'"
-                  >
-                    Play
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn-outline-light rounded-pill fw-bold px-4 m-1 mt-3"
-                  >
-                    Salva
-                  </button>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-three-dots mx-3"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"
-                    ></path>
-                  </svg>
+                  <h6>ALBUM</h6>
+                  <h1>Casa Dolce Casa</h1>
+                  <p>Un cane sul divano</p>
+                  <p>
+                    Ascolta il nuovo album scritto e prodotto da un cane su un
+                    divano (che carino!)
+                  </p>
+                  <!--Bottoni-->
+                  <div>
+                    <button
+                      type="button"
+                      class="btn btn-spotify text-dark rounded-pill fw-bold px-4 m-1 mt-3 me-3"
+                      onclick="location.href='album.html?id=8668997'"
+                    >
+                      Play
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-outline-light rounded-pill fw-bold px-4 m-1 mt-3"
+                    >
+                      Salva
+                    </button>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-three-dots mx-3"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <!--Schede alte-->
+              <div>
+                <!-- Saluto -->
+                <h2
+                  class="mb-1 mb-4 text-white"
+                  id="saluto"
+                  style="margin-left: 20px"
+                ></h2>
+                <div class="row row-cols-2 row-cols-lg-4 p-md-4">
+                  <!-- Lofi -->
+                  <div class="d-none d-md-block">
+                    <div class="card mb-3" style="max-width: 540px">
+                      <div
+                        class="row g-0 justify-content-center align-items-center h-100"
+                      >
+                        <div class="col-md-4">
+                          <img
+                            src="assets/imgs/main/image-5.jpg"
+                            class="img-fluid rounded-start h-100"
+                            alt="..."
+                          />
+                        </div>
+                        <div class="col-md-8">
+                          <div class="card-body">
+                            <h5
+                              class="card-title text-hover text-truncate"
+                              onclick="location.href='index.html?q=lofi'"
+                            >
+                              Lofi beats
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Max Concentrazione -->
+                  <div class="d-none d-md-block">
+                    <div class="card mb-3" style="max-width: 540px">
+                      <div
+                        class="row g-0 justify-content-center align-items-center h-100"
+                      >
+                        <div class="col-md-4">
+                          <img
+                            src="assets/imgs/main/image-3.jpg"
+                            class="img-fluid rounded-start h-100"
+                            alt="..."
+                          />
+                        </div>
+                        <div class="col-md-8">
+                          <div class="card-body">
+                            <h5
+                              class="card-title text-hover text-truncate"
+                              onclick="location.href='index.html?q=max'"
+                            >
+                              Massima Concentrazione
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- What the dog doing? -->
+                  <div class="d-none d-md-block">
+                    <div class="card mb-3" style="max-width: 540px">
+                      <div
+                        class="row g-0 justify-content-center align-items-center h-100"
+                      >
+                        <div class="col-md-4">
+                          <img
+                            src="assets/imgs/main/image-21.jpg"
+                            class="img-fluid rounded-start h-100"
+                            alt="..."
+                          />
+                        </div>
+                        <div class="col-md-8">
+                          <div class="card-body">
+                            <h5
+                              class="card-title text-hover text-truncate"
+                              onclick="location.href='index.html?q=wholetthedogsout'"
+                            >
+                              What the dog doing'
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Jazz Vibes -->
+                  <div class="d-none d-md-block">
+                    <div class="card mb-3" style="max-width: 540px">
+                      <div
+                        class="row g-0 justify-content-center align-items-center h-100"
+                      >
+                        <div class="col-md-4">
+                          <img
+                            src="assets/imgs/main/image-6.jpg"
+                            class="img-fluid rounded-start h-100"
+                            alt="..."
+                          />
+                        </div>
+                        <div class="col-md-8">
+                          <div class="card-body">
+                            <h5
+                              class="card-title text-hover text-truncate"
+                              onclick="location.href='index.html?q=jazz'"
+                            >
+                              Jazz vibes
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Brani che ti piacciono -->
+                  <div class="d-none d-md-block">
+                    <div class="card mb-3" style="max-width: 540px">
+                      <div
+                        class="row g-0 justify-content-center align-items-center h-100"
+                      >
+                        <div class="col-md-4">
+                          <img
+                            src="assets/imgs/icons/brani_che_ti_piacciono_icon.jpg"
+                            class="img-fluid rounded-start h-100"
+                            alt="..."
+                          />
+                        </div>
+                        <div class="col-md-8">
+                          <div class="card-body">
+                            <h5
+                              class="card-title text-hover text-truncate"
+                              onclick="location.href='index.html?q=likes'"
+                            >
+                              Brani che ti piacciono
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Estate 2022 -->
+                  <div class="d-none d-md-block">
+                    <div class="card mb-3" style="max-width: 540px">
+                      <div
+                        class="row g-0 justify-content-center align-items-center h-100"
+                      >
+                        <div class="col-md-4">
+                          <img
+                            src="assets/imgs/main/image-18.jpg"
+                            class="img-fluid rounded-start h-100"
+                            alt="..."
+                          />
+                        </div>
+                        <div class="col-md-8">
+                          <div class="card-body">
+                            <h5
+                              class="card-title text-hover text-truncate"
+                              onclick="location.href='index.html?q=summer'"
+                            >
+                              Estate 2022
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Peaceful Piano -->
+                  <div class="d-none d-md-block">
+                    <div class="card mb-3" style="max-width: 540px">
+                      <div
+                        class="row g-0 justify-content-center align-items-center h-100"
+                      >
+                        <div class="col-md-4">
+                          <img
+                            src="assets/imgs/main/image-4.jpg"
+                            class="img-fluid rounded-start h-100"
+                            alt="..."
+                          />
+                        </div>
+                        <div class="col-md-8">
+                          <div class="card-body">
+                            <h5
+                              class="card-title text-hover text-truncate"
+                              onclick="location.href='index.html?q=piano'"
+                            >
+                              Peaceful Piano
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Get Trolled  -->
+                  <div class="d-none d-md-block">
+                    <div class="card mb-3" style="max-width: 540px">
+                      <div
+                        class="row g-0 justify-content-center align-items-center h-100"
+                      >
+                        <div class="col-md-4">
+                          <img
+                            src="assets/imgs/main/image-20.jpg"
+                            class="img-fluid rounded-start h-100"
+                            alt="..."
+                          />
+                        </div>
+                        <div class="col-md-8">
+                          <div class="card-body">
+                            <h5
+                              class="card-title text-hover text-truncate"
+                              onclick="location.href='index.html?q=rickastley'"
+                            >
+                              Get Trolled
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Albums -->
+              <div>
+                <h3 class="mx-4 mb-4 text-white d-none d-md-block">
+                  Altro di ciò che ti piace
+                </h3>
+                <h3 class="mx-4 mb-4 mx-4 text-white d-block d-md-none">
+                  Consigliato per oggi
+                </h3>
+
+                <div class="container mt-4">
+                  <div class="row" id="row-to-append-children"></div>
+                </div>
+                <div
+                  class="d-flex justify-content-center"
+                  id="spinner-container"
+                >
+                  <div class="spinner-border text-success" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
                 </div>
               </div>
             </main>
-
-            <!-- Home buonasera -->
-            <!--Titolo-->
-            <h2
-              class="mb-4 text-white"
-              id="saluto"
-              style="margin-left: 20px"
-            ></h2>
-            <!--Titolo-->
-            <div
-              class="row row-cols-2 row-cols-xl-2 justify-content-center"
-              style="margin-right: auto; margin-left: auto"
-            >
-              <!--Cards-->
-              <div class="card mb-3 mx-3 p-0" style="max-width: 306px">
-                <div class="row g-0">
-                  <div class="col-md-2">
-                    <img
-                      src="assets/imgs/main/image-5.jpg"
-                      class="img-fluid rounded-start h-100"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h6 class="card-title m-1 text-hover">Lofi Beats</h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card mb-3 mx-3 p-0" style="max-width: 306px">
-                <div class="row g-0">
-                  <div class="col-md-2">
-                    <img
-                      src="assets/imgs/main/image-3.jpg"
-                      class="img-fluid rounded-start h-100"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h6 class="card-title m-1 text-hover">
-                        Max Concentrazione
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card mb-3 mx-3 p-0" style="max-width: 306px">
-                <div class="row g-0">
-                  <div class="col-md-2">
-                    <img
-                      src="assets/imgs/main/image-6.jpg"
-                      class="img-fluid rounded-start h-100"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h6 class="card-title m-1 text-hover">Jazz Vibes</h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card mb-3 mx-3 p-0" style="max-width: 306px">
-                <div class="row g-0">
-                  <div class="col-md-2">
-                    <img
-                      src="assets/imgs/icons/brani_che_ti_piacciono_icon.jpg"
-                      class="img-fluid rounded-start h-100 w-100"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h6 class="card-title m-1 test-hover">
-                        Brani che ti piacciono
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card mb-3 mx-3 p-0" style="max-width: 306px">
-                <div class="row g-0">
-                  <div class="col-md-2">
-                    <img
-                      src="assets/imgs/main/image-18.jpg"
-                      class="img-fluid rounded-start h-100"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h6 class="card-title m-1 text-hover">Estate 2022</h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card mb-3 mx-3 p-0" style="max-width: 306px">
-                <div class="row g-0">
-                  <div class="col-md-2">
-                    <img
-                      src="assets/imgs/main/image-4.jpg"
-                      class="img-fluid rounded-start h-100"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h6 class="card-title m-1 text-hover">Peaceful Piano</h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card mb-3 mx-3 p-0" style="max-width: 306px">
-                <div class="row g-0">
-                  <div class="col-md-2">
-                    <img
-                      src="assets/imgs/main/image-20.jpg"
-                      class="img-fluid rounded-start h-100"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h6 class="card-title m-1 text-hover">Get Trolled</h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card mb-3 mx-3 p-0" style="max-width: 306px">
-                <div class="row g-0">
-                  <div class="col-md-2">
-                    <img
-                      src="assets/imgs/main/image-21.jpg"
-                      class="img-fluid rounded-start h-100"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h6 class="card-title m-1 text-hover">
-                        What the dog doing
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!--Genero degli album dinamicamente-->
-            <h3 class="mx-4 mb-4 text-white">Altro di ciò che ti piace</h3>
-            <div class="container mt-4">
-              <div class="row" id="row-to-append-children"></div>
-            </div>
-            <div class="d-flex justify-content-center" id="spinner-container">
-              <div class="spinner-border text-success" role="status">
-                <span class="visually-hidden">Loading...</span>
-              </div>
-            </div>
           </section>
         </div>
 

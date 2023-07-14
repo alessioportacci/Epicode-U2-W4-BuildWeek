@@ -72,7 +72,7 @@ const loadDiscography = function(discographyURL)
             const discographyList = document.querySelector(".discography")
             albums.data.forEach(album => {
                 let card = document.createElement("div")
-                card.classList.add("col-6", "col-md-3", "my-3", "p-5", "p-md-1","h-100",)
+                card.classList.add("col-6", "col-md-3", "my-3", "p-md-1","h-100",)
                 card.innerHTML = `<div class="bg-spotify-card spotify-card"> 
                                     <div class="card h-100 bg-card card-container">
                                         <img src="${album.cover_big}" class="card-img-top p-2 spotify-card-image" alt="copertina">
