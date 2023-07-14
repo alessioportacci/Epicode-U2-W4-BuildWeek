@@ -32,7 +32,7 @@
             id="left-column"
             class="container-fluid p-0 d-none d-md-block lateral-column col-2 m-0 sticky-top"
           >
-            <section id="left-column-content">
+            <section id="left-column-content" class="position-relative">
               <!-- Blocco alto-->
               <div
                 id="first-block"
@@ -60,8 +60,8 @@
                 <!-- 3 icone minimal -->
                 <div>
                   <!--Icona Home -->
-                  <div id="home-icon" class="m-1 mb-2">
-                    <div class="row row-cols-2 home-nav">
+                  <div id="home-icon" class="m-1 mb-2 home-nav">
+                    <div class="row row-cols-2">
                       <!-- Icona -->
                       <div class="col-2">
                         <svg
@@ -81,12 +81,7 @@
                       </div>
                       <!-- Testo -->
                       <div class="col-12 col-xxl-10">
-                        <p
-                          class="text-truncate"
-                          onclick="location.href='index.html'"
-                        >
-                          Home
-                        </p>
+                        <p class="text-truncate">Home</p>
                       </div>
                     </div>
                   </div>
@@ -112,7 +107,11 @@
                       </div>
                       <!-- Testo-->
                       <div class="col-12 col-xxl-10">
-                        <p class="text-truncate">Cerca</p>
+                        <a
+                          href="./search.html"
+                          class="text-light text-decoration-none"
+                          ><p class="text-truncate" id="to-search">Cerca</p></a
+                        >
                       </div>
                     </div>
                   </div>
@@ -211,104 +210,109 @@
                   id="main-library"
                   class="row row-cols-1 text-spotify-secondary"
                 >
-                  <div id="library-main">
-                    <div class="ms-4 my-2">
-                      <ul
-                        id="playlist-library"
-                        class="text-truncate scrolling-box"
-                      >
-                        <li class="text-truncate">
-                          early stage emily syndrome (sett-ott 2022)
-                        </li>
-                        <li class="text-truncate">Be The Young</li>
-                        <li class="text-truncate">
-                          cit. Kimiko (lug-ago 2022)
-                        </li>
-                        <li class="text-truncate">saggio vibes</li>
-                        <li class="text-truncate">
-                          main character energy (mag-giu 2022)
-                        </li>
-                        <li class="text-truncate">that fucking mood</li>
-                        <li class="text-truncate">
-                          VEE, CARLOTTA E GIACOMO VANNO A BOSIO
-                        </li>
-                        <li class="text-truncate">
-                          An Emily Winchester kind of mood landing page (mar-apr
-                          2022)
-                        </li>
-                        <li class="text-truncate">2021 lol</li>
-                        <li class="text-truncate">
-                          cosa cazzo vuol dire questa affermazione gen-fe...
-                        </li>
-                        <li class="text-truncate">
-                          honey and glass (nov-dic 2021)
-                        </li>
-                        <li class="text-truncate">(Revenge) Training Arc</li>
-                        <li class="text-truncate">Lidia * Emily</li>
-                        <li class="text-truncate">
-                          minecraft e nintendo switch (sep-oct 2021)
-                        </li>
-                        <li class="text-truncate">
-                          silvano d'orba? I hardly know her (lug - ago 2021)
-                        </li>
-                        <li class="text-truncate">Song 2021</li>
-                        <li class="text-truncate">Caparezza</li>
-                        <li class="text-truncate">Suspense</li>
-                        <li class="text-truncate">2021 lol</li>
-                        <li class="text-truncate">
-                          cosa cazzo vuol dire questa affermazione gen-fe...
-                        </li>
-                        <li class="text-truncate">
-                          honey and glass (nov-dic 2021)
-                        </li>
-                        <li class="text-truncate">(Revenge) Training Arc</li>
-                        <li class="text-truncate">Lidia * Emily</li>
-                        <li class="text-truncate">
-                          minecraft e nintendo switch (sep-oct 2021)
-                        </li>
-                        <li class="text-truncate">
-                          silvano d'orba? I hardly know her (lug - ago 2021)
-                        </li>
-                        <li class="text-truncate">Song 2021</li>
-                        <li class="text-truncate">Caparezza</li>
-                        <li class="text-truncate">Suspense</li>
-                        <li class="text-truncate">2021 lol</li>
-                        <li class="text-truncate">
-                          cosa cazzo vuol dire questa affermazione gen-fe...
-                        </li>
-                        <li class="text-truncate">
-                          honey and glass (nov-dic 2021)
-                        </li>
-                        <li class="text-truncate">(Revenge) Training Arc</li>
-                        <li class="text-truncate">Lidia * Emily</li>
-                        <li class="text-truncate">
-                          minecraft e nintendo switch (sep-oct 2021)
-                        </li>
-                        <li class="text-truncate">
-                          silvano d'orba? I hardly know her (lug - ago 2021)
-                        </li>
-                        <li class="text-truncate">Song 2021</li>
-                        <li class="text-truncate">Caparezza</li>
-                        <li class="text-truncate">Suspense</li>
-                        <li class="text-truncate">2021 lol</li>
-                        <li class="text-truncate">
-                          cosa cazzo vuol dire questa affermazione gen-fe...
-                        </li>
-                        <li class="text-truncate">
-                          honey and glass (nov-dic 2021)
-                        </li>
-                        <li class="text-truncate">(Revenge) Training Arc</li>
-                        <li class="text-truncate">Lidia * Emily</li>
-                        <li class="text-truncate">
-                          minecraft e nintendo switch (sep-oct 2021)
-                        </li>
-                        <li class="text-truncate">
-                          silvano d'orba? I hardly know her (lug - ago 2021)
-                        </li>
-                        <li class="text-truncate">Song 2021</li>
-                        <li class="text-truncate">Caparezza</li>
-                        <li class="text-truncate">Suspense</li>
-                      </ul>
+                  <div
+                    id="main-library"
+                    class="row row-cols-1 text-spotify-secondary"
+                  >
+                    <div id="library-main">
+                      <div class="ms-4 my-2">
+                        <ul
+                          id="playlist-library"
+                          class="text-truncate scrolling-box"
+                        >
+                          <li class="text-truncate">
+                            early stage emily syndrome (sett-ott 2022)
+                          </li>
+                          <li class="text-truncate">Be The Young</li>
+                          <li class="text-truncate">
+                            cit. Kimiko (lug-ago 2022)
+                          </li>
+                          <li class="text-truncate">saggio vibes</li>
+                          <li class="text-truncate">
+                            main character energy (mag-giu 2022)
+                          </li>
+                          <li class="text-truncate">that fucking mood</li>
+                          <li class="text-truncate">
+                            VEE, CARLOTTA E GIACOMO VANNO A BOSIO
+                          </li>
+                          <li class="text-truncate">
+                            An Emily Winchester kind of mood landing page
+                            (mar-apr 2022)
+                          </li>
+                          <li class="text-truncate">2021 lol</li>
+                          <li class="text-truncate">
+                            cosa cazzo vuol dire questa affermazione gen-fe...
+                          </li>
+                          <li class="text-truncate">
+                            honey and glass (nov-dic 2021)
+                          </li>
+                          <li class="text-truncate">(Revenge) Training Arc</li>
+                          <li class="text-truncate">Lidia * Emily</li>
+                          <li class="text-truncate">
+                            minecraft e nintendo switch (sep-oct 2021)
+                          </li>
+                          <li class="text-truncate">
+                            silvano d'orba? I hardly know her (lug - ago 2021)
+                          </li>
+                          <li class="text-truncate">Song 2021</li>
+                          <li class="text-truncate">Caparezza</li>
+                          <li class="text-truncate">Suspense</li>
+                          <li class="text-truncate">2021 lol</li>
+                          <li class="text-truncate">
+                            cosa cazzo vuol dire questa affermazione gen-fe...
+                          </li>
+                          <li class="text-truncate">
+                            honey and glass (nov-dic 2021)
+                          </li>
+                          <li class="text-truncate">(Revenge) Training Arc</li>
+                          <li class="text-truncate">Lidia * Emily</li>
+                          <li class="text-truncate">
+                            minecraft e nintendo switch (sep-oct 2021)
+                          </li>
+                          <li class="text-truncate">
+                            silvano d'orba? I hardly know her (lug - ago 2021)
+                          </li>
+                          <li class="text-truncate">Song 2021</li>
+                          <li class="text-truncate">Caparezza</li>
+                          <li class="text-truncate">Suspense</li>
+                          <li class="text-truncate">2021 lol</li>
+                          <li class="text-truncate">
+                            cosa cazzo vuol dire questa affermazione gen-fe...
+                          </li>
+                          <li class="text-truncate">
+                            honey and glass (nov-dic 2021)
+                          </li>
+                          <li class="text-truncate">(Revenge) Training Arc</li>
+                          <li class="text-truncate">Lidia * Emily</li>
+                          <li class="text-truncate">
+                            minecraft e nintendo switch (sep-oct 2021)
+                          </li>
+                          <li class="text-truncate">
+                            silvano d'orba? I hardly know her (lug - ago 2021)
+                          </li>
+                          <li class="text-truncate">Song 2021</li>
+                          <li class="text-truncate">Caparezza</li>
+                          <li class="text-truncate">Suspense</li>
+                          <li class="text-truncate">2021 lol</li>
+                          <li class="text-truncate">
+                            cosa cazzo vuol dire questa affermazione gen-fe...
+                          </li>
+                          <li class="text-truncate">
+                            honey and glass (nov-dic 2021)
+                          </li>
+                          <li class="text-truncate">(Revenge) Training Arc</li>
+                          <li class="text-truncate">Lidia * Emily</li>
+                          <li class="text-truncate">
+                            minecraft e nintendo switch (sep-oct 2021)
+                          </li>
+                          <li class="text-truncate">
+                            silvano d'orba? I hardly know her (lug - ago 2021)
+                          </li>
+                          <li class="text-truncate">Song 2021</li>
+                          <li class="text-truncate">Caparezza</li>
+                          <li class="text-truncate">Suspense</li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
