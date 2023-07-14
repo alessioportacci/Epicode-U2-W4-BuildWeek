@@ -50,3 +50,11 @@
   display: flex;
   flex-direction: reverse;
 }
+
+#to-search{
+  color: #a8a8a8;
+}
+#to-search:hover{
+  color: white;
+  cursor: pointer;
+}

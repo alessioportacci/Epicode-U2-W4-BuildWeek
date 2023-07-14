@@ -88,6 +88,7 @@
 body
 {
     overflow-x: hidden;
+    user-select: none;
 }
 
 .text-hover:hover
@@ -338,6 +339,13 @@ p {
 .player-button-icon
 {
   margin-bottom: 3.5px
+}
+
+.player-button .pause-player-image
+{
+  padding-bottom: 4px;
+  padding-right: 7px;
+  margin-left: -1px;
 }
 
 .bottom-nav

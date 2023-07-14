@@ -81,6 +81,12 @@ const start = function (img) {
   if(img)
     imgReference = img
 
+  console.log(imgReference.width)
+  console.log(imgReference)
+
+  if(imgReference.width == 0)
+    imgReference. width = 100
+
   // creo il context 2d dell'immagine selezionata
   let context = draw(imgReference)
 

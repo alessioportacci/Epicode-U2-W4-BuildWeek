@@ -58,3 +58,11 @@
 {
   width: 90%;
 }
+
+#to-search{
+  color: #a8a8a8;
+}
+#to-search:hover{
+  color: white;
+  cursor: pointer;
+}

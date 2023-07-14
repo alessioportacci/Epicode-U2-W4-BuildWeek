@@ -24,3 +24,10 @@
     height: 20em !important
 }
 
+#to-search{
+    color: #a8a8a8;
+  }
+  #to-search:hover{
+    color: white;
+    cursor: pointer;
+  }
