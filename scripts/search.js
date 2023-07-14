@@ -19,8 +19,6 @@ input.addEventListener("keypress", function(event) {
 
 const boxes = document.querySelectorAll(".sfoglia-box")
 boxes.forEach((box) =>{
-    console.log(box.firstElementChild)
-    
     
     start(box.firstElementChild)
     box.setAttribute("style", "background-color:#" +  sessionStorage.getItem("hex") + "!important")
