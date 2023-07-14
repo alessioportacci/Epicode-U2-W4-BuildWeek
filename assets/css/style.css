@@ -88,6 +88,7 @@
 body
 {
     overflow-x: hidden;
+    user-select: none;
 }
 
 .text-hover:hover
