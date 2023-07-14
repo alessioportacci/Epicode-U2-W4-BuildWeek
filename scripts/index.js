@@ -28,8 +28,7 @@ const getRemoteData = function () {
           "col-6",
           "col-md-3",
           "my-3",
-          "p-5",
-          "p-md-1",
+          "p-1",
           "h-100"
         );
         newCol.innerHTML = `<div class="bg-spotify-card spotify-card"> 
