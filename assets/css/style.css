@@ -328,6 +328,11 @@ p {
   padding-top: 9px !important
 }
 
+.audio-slider
+{
+  accent-color: white;
+}
+
 .player-button
 {
   background-color: white;

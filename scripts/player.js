@@ -83,13 +83,23 @@ const audioSlider =  document.querySelector(".audio-slider")
 const updateTime = function()
 {
   if(!audioPlayer.paused)
-  if (audioPlayer.currentTime < 10)
-    songTimestamp.innerHTML =  "00:0" + Math.floor(audioPlayer.currentTime)
-  else 
-    songTimestamp.innerHTML =  "00:" + Math.floor(audioPlayer.currentTime)
-  audioSlider.setAttribute("value", Math.floor(audioPlayer.currentTime))
+    if (audioPlayer.currentTime < 10)
+      songTimestamp.innerHTML =  "00:0" + Math.floor(audioPlayer.currentTime)
+    else 
+      songTimestamp.innerHTML =  "00:" + Math.floor(audioPlayer.currentTime)
+    audioSlider.setAttribute("value", Math.floor(audioPlayer.currentTime))
 }
 setInterval(updateTime, 1000)
+
+//Al cambiare dello slider
+audioSlider.addEventListener("change", function()
+{
+  document.querySelector("#myAudio").currentTime = audioSlider.value
+  document.querySelector("#myAudio").focus()
+
+  audioSlider.setAttribute("value", Math.floor(audioPlayer.currentTime))
+})
+
 
 //Funzione che aggiorna il volume
 sliderAudio.addEventListener("change", function()
