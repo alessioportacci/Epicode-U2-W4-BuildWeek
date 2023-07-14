@@ -109,12 +109,16 @@ const loadAlbum = function () {
     })
 
     //Carico le tracce
+
     .then((album) => 
     {
       //Levo lo spinner
       document
         .getElementById("spinner-container-tracks")
         .classList.toggle("d-none");
+
+      //Metto la prima traccia sul bottone
+      document.querySelector(".btn-spotify").setAttribute("onclick", `loadAudio(${album.tracks.data[0].id})`)
 
       const table = document.querySelector(".table-tracks")
       let number = 1
