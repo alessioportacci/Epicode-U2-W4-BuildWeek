@@ -316,71 +316,254 @@
             </section>
           </div>
 
-          <!--Colonna centrale album-->
+          <!--Colonna centrale-->
           <div class="col-12 col-md-10 col-lg-8 p-0">
-            <!--Main album-->
-            <main
-              id="main"
-              class="d-flex justify-content-start align-items-center text-light"
-            >
-              <!-- Podcast -->
+            <main id="main" class="text-light container">
+              <!-- Searchbar -->
               <div
-                class="row row-cols-2 row-col-md-4 p-2 px-5 n.3"
-                onclick="location.href = 'index.html?q=podcast'"
+                class="row row-cols-1 m-2 mt-4 justify-content-center align-items-center"
               >
-                <div class="sfoglia-box">
+                <div class="text-center">
+                  <div class="input-group mb-3">
+                    <input
+                      id="search-input"
+                      type="text"
+                      class="form-control bg-spotify-card text-white rounded-pill no-border"
+                      placeholder="Cosa vuoi ascoltare?"
+                      aria-label="Cosa vuoi ascoltare?"
+                      aria-describedby="button-addon2"
+                    />
+                    <button
+                      class="btn btn-outline-secondary no-border rounded-pill"
+                      type="button"
+                      id="search-button"
+                    >
+                      <svg
+                        role="img"
+                        height="20"
+                        width="20"
+                        aria-hidden="true"
+                        class="Svg-sc-ytk21e-0 haNxPq search-icon"
+                        viewBox="0 0 24 24"
+                        data-encore-id="icon"
+                        fill="white"
+                      >
+                        <path
+                          d="M10.533 1.279c-5.18 0-9.407 4.14-9.407 9.279s4.226 9.279 9.407 9.279c2.234 0 4.29-.77 5.907-2.058l4.353 4.353a1 1 0 1 0 1.414-1.414l-4.344-4.344a9.157 9.157 0 0 0 2.077-5.816c0-5.14-4.226-9.28-9.407-9.28zm-7.407 9.279c0-4.006 3.302-7.28 7.407-7.28s7.407 3.274 7.407 7.28-3.302 7.279-7.407 7.279-7.407-3.273-7.407-7.28z"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Blocchetti  -->
+              <div
+                class="row row-cols-2 row-cols-md-4 p-3 px-5 m-3 justify-content-center"
+              >
+                <!-- Podcast -->
+                <div
+                  class="sfoglia-box"
+                  onclick="location.href = 'index.html?q=podcast'"
+                >
                   <img src="assets/imgs/main/image-1.jpg" class="sfoglia-img" />
                   <p class="sfoglia-text">Podcast</p>
                 </div>
-              </div>
-              <!-- Eventi dal vivo -->
-              <div
-                class="row row-cols-2 row-col-md-4 p-2 px-5 n.3"
-                onclick="location.href = 'index.html?q=dalvivo'"
-              >
-                <div class="sfoglia-box">
+                <!-- Eventi dal vivo -->
+                <div
+                  class="sfoglia-box"
+                  onclick="location.href = 'index.html?q=dalvivo'"
+                >
                   <img src="assets/imgs/main/image-2.jpg" class="sfoglia-img" />
                   <p class="sfoglia-text">Eventi dal vivo</p>
                 </div>
-              </div>
-              <!-- Create per te -->
-              <div
-                class="row row-cols-2 row-col-md-4 p-2 px-5 n.3"
-                onclick="location.href = 'index.html?q=foryou'"
-              >
-                <div class="sfoglia-box">
+                <!-- Create per te -->
+                <div
+                  class="sfoglia-box"
+                  onclick="location.href = 'index.html?q=foryou'"
+                >
                   <img src="assets/imgs/main/image-3.jpg" class="sfoglia-img" />
                   <p class="sfoglia-text">Create per te</p>
                 </div>
-              </div>
-              <!-- Nuove uscite -->
-              <div
-                class="row row-cols-2 row-col-md-4 p-2 px-5 n.3"
-                onclick="location.href = 'index.html?q=newreleases'"
-              >
-                <div class="sfoglia-box">
+                <!-- Nuove uscite -->
+                <div
+                  class="sfoglia-box"
+                  onclick="location.href = 'index.html?q=newreleases'"
+                >
                   <img src="assets/imgs/main/image-4.jpg" class="sfoglia-img" />
                   <p class="sfoglia-text">Nuove Uscite</p>
                 </div>
-              </div>
-              <!-- Estate -->
-              <div
-                class="row row-cols-2 row-col-md-4 p-2 px-5 n.3"
-                onclick="location.href = 'index.html?q=summer'"
-              >
-                <div class="sfoglia-box">
+                <!-- Estate -->
+                <div
+                  class="sfoglia-box"
+                  onclick="location.href = 'index.html?q=summer'"
+                >
                   <img src="assets/imgs/main/image-5.jpg" class="sfoglia-img" />
                   <p class="sfoglia-text">Estate</p>
                 </div>
-              </div>
-              <!-- Estate -->
-              <div
-                class="row row-cols-2 row-col-md-4 p-2 px-5 n.3"
-                onclick="location.href = 'index.html?q=summer'"
-              >
-                <div class="sfoglia-box">
-                  <img src="assets/imgs/main/image-5.jpg" class="sfoglia-img" />
-                  <p class="sfoglia-text">Estate</p>
+                <!-- Pop -->
+                <div
+                  class="sfoglia-box"
+                  onclick="location.href = 'index.html?q=pop'"
+                >
+                  <img src="assets/imgs/main/image-6.jpg" class="sfoglia-img" />
+                  <p class="sfoglia-text">Pop</p>
+                </div>
+                <!-- Hip Hop -->
+                <div
+                  class="sfoglia-box"
+                  onclick="location.href = 'index.html?q=hiphop'"
+                >
+                  <img src="assets/imgs/main/image-7.jpg" class="sfoglia-img" />
+                  <p class="sfoglia-text">Hip Hop</p>
+                </div>
+                <!-- Dance -->
+                <div
+                  class="sfoglia-box"
+                  onclick="location.href = 'index.html?q=dance'"
+                >
+                  <img src="assets/imgs/main/image-8.jpg" class="sfoglia-img" />
+                  <p class="sfoglia-text">Dance / Elettronica</p>
+                </div>
+                <!-- Classifiche -->
+                <div
+                  class="sfoglia-box"
+                  onclick="location.href = 'index.html?q=tierlists'"
+                >
+                  <img src="assets/imgs/main/image-9.jpg" class="sfoglia-img" />
+                  <p class="sfoglia-text">Classifiche</p>
+                </div>
+                <!-- Latina -->
+                <div
+                  class="sfoglia-box"
+                  onclick="location.href = 'index.html?q=tierlists'"
+                >
+                  <img
+                    src="assets/imgs/main/image-10.jpg"
+                    class="sfoglia-img"
+                  />
+                  <p class="sfoglia-text">Latina</p>
+                </div>
+                <!-- Rock -->
+                <div
+                  class="sfoglia-box"
+                  onclick="location.href = 'index.html?q=rock'"
+                >
+                  <img
+                    src="assets/imgs/main/image-11.jpg"
+                    class="sfoglia-img"
+                  />
+                  <p class="sfoglia-text">Rock</p>
+                </div>
+                <!-- Indie -->
+                <div
+                  class="sfoglia-box"
+                  onclick="location.href = 'index.html?q=indie'"
+                >
+                  <img
+                    src="assets/imgs/main/image-12.jpg"
+                    class="sfoglia-img"
+                  />
+                  <p class="sfoglia-text">Indie</p>
+                </div>
+                <!-- In Auto -->
+                <div
+                  class="sfoglia-box"
+                  onclick="location.href = 'index.html?q=car'"
+                >
+                  <img
+                    src="assets/imgs/main/image-13.jpg"
+                    class="sfoglia-img"
+                  />
+                  <p class="sfoglia-text">In Auto</p>
+                </div>
+                <!-- Scopri -->
+                <div
+                  class="sfoglia-box"
+                  onclick="location.href = 'index.html?q=discover'"
+                >
+                  <img
+                    src="assets/imgs/main/image-19.jpg"
+                    class="sfoglia-img"
+                  />
+                  <p class="sfoglia-text">Scopri</p>
+                </div>
+                <!-- Sanremo -->
+                <div
+                  class="sfoglia-box"
+                  onclick="location.href = 'index.html?q=sanremo'"
+                >
+                  <img
+                    src="assets/imgs/main/image-14.jpg"
+                    class="sfoglia-img"
+                  />
+                  <p class="sfoglia-text">Sanremo</p>
+                </div>
+                <!-- Mood -->
+                <div
+                  class="sfoglia-box"
+                  onclick="location.href = 'index.html?q=mood'"
+                >
+                  <img
+                    src="assets/imgs/main/image-15.jpg"
+                    class="sfoglia-img"
+                  />
+                  <p class="sfoglia-text">Mood</p>
+                </div>
+                <!-- Di Tendenza -->
+                <div
+                  class="sfoglia-box"
+                  onclick="location.href = 'index.html?q=trending'"
+                >
+                  <img
+                    src="assets/imgs/main/image-16.jpg"
+                    class="sfoglia-img"
+                  />
+                  <p class="sfoglia-text">Di Tendenza</p>
+                </div>
+                <!-- Equal -->
+                <div
+                  class="sfoglia-box"
+                  onclick="location.href = 'index.html?q=equal'"
+                >
+                  <img
+                    src="assets/imgs/main/image-17.jpg"
+                    class="sfoglia-img"
+                  />
+                  <p class="sfoglia-text">EQUAL</p>
+                </div>
+                <!-- RADAR -->
+                <div
+                  class="sfoglia-box"
+                  onclick="location.href = 'index.html?q=radar'"
+                >
+                  <img
+                    src="assets/imgs/main/image-18.jpg"
+                    class="sfoglia-img"
+                  />
+                  <p class="sfoglia-text">RADAR</p>
+                </div>
+                <!-- Allenamento -->
+                <div
+                  class="sfoglia-box"
+                  onclick="location.href = 'index.html?q=allenamento'"
+                >
+                  <img
+                    src="assets/imgs/main/image-20.jpg"
+                    class="sfoglia-img"
+                  />
+                  <p class="sfoglia-text">Allenamento</p>
+                </div>
+                <!-- Party -->
+                <div
+                  class="sfoglia-box"
+                  onclick="location.href = 'index.html?q=party'"
+                >
+                  <img
+                    src="assets/imgs/main/image-21.jpg"
+                    class="sfoglia-img"
+                  />
+                  <p class="sfoglia-text">Party</p>
                 </div>
               </div>
             </main>
@@ -960,8 +1143,8 @@
       ></script>
 
       <script src="scripts/averageColor.js"></script>
-      <script src="scripts/album.js"></script>
       <script src="scripts/player.js"></script>
+      <script src="scripts/search.js"></script>
     </body>
     <!-- </html> -->
   </body>

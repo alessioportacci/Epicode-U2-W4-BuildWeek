@@ -75,9 +75,11 @@ const generateImage = function () {
     />`
 }
 
-const start = function () {
+const start = function (img) {
   // prendo il riferimento all'immagine del dom
   let imgReference = document.querySelector('.get-hex')
+  if(img)
+    imgReference = img
 
   // creo il context 2d dell'immagine selezionata
   let context = draw(imgReference)
@@ -90,7 +92,9 @@ const start = function () {
 
   // se necessario, aggiunge degli '0' per rendere il risultato un valido colore esadecimale
   let mostRecurrentHex = pad(mostRecurrent)
+
   sessionStorage.setItem("hex", mostRecurrentHex)
 
+  console.log(mostRecurrentHex)
   // console.log del risultato
 }
