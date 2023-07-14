@@ -53,6 +53,12 @@
   color: white;
 }
 
+/*css icona account*/
+.dropdown-toggle::after {
+  margin-left: 11px; 
+  margin-top: 10px;
+}
+
 /*css img first*/
 #imgAlbum {
   width: 20%;
