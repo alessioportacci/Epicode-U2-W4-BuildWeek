@@ -3,10 +3,10 @@
 }
 
 #card-title {
-  font-size: 0.8em;
+  font-size: 1.25rem;
 }
 #card-text {
-  font-size: 0.5em;
+  font-size: 1rem;
 }
 .my-cards {
   border-radius: 6%;
@@ -17,6 +17,7 @@
 .position-absolute {
   padding: 5px;
   width: 1.5em;
+  z-index: 2;
 }
 
 #main-a {
