@@ -57,6 +57,7 @@ function loadAudio(id)
         document.querySelector(".footer-album-artist").innerHTML = song.artist.name
         document.querySelector(".footer-album-artist").setAttribute("value", song.artist.id)
         document.querySelector(".footer-album-cover").setAttribute("src", song.album.cover_medium)
+        document.querySelector(".footer-album-cover").setAttribute("style","margin-left:40%")
         //Lo imposto anche per il mini player
         document.querySelector(".scroll-text").innerHTML = `${song.title.replaceAll(" ", "&nbsp;")}&nbsp;-&nbsp;${song.artist.name.replaceAll(" ", "&nbsp;")}&nbsp;(${song.album.title.replaceAll(" ", "&nbsp;")}&nbsp;)`
         //Imposto l'audioplayer
