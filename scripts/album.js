@@ -120,27 +120,27 @@ const loadAlbum = function () {
       //Ci scorriamo tutte le tracce dell'album
       album.tracks.data.forEach((track) =>
       {
-        //Ci appendiamo il numero di traccia
+        //1- Ci appendiamo il numero di traccia
         let trackNumber = document.createElement("div")
         trackNumber.classList.add("my-2", "col-1")
         trackNumber.innerHTML = number
         table.appendChild(trackNumber)  
         number ++
       
-        //Appendiamo il titolo
+        //2- Appendiamo il titolo
         let trackName = document.createElement("div")
-        trackName.classList.add("my-2", "col-8", "col-md-7")
+        trackName.classList.add("my-2", "col-10", "col-md-7")
         trackName.innerHTML = `<span class="text-hover text-white" onclick="loadAudio(${track.id})">${track.title}</span> <br> 
                                <span class="text-hover" onclick="location.href='artist.html?id=${track.artist.id}'"> ${track.artist.name} </span`
         table.appendChild(trackName)  
 
-        //Appendiamo le riproduzioni
+        //3- Appendiamo le riproduzioni
         let trackReproductions = document.createElement("div")
-        trackReproductions.classList.add("my-2", "col-2") 
+        trackReproductions.classList.add("my-2", "col-2", "d-none", "d-md-block") 
         trackReproductions.innerHTML = numberWithCommas(track.rank)
         table.appendChild(trackReproductions)  
 
-        //Mettiamo il cuore
+        //4- Mettiamo il cuore
         let trackLikes = document.createElement("div")
         trackLikes.classList.add("my-2", "col-1","d-none", "d-md-block")
         trackLikes.innerHTML = `<img
@@ -150,7 +150,7 @@ const loadAlbum = function () {
                                 />`
         table.appendChild(trackLikes)
 
-        //Mettiamo la durata della canzone
+        //5- Mettiamo la durata della canzone
         let trackDuration = document.createElement("div")
         trackDuration.classList.add("my-2", "col-1", "text-end")
         trackDuration.innerHTML = (track.duration/60).toFixed(2).toString().replace(".", ":")
