@@ -316,9 +316,47 @@
             </section>
           </div>
 
-          <!--Colonna centrale album-->
+          <!--Colonna centrale-->
           <div class="col-12 col-md-10 col-lg-8 p-0">
-            <main id="main" class="text-light">
+            <main id="main" class="text-light container">
+              <!-- Searchbar -->
+              <div
+                class="row row-cols-1 m-2 mt-4 justify-content-center align-items-center"
+              >
+                <div class="text-center">
+                  <div class="input-group mb-3">
+                    <input
+                      id="search-input"
+                      type="text"
+                      class="form-control bg-spotify-card text-white rounded-pill no-border"
+                      placeholder="Cosa vuoi ascoltare?"
+                      aria-label="Cosa vuoi ascoltare?"
+                      aria-describedby="button-addon2"
+                    />
+                    <button
+                      class="btn btn-outline-secondary no-border rounded-pill"
+                      type="button"
+                      id="search-button"
+                    >
+                      <svg
+                        role="img"
+                        height="20"
+                        width="20"
+                        aria-hidden="true"
+                        class="Svg-sc-ytk21e-0 haNxPq search-icon"
+                        viewBox="0 0 24 24"
+                        data-encore-id="icon"
+                        fill="white"
+                      >
+                        <path
+                          d="M10.533 1.279c-5.18 0-9.407 4.14-9.407 9.279s4.226 9.279 9.407 9.279c2.234 0 4.29-.77 5.907-2.058l4.353 4.353a1 1 0 1 0 1.414-1.414l-4.344-4.344a9.157 9.157 0 0 0 2.077-5.816c0-5.14-4.226-9.28-9.407-9.28zm-7.407 9.279c0-4.006 3.302-7.28 7.407-7.28s7.407 3.274 7.407 7.28-3.302 7.279-7.407 7.279-7.407-3.273-7.407-7.28z"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
               <div
                 class="row row-cols-2 row-cols-md-4 p-3 px-5 m-3 justify-content-center"
               >
@@ -948,7 +986,7 @@
       ></script>
 
       <script src="scripts/averageColor.js"></script>
-      <script src="scripts/album.js"></script>
+      <script src="scripts/search.js"></script>
       <script src="scripts/player.js"></script>
     </body>
     <!-- </html> -->

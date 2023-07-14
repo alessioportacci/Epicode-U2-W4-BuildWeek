@@ -1,10 +1,13 @@
 //Mi prendo lo spinner
 const spinnerContainer = document.getElementById("spinner-container");
 
+const q = new URL(window.location.href).searchParams.get("q");
 
 
 //Mi prendo l'url per i gruppi rock
-const myUrl = "https://striveschool-api.herokuapp.com/api/deezer/search?q=rock";
+let myUrl = "https://striveschool-api.herokuapp.com/api/deezer/search?q=rock";
+if(q)
+  myUrl = "https://striveschool-api.herokuapp.com/api/deezer/search?q=" + q;
 const getRemoteData = function () {
   fetch(myUrl, {
     headers: {
