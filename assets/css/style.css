@@ -340,6 +340,13 @@ p {
   margin-bottom: 3.5px
 }
 
+.player-button .pause-player-image
+{
+  padding-bottom: 4px;
+  padding-right: 7px;
+  margin-left: -1px;
+}
+
 .bottom-nav
 {
   background: linear-gradient(180deg, rgba(0,0,0,0.2274159663865546) 0%, rgba(0,0,0,0.7540266106442577) 35%, rgba(0,0,0,0.9332983193277311) 100%);}
