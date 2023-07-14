@@ -7,7 +7,13 @@ const q = new URL(window.location.href).searchParams.get("q");
 //Mi prendo l'url per i gruppi rock
 let myUrl = "https://striveschool-api.herokuapp.com/api/deezer/search?q=rock";
 if(q)
+{
   myUrl = "https://striveschool-api.herokuapp.com/api/deezer/search?q=" + q;
+  const welcome = document.querySelectorAll(".welcome-text")
+  welcome.forEach(text =>
+    text.innerHTML = "Ecco i risultati della tua ricerca:"
+    )
+}
 const getRemoteData = function () {
   fetch(myUrl, {
     headers: {
