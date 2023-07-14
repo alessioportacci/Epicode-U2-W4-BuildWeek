@@ -1,0 +1,33 @@
+.sfoglia-box
+{
+    height: 150px;
+    width: 150px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: red !important;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.sfoglia-img
+{
+    position: absolute;
+    z-index: 2;
+    height: 100px !important;
+    transform: rotate(20deg);
+    bottom: -5px;
+    right: -10px;
+}
+
+.sfoglia-text
+{
+    position: absolute;
+    top: 10px;
+    left: 10px ;
+    z-index: 3;
+    font-family: CircularStd-book;
+    font-weight: bold;
+    font-size: 25px;
+    text-shadow: 1px 1px 2px black;
+}
