@@ -102,9 +102,9 @@ const hideSection = function (el) {
   }
 };
 
-collapser2.addEventListener("click", function () {
-  hideSection(rowToAppendChildren);
-});
+//collapser2.addEventListener("click", function () {
+  //hideSection(rowToAppendChildren);
+//});
 
 //Saluto in base all'orario
 function salutoInBaseAllOrario() {
@@ -120,4 +120,5 @@ function salutoInBaseAllOrario() {
       titolo.innerText = "Buonasera";
   }
 }
+
 
