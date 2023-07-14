@@ -78,6 +78,7 @@ const loadAlbum = function () {
       //Nome artista
       document.querySelector(".artist-name").innerHTML = album.artist.name
       document.querySelector(".artist-name").setAttribute("value", album.artist.id)
+      document.querySelector(".artist-name").setAttribute("onclick", "location.href='artist.html?id=" + album.artist.id + "'")
       document.querySelector(".artist-name").classList.add("text-shadow")
       //Anno album
       document.querySelector(".album-year").innerHTML = album.release_date
