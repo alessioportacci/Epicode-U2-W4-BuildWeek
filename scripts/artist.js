@@ -137,7 +137,7 @@ const loadArtist = function ()
       artistName = artist.name
       document.querySelector(".artist-name").innerHTML = artistName
       //Ascoltatori mensili
-      document.querySelector(".monthly-listeners").innerHTML = numberWithCommas(artist.nb_fan) + " ascoltatori Mensili"
+      document.querySelector(".monthly-listeners").innerHTML = numberWithCommas(artist.nb_fan) + " ascoltatori mensili"
     
       //Aggiungo i brani likati
       //Iconcina
