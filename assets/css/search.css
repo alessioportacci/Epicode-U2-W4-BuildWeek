@@ -19,6 +19,8 @@
     transform: rotate(20deg);
     bottom: -5px;
     right: -10px;
+    box-shadow: 5px 5px 37px -2px #000000;
+
 }
 
 .sfoglia-text
