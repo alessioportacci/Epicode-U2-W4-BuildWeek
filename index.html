@@ -326,13 +326,13 @@
             <div class="row row-cols-2 justify-content-between mt-1 me-2 ms-1">
               <div>
                 <!--Freccette-->
-                <a href="#" class="arrow-link"
-                  ><svg
+                <a href="#" class="arrow-link" onclick="history.back()">
+                  <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
                     height="16"
                     fill="currentColor"
-                    class="bi bi-chevron-left text-white rounded-circle"
+                    class="bi bi-chevron-left"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -341,13 +341,17 @@
                     />
                   </svg>
                 </a>
-                <a href="#" class="arrow-link">
+                <a
+                  href="#"
+                  class="arrow-link"
+                  onclick="history.forward()"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
                     height="16"
                     fill="currentColor"
-                    class="bi bi-chevron-right text-white rounded-circle"
+                    class="bi bi-chevron-left"
                     viewBox="0 0 16 16"
                   >
                     <path
